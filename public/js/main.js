@@ -13,11 +13,12 @@ import { initMap, renderMap } from "./map.js";
 import { banner } from "./visuals.js";
 import { initShare, importFromHash, encodeTrip, decodeTrip, applyTrip } from "./share.js";
 import { initPrint, printBook } from "./print.js";
+import { initBackup } from "./backup.js";
 
 $("#nbmod").textContent=MODS.length;
 initModuleSheet();initExplorer();initTrip();initCarnet();initPratique();initNav();
 renderPrat();
-initMap();initShare();initPrint();
+initMap();initShare();initPrint();initBackup();
 
 // API globale conservée pour les scripts (build-book-pdf.mjs) et le débogage
 window.__PEI={MODS,BY,PROFILES,PICTOS,S,SLOTS,save,renderAll,toast,dayDate,switchView,openModule,renderMap,banner,encodeTrip,decodeTrip,applyTrip,get rows(){return rows}};

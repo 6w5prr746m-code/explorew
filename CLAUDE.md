@@ -45,7 +45,7 @@ book/                   PDF du Book généré
 - `main.js` : point d'entrée, initialise les modules dans l'ordre et expose `window.__PEI` et `window.__printBook()` (utilisés par `scripts/build-book-pdf.mjs`).
 - `data.js` (référentiels, modules), `state.js` (état localStorage), `util.js`.
 - `explorer.js` (filtres, liste), `module-sheet.js` (fiche), `trip.js` (voyage), `carnet.js`, `pratique.js`, `nav.js`, `render.js` (`renderAll`).
-- `map.js` (carte SVG, bascule Liste/Carte), `visuals.js` (bannières), `share.js` (partage `#t=`, QR, import), `print.js` (voyage et Book).
+- `map.js` (carte SVG, bascule Liste/Carte), `visuals.js` (bannières), `share.js` (partage `#t=`, QR, import), `print.js` (voyage et Book), `backup.js` (export / restauration JSON, onglet Carnet).
 
 Chaque module n'exécute rien au chargement : il exporte des fonctions et un `initXxx()` appelé par `main.js`, ce qui évite les soucis d'imports circulaires. Tout nouveau fichier de `js/` doit être ajouté à `CORE` dans `sw.js`.
 
