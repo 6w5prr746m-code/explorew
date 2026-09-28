@@ -6,7 +6,7 @@ import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, join } from "node:path";
 const root = new URL("../public/", import.meta.url).pathname;
-const types = { ".html":"text/html", ".css":"text/css", ".js":"text/javascript", ".json":"application/json", ".svg":"image/svg+xml", ".png":"image/png", ".webmanifest":"application/manifest+json" };
+const types = { ".html":"text/html", ".css":"text/css", ".js":"text/javascript", ".json":"application/json", ".svg":"image/svg+xml", ".png":"image/png", ".webmanifest":"application/manifest+json", ".woff2":"font/woff2" };
 const server = createServer(async (req, res) => {
   const p = join(root, decodeURIComponent(req.url.split("?")[0]).replace(/\/$/, "/index.html"));
   try { res.writeHead(200, { "content-type": types[extname(p)] || "application/octet-stream" }); res.end(await readFile(p)); }

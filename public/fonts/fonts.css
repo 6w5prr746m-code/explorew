@@ -1,0 +1,6 @@
+/* Polices auto-hébergées (sous-ensemble latin), licence SIL OFL 1.1 : voir OFL-*.txt.
+   Source : Google Fonts. Figtree est une police variable (400 à 700 dans un seul fichier). */
+@font-face{font-family:"Figtree";font-style:normal;font-weight:400 700;font-display:swap;src:url(figtree-latin.woff2) format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;font-display:swap;src:url(instrument-serif-latin.woff2) format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url(instrument-serif-italic-latin.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:500;font-display:swap;src:url(jetbrains-mono-500-latin.woff2) format("woff2")}
