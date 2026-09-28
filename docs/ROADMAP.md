@@ -7,7 +7,7 @@ Ordre pensé pour ne pas perdre de temps : d'abord mettre l'app en ligne et la f
 - [x] Dépôt GitHub public `6w5prr746m-code/explorew`.
 - [x] Workflow `.github/workflows/deploy.yml` : valide les données puis publie `public/` à chaque push sur main.
 - [ ] Settings → Pages → Source : **GitHub Actions** (à faire une fois par le CEO).
-- [ ] Ouvrir l'URL `https://6w5prr746m-code.github.io/explorew/` sur iPhone et Android : installer sur l'écran d'accueil, passer en mode avion, vérifier que l'app s'ouvre.
+- [ ] (CEO) Ouvrir l'URL `https://6w5prr746m-code.github.io/explorew/` sur iPhone et Android : installer sur l'écran d'accueil, passer en mode avion, vérifier que l'app s'ouvre.
 - [ ] (Option) Nom de domaine : ajouter un fichier `public/CNAME` et configurer le DNS.
 
 ## Étape 1 — Fiabiliser (1 à 2 sessions Claude Code)
@@ -19,6 +19,16 @@ Ordre pensé pour ne pas perdre de temps : d'abord mettre l'app en ligne et la f
 - [x] Tests de bout en bout **Playwright** : chargement des 200 modules, filtres, ajout au voyage, partage/import, carte, impression. Les lancer en CI.
 - [ ] Prettier + ESLint minimal.
 - [x] Bouton « Exporter / restaurer mes données » (fichier JSON) : sécurise le voyage de l'utilisateur, stocké seulement dans son navigateur.
+
+## Étape 1 bis — Expérience (validée par le CEO le 28 septembre 2026)
+
+À traiter dans cet ordre, **en priorité sur les cases restantes des étapes 1 et 2**. Chaque livrable respecte les garde-fous : aucune mécanique qui culpabilise (série de jours, fausse rareté), aucun tampon ni badge qui récompense la performance (sommet, niveau 3, vitesse, heure de départ), rappels de sécurité toujours visibles à côté des actions, pas de compte ni de pistage, aucun chiffre non sourcé.
+
+- [ ] **Thèmes Épure (par défaut) et Désert**, clair et sombre (Graphite, Bivouac), selon `docs/design/THEMES.md`.
+- [ ] **Vue « Aujourd'hui »** : à l'ouverture pendant le séjour, le jour en cours (matin, après-midi, soir), les réflexes du jour, et une bascule **Plan B pluie** qui propose pour le créneau les modules PB ou le `planB` du module prévu.
+- [ ] **Export agenda (.ics)** du voyage : un événement par créneau, avec rappels « réserver » et « vérifier la veille l'état des sentiers (onf.fr) et du volcan (OVPF) ». Fichier généré dans le navigateur, sans serveur.
+- [ ] **Passeport étendu** : bouton « Fait » sur chaque module, qui pose un tampon daté ; collection par zone et par profil. Le tampon récompense l'expérience vécue, jamais la performance ; un module volcan, sentier ou baignade garde son rappel de sécurité à côté du bouton.
+- [ ] **Carnet souvenir et carte postale** : récit de fin de voyage (jours, tampons, coups de cœur, mots appris) imprimable, image de partage sans données personnelles (carte, trajet, tampons), et « Je reviens pour… » transformé en liste de modules qui préremplit le prochain voyage.
 
 ## Étape 2 — Contenu (en continu)
 
