@@ -12,7 +12,15 @@ Carnet Péï est développé par une petite équipe d'agents Claude Code, pilot�
 
 ## Règles
 
-- **Rien n'est fusionné sans le CEO.** Chaque livrable est une pull request ; le CEO relit et fusionne.
+- Chaque livrable est une pull request. L'équipe la **fusionne elle-même** (commit de fusion) quand :
+  1. la CI est verte sur le dernier commit de la PR, sans conflit ;
+  2. `node scripts/check-auto-merge.mjs` (lancé après `git fetch origin main`) sort en succès.
+- Sinon, la PR reste ouverte pour le CEO, et le rapport du jour dit pourquoi. Passent **toujours** par le CEO :
+  - le contenu : `public/data/` (dont `modules.json`) et toute coordonnée passée à « valide » dans `docs/geo/` ;
+  - les consignes de sécurité : toute ligne de `public/` qui parle de baignade, rivières, crues, volcan, sentiers, vigilance ou urgences ;
+  - les nouvelles dépendances : `package.json`, `package-lock.json`, `public/vendor/`, `public/fonts/`, toute nouvelle URL externe dans `public/` ;
+  - les règles elles-mêmes : `CLAUDE.md`, `docs/EQUIPE.md`, `.claude/`, `.github/`, ce script, les licences.
+- En cas de doute, ne pas fusionner : laisser la PR au CEO.
 - Pas de push sur `main`. Branches de l'équipe : `equipe/AAAA-MM-JJ-sujet`.
 - Une PR ne s'ouvre que si `npm run validate` et `npm test` sont verts.
 - Toute décision de bibliothèque, dépendance, architecture, service externe ou dépense remonte au CEO avant d'être prise.
