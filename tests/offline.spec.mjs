@@ -12,7 +12,7 @@ test("l'app fonctionne hors ligne après une première visite", async ({ page, c
     const c = await caches.open(keys[0]);
     return (await c.keys()).map(r => new URL(r.url).pathname);
   });
-  for (const f of ["/fonts/fonts.css", "/fonts/figtree-latin.woff2", "/vendor/qrcode.min.js", "/data/modules.json"]) expect(cached).toContain(f);
+  for (const f of ["/fonts/fonts.css", "/fonts/figtree-latin.woff2", "/vendor/qrcode.min.js", "/data/modules.json", "/js/main.js", "/js/share.js"]) expect(cached).toContain(f);
 
   await context.setOffline(true);
   const { errors } = await openApp(page);

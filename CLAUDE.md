@@ -25,8 +25,8 @@ Contexte pour Claude Code. À lire avant toute modification.
 public/
   index.html            coquille de l'app (4 onglets : Explorer, Voyage, Carnet, Pratique)
   styles.css            design tokens (clair + sombre), composants, styles d'impression du Book
-  boot.js               charge data/modules.json, puis app.js, puis enregistre le service worker
-  app.js                l'application (3 blocs IIFE, voir ci-dessous)
+  boot.js               charge data/modules.json, puis js/main.js (module ES), puis enregistre le service worker
+  js/                   l'application en modules ES (voir ci-dessous)
   data/modules.json     les 200 modules
   fonts/                polices woff2 auto-hébergées + fonts.css + licences OFL
   vendor/               qrcode.min.js (davidshimjs/qrcodejs, MIT)
@@ -41,12 +41,13 @@ docs/                   ROADMAP, modèle de données, liste à vérifier
 book/                   PDF du Book généré
 ```
 
-`app.js` contient trois blocs :
-1. **Cœur** : filtres, liste, fiche module, voyage, carnet, pratique. Expose `window.__PEI` (MODS, BY, S, save, renderAll, openModule, switchView…).
-2. **V2 géo/visuels/partage** : carte SVG de l'île (`renderMap`), bannières illustrées (`banner`), encodage/décodage d'un voyage (`encodeTrip`, `decodeTrip`, `applyTrip`).
-3. **V2 interface** : bascule Liste/Carte, feuilles Partager/Importer, import via `#t=` dans l'URL, `window.__printBook()`.
+`js/` contient un module par fonctionnalité, sans build :
+- `main.js` : point d'entrée, initialise les modules dans l'ordre et expose `window.__PEI` et `window.__printBook()` (utilisés par `scripts/build-book-pdf.mjs`).
+- `data.js` (référentiels, modules), `state.js` (état localStorage), `util.js`.
+- `explorer.js` (filtres, liste), `module-sheet.js` (fiche), `trip.js` (voyage), `carnet.js`, `pratique.js`, `nav.js`, `render.js` (`renderAll`).
+- `map.js` (carte SVG, bascule Liste/Carte), `visuals.js` (bannières), `share.js` (partage `#t=`, QR, import), `print.js` (voyage et Book).
 
-Refactor prévu : passer en modules ES (`type="module"`) et découper `app.js` par fonctionnalité, sans changer le comportement.
+Chaque module n'exécute rien au chargement : il exporte des fonctions et un `initXxx()` appelé par `main.js`, ce qui évite les soucis d'imports circulaires. Tout nouveau fichier de `js/` doit être ajouté à `CORE` dans `sw.js`.
 
 ## Modèle de données (résumé, détail dans docs/DATA.md)
 
