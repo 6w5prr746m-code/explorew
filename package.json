@@ -1,0 +1,17 @@
+{
+  "name": "carnet-pei",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Carnet Péï — 1001 façons de découvrir La Réunion : PWA de voyage sur mesure (200 modules).",
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes serve public -l 5173",
+    "validate": "node scripts/validate-data.mjs",
+    "a-verifier": "node scripts/list-a-verifier.mjs",
+    "pdf": "node scripts/build-book-pdf.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  },
+  "engines": { "node": ">=20" }
+}

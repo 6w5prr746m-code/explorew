@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carnet Péï</title>
+<meta name="description" content="1001 façons de découvrir La Réunion : 200 modules à piocher pour composer son voyage sur mesure.">
+<meta name="theme-color" content="#0A7F86">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <h1>Carnet <em>Péï</em></h1>
+      <small><span id="nbmod">200</span> modules<br>1001 façons de découvrir<br>La Réunion</small>
+    </div>
+  </header>
+
+  <!-- EXPLORER -->
+  <section class="view" id="v-explore">
+    <div class="search"><input id="q" type="search" placeholder="Chercher : volcan, vanille, Mafate, bassin…" aria-label="Rechercher un module"></div>
+    <div class="chips" id="profiles" role="group" aria-label="Profils"></div>
+    <div class="filters">
+      <select id="zone" aria-label="Zone"></select>
+      <select id="niveau" aria-label="Niveau"><option value="">Tous niveaux</option><option value="1">Niveau 1 · accessible</option><option value="2">Niveau 2 · en forme</option><option value="3">Niveau 3 · sportif</option></select>
+      <span id="pictos" class="row" style="gap:4px"></span>
+    </div>
+    <div class="countrow"><p class="count" id="count"></p><div class="seg" role="group" aria-label="Affichage"><button id="segList" aria-pressed="true">Liste</button><button id="segMap" aria-pressed="false">Carte</button></div></div>
+    <div class="list" id="list"></div>
+    <div id="map" class="map" hidden></div>
+  </section>
+
+  <!-- VOYAGE -->
+  <section class="view" id="v-trip" hidden>
+    <h2>Mon voyage</h2>
+    <div class="tripbar">
+      <label><span class="lbl">Format</span>
+        <select id="fmt"><option value="7">7 jours · l'essentiel</option><option value="10">10 jours · classiques</option><option value="15">15 jours · grand tour</option><option value="20">20 jours · nature</option><option value="25">25 jours · slow</option><option value="30">30 jours · la totale</option></select></label>
+      <label><span class="lbl">Arrivée</span><input id="start" type="date"></label>
+    </div>
+    <div id="exnote"></div>
+    <div class="kpis">
+      <div class="kpi"><b id="k-mod">0</b><span>modules placés</span></div>
+      <div class="kpi"><b id="k-free">0</b><span>créneaux libres</span></div>
+      <div class="kpi"><b id="k-bud">0 €</b><span>budget saisi</span></div>
+    </div>
+    <div id="days"></div>
+    <div class="row" style="margin-top:12px">
+      <button class="btn primary" id="share">Partager</button>
+      <button class="btn" id="tripmap">Voir sur la carte</button>
+      <button class="btn" id="print">Imprimer / PDF</button>
+      <button class="btn" id="import">Importer</button>
+      <button class="btn ghost" id="reset">Vider le voyage</button>
+    </div>
+  </section>
+
+  <!-- CARNET -->
+  <section class="view" id="v-carnet" hidden>
+    <h2>Mon carnet</h2>
+    <div class="panel"><h3>Passeport des cirques</h3><p class="sub" style="margin-bottom:10px">Touchez un tampon quand l'étape est faite.</p><div class="stamps" id="stamps"></div></div>
+    <div class="panel"><h3>Mon mot créole du jour</h3>
+      <form class="inline-form" id="wordform"><input id="word" placeholder="Ex. : Ti lampé = doucement" aria-label="Mot créole"><button class="btn small primary">Ajouter</button></form>
+      <div class="words" id="words"></div></div>
+    <div class="panel"><h3>Mes coups de cœur</h3><div id="hearts" class="words"></div></div>
+    <div class="panel"><h3>Je reviens pour…</h3><textarea id="back" rows="3" style="width:100%;border:1px solid var(--line);background:var(--surface-2);border-radius:8px;padding:8px;color:var(--ink)" placeholder="Les modules que je n'ai pas eu le temps de faire"></textarea></div>
+  </section>
+
+  <!-- PRATIQUE -->
+  <section class="view" id="v-prat" hidden>
+    <h2>Pratique</h2>
+    <div class="panel"><h3>Le Book imprimé</h3><p class="sub" style="margin-bottom:10px">Les 200 fiches, le mode d'emploi, la grille du jour, votre itinéraire et l'index, mis en page au format A5.</p><button class="btn primary" id="printbook">Imprimer le Book complet</button></div>
+    <div class="panel"><h3>Urgences</h3><div class="urg"><a href="tel:112"><b>112</b>Urgences</a><a href="tel:15"><b>15</b>SAMU</a><a href="tel:18"><b>18</b>Pompiers</a></div></div>
+    <div class="panel"><h3>Les réflexes du jour</h3>
+      <div class="check"><span class="lbl" style="min-width:8px">·</span><span><b>Partir tôt</b> : les sommets se couvrent vers 11 h. Volcan, Maïdo et belvédères à l'aube.</span></div>
+      <div class="check"><span class="lbl" style="min-width:8px">·</span><span><b>Est humide, Ouest sec</b> : s'il pleut dans l'Est, basculer vers la côte Ouest.</span></div>
+      <div class="check"><span class="lbl" style="min-width:8px">·</span><span><b>Avant de marcher</b> : état des sentiers sur onf.fr, volcan sur le site de l'OVPF, vigilance Météo-France.</span></div>
+      <div class="check"><span class="lbl" style="min-width:8px">·</span><span><b>Baignade</b> : uniquement dans le lagon ou les zones surveillées et aménagées.</span></div>
+      <div class="check"><span class="lbl" style="min-width:8px">·</span><span><b>Nuit tôt</b> : vers 17 h 30 en hiver, 19 h en été. Frontale dans le sac.</span></div>
+    </div>
+    <div class="panel"><h3>Check-list</h3><div id="checklist"></div></div>
+    <div class="panel"><h3>Lexique créole</h3><div style="overflow-x:auto"><table class="lex" id="lex"></table></div></div>
+    <p class="sub">Sources : reunion.fr (Île de la Réunion Tourisme). Horaires, tarifs et accès à vérifier avant de partir.</p>
+  </section>
+</div>
+
+<nav class="tabs" aria-label="Navigation"><div class="in" role="tablist">
+  <button role="tab" data-v="explore" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>Explorer</button>
+  <button role="tab" data-v="trip" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Voyage<span class="badge" id="tripbadge" hidden>0</span></span></button>
+  <button role="tab" data-v="carnet" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>Carnet</button>
+  <button role="tab" data-v="prat" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>Pratique</button>
+</div></nav>
+
+<dialog id="dlg"><div class="sheet" id="sheet"></div></dialog>
+<div class="print-only" id="printout"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+<script src="boot.js" defer></script>
+</body>
+</html>
