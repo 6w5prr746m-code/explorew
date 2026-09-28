@@ -4,10 +4,10 @@ Ordre pensé pour ne pas perdre de temps : d'abord mettre l'app en ligne et la f
 
 ## Étape 0 — Mise en ligne (1 à 2 h)
 
-- [ ] Créer le dépôt GitHub public `carnet-pei` et pousser ce dossier.
+- [x] Dépôt GitHub public `6w5prr746m-code/explorew`.
 - [x] Workflow `.github/workflows/deploy.yml` : valide les données puis publie `public/` à chaque push sur main.
 - [ ] Settings → Pages → Source : **GitHub Actions** (à faire une fois par le CEO).
-- [ ] Ouvrir l'URL `https://<utilisateur>.github.io/carnet-pei/` sur iPhone et Android : installer sur l'écran d'accueil, passer en mode avion, vérifier que l'app s'ouvre.
+- [ ] Ouvrir l'URL `https://6w5prr746m-code.github.io/explorew/` sur iPhone et Android : installer sur l'écran d'accueil, passer en mode avion, vérifier que l'app s'ouvre.
 - [ ] (Option) Nom de domaine : ajouter un fichier `public/CNAME` et configurer le DNS.
 
 ## Étape 1 — Fiabiliser (1 à 2 sessions Claude Code)
