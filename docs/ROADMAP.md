@@ -15,7 +15,7 @@ Ordre pensé pour ne pas perdre de temps : d'abord mettre l'app en ligne et la f
 - [x] Ajouter ces fichiers à la liste `CORE` de `sw.js`.
 - [ ] Automatiser `VERSION` (hash des fichiers) via un petit script.
 - [ ] Passer `app.js` en **modules ES** : `data.js`, `state.js`, `explorer.js`, `module-sheet.js`, `trip.js`, `map.js`, `share.js`, `carnet.js`, `print.js`. Aucun changement de comportement.
-- [ ] Tests de bout en bout **Playwright** : chargement des 200 modules, filtres, ajout au voyage, partage/import, carte, impression. Les lancer en CI.
+- [x] Tests de bout en bout **Playwright** : chargement des 200 modules, filtres, ajout au voyage, partage/import, carte, impression. Les lancer en CI.
 - [ ] Prettier + ESLint minimal.
 - [ ] Bouton « Exporter / restaurer mes données » (fichier JSON) : sécurise le voyage de l'utilisateur, stocké seulement dans son navigateur.
 

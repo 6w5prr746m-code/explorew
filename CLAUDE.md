@@ -35,6 +35,8 @@ scripts/
   validate-data.mjs     contrôle des données (lancé en CI, doit rester vert)
   list-a-verifier.mjs   génère docs/A-VERIFIER.md
   build-book-pdf.mjs    génère book/…A5.pdf via Playwright
+tests/                  tests Playwright (parcours principaux, hors ligne)
+.github/workflows/      CI : validation des données + tests Playwright
 docs/                   ROADMAP, modèle de données, liste à vérifier
 book/                   PDF du Book généré
 ```
@@ -71,6 +73,7 @@ Profils : AV Aventurier · LA Lagon · RA Randonneur · EP Épicurien (30 module
 ```
 npm run dev          # sert public/ sur http://localhost:5173
 npm run validate     # contrôle des données (obligatoire avant commit)
+npm test             # tests Playwright de bout en bout (tests/), lancés aussi en CI
 npm run a-verifier   # régénère docs/A-VERIFIER.md
 npm install && npx playwright install chromium && npm run pdf   # régénère le Book PDF
 ```
@@ -82,7 +85,7 @@ npm install && npx playwright install chromium && npm run pdf   # régénère le
 
 ## Avant chaque PR
 
-1. `npm run validate` est vert.
+1. `npm run validate` et `npm test` sont verts.
 2. Tester sur mobile (ou DevTools 400 px), en clair et en sombre.
 3. Si des fichiers de `public/` changent : incrémenter `VERSION` dans `sw.js`.
 4. Si `modules.json` change : relancer `npm run a-verifier` et, pour une édition papier, `npm run pdf`.
