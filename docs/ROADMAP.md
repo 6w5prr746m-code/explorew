@@ -11,17 +11,18 @@ Ordre pensé pour ne pas perdre de temps : d'abord mettre l'app en ligne et la f
 
 ## Étape 1 — Fiabiliser (1 à 2 sessions Claude Code)
 
-- [ ] **Auto-héberger** les polices (woff2 dans `public/fonts/`) et `qrcodejs` (dans `public/vendor/`) : l'app doit fonctionner 100 % hors ligne, y compris à Mafate.
-- [ ] Ajouter ces fichiers à la liste `CORE` de `sw.js` ; automatiser `VERSION` (hash des fichiers) via un petit script.
-- [ ] Passer `app.js` en **modules ES** : `data.js`, `state.js`, `explorer.js`, `module-sheet.js`, `trip.js`, `map.js`, `share.js`, `carnet.js`, `print.js`. Aucun changement de comportement.
-- [ ] Tests de bout en bout **Playwright** : chargement des 200 modules, filtres, ajout au voyage, partage/import, carte, impression. Les lancer en CI.
+- [x] **Auto-héberger** les polices (woff2 dans `public/fonts/`) et `qrcodejs` (dans `public/vendor/`) : l'app doit fonctionner 100 % hors ligne, y compris à Mafate.
+- [x] Ajouter ces fichiers à la liste `CORE` de `sw.js`.
+- [ ] Automatiser `VERSION` (hash des fichiers) via un petit script.
+- [x] Passer `app.js` en **modules ES** : `data.js`, `state.js`, `explorer.js`, `module-sheet.js`, `trip.js`, `map.js`, `share.js`, `carnet.js`, `print.js`. Aucun changement de comportement.
+- [x] Tests de bout en bout **Playwright** : chargement des 200 modules, filtres, ajout au voyage, partage/import, carte, impression. Les lancer en CI.
 - [ ] Prettier + ESLint minimal.
-- [ ] Bouton « Exporter / restaurer mes données » (fichier JSON) : sécurise le voyage de l'utilisateur, stocké seulement dans son navigateur.
+- [x] Bouton « Exporter / restaurer mes données » (fichier JSON) : sécurise le voyage de l'utilisateur, stocké seulement dans son navigateur.
 
 ## Étape 2 — Contenu (en continu)
 
 - [ ] Traiter `docs/A-VERIFIER.md` (18 modules et quelques infos transverses).
-- [ ] Renseigner `geo` (lat/lng) pour les 200 modules : la carte devient exacte.
+- [ ] Renseigner `geo` (lat/lng) pour les 200 modules : la carte devient exacte. Proposition en relecture dans `docs/geo/PROPOSITION.md` (80 points de localité à relire, 65 sites à relever sur IGN/OSM, 55 sans point unique).
 - [ ] Renseigner `source` (URL reunion.fr ou office de tourisme) et `verifieLe` pour chaque module.
 - [ ] Rédiger les **fiches complètes** des 80 modules additionnels (FA, SL, PB, NE) au gabarit : essentiel, créneau, saison, réservation, astuce, plan B, combo.
 - [ ] Ajouter des champs `saison` (mois idéaux) et `reservation` (oui/non + délai) pour filtrer par mois de voyage.

@@ -7,6 +7,6 @@
     document.body.insertAdjacentHTML("afterbegin",'<p style="padding:16px">Impossible de charger les modules. Vérifiez la connexion puis rechargez la page.</p>');
     return;
   }
-  const s=document.createElement("script");s.src="app.js";document.body.appendChild(s);
+  const s=document.createElement("script");s.type="module";s.src="js/main.js";document.body.appendChild(s);
   if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 })();

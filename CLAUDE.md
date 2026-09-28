@@ -17,7 +17,7 @@ Contexte pour Claude Code. À lire avant toute modification.
 - Données : `public/data/modules.json` est **la source de vérité** du contenu. L'app, la carte et le PDF en dérivent.
 - État utilisateur (voyage, carnet, check-list) : `localStorage`, clé `carnetpei.v1`. Pas de compte, pas de serveur pour l'instant.
 - Hors ligne : `public/sw.js` (réseau d'abord, puis cache). **Incrémenter `VERSION` dans `sw.js` à chaque déploiement qui change des fichiers de l'app.**
-- Dépendances externes au runtime : Google Fonts et `qrcodejs` (cdnjs). À auto-héberger (voir `docs/ROADMAP.md`).
+- Aucune dépendance externe au runtime : polices dans `public/fonts/` (OFL), `qrcodejs` dans `public/vendor/` (MIT). Tout fichier ajouté à l'app doit entrer dans `CORE` de `sw.js`.
 
 ## Structure
 
@@ -25,24 +25,29 @@ Contexte pour Claude Code. À lire avant toute modification.
 public/
   index.html            coquille de l'app (4 onglets : Explorer, Voyage, Carnet, Pratique)
   styles.css            design tokens (clair + sombre), composants, styles d'impression du Book
-  boot.js               charge data/modules.json, puis app.js, puis enregistre le service worker
-  app.js                l'application (3 blocs IIFE, voir ci-dessous)
+  boot.js               charge data/modules.json, puis js/main.js (module ES), puis enregistre le service worker
+  js/                   l'application en modules ES (voir ci-dessous)
   data/modules.json     les 200 modules
+  fonts/                polices woff2 auto-hébergées + fonts.css + licences OFL
+  vendor/               qrcode.min.js (davidshimjs/qrcodejs, MIT)
   sw.js, manifest.webmanifest, icons/
 scripts/
   validate-data.mjs     contrôle des données (lancé en CI, doit rester vert)
   list-a-verifier.mjs   génère docs/A-VERIFIER.md
   build-book-pdf.mjs    génère book/…A5.pdf via Playwright
+tests/                  tests Playwright (parcours principaux, hors ligne)
+.github/workflows/      CI : validation des données + tests Playwright
 docs/                   ROADMAP, modèle de données, liste à vérifier
 book/                   PDF du Book généré
 ```
 
-`app.js` contient trois blocs :
-1. **Cœur** : filtres, liste, fiche module, voyage, carnet, pratique. Expose `window.__PEI` (MODS, BY, S, save, renderAll, openModule, switchView…).
-2. **V2 géo/visuels/partage** : carte SVG de l'île (`renderMap`), bannières illustrées (`banner`), encodage/décodage d'un voyage (`encodeTrip`, `decodeTrip`, `applyTrip`).
-3. **V2 interface** : bascule Liste/Carte, feuilles Partager/Importer, import via `#t=` dans l'URL, `window.__printBook()`.
+`js/` contient un module par fonctionnalité, sans build :
+- `main.js` : point d'entrée, initialise les modules dans l'ordre et expose `window.__PEI` et `window.__printBook()` (utilisés par `scripts/build-book-pdf.mjs`).
+- `data.js` (référentiels, modules), `state.js` (état localStorage), `util.js`.
+- `explorer.js` (filtres, liste), `module-sheet.js` (fiche), `trip.js` (voyage), `carnet.js`, `pratique.js`, `nav.js`, `render.js` (`renderAll`).
+- `map.js` (carte SVG, bascule Liste/Carte), `visuals.js` (bannières), `share.js` (partage `#t=`, QR, import), `print.js` (voyage et Book), `backup.js` (export / restauration JSON, onglet Carnet).
 
-Refactor prévu : passer en modules ES (`type="module"`) et découper `app.js` par fonctionnalité, sans changer le comportement.
+Chaque module n'exécute rien au chargement : il exporte des fonctions et un `initXxx()` appelé par `main.js`, ce qui évite les soucis d'imports circulaires. Tout nouveau fichier de `js/` doit être ajouté à `CORE` dans `sw.js`.
 
 ## Modèle de données (résumé, détail dans docs/DATA.md)
 
@@ -69,7 +74,10 @@ Profils : AV Aventurier · LA Lagon · RA Randonneur · EP Épicurien (30 module
 ```
 npm run dev          # sert public/ sur http://localhost:5173
 npm run validate     # contrôle des données (obligatoire avant commit)
+npm test             # tests Playwright de bout en bout (tests/), lancés aussi en CI
 npm run a-verifier   # régénère docs/A-VERIFIER.md
+npm run geo:proposer # propose des coordonnées GPS dans docs/geo/ (source GeoNames, rien n'est fusionné)
+npm run geo:fusionner # fusionne dans modules.json les entrées passées à « valide »
 npm install && npx playwright install chromium && npm run pdf   # régénère le Book PDF
 ```
 
@@ -80,7 +88,7 @@ npm install && npx playwright install chromium && npm run pdf   # régénère le
 
 ## Avant chaque PR
 
-1. `npm run validate` est vert.
+1. `npm run validate` et `npm test` sont verts.
 2. Tester sur mobile (ou DevTools 400 px), en clair et en sombre.
 3. Si des fichiers de `public/` changent : incrémenter `VERSION` dans `sw.js`.
 4. Si `modules.json` change : relancer `npm run a-verifier` et, pour une édition papier, `npm run pdf`.

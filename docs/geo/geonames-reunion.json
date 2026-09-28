@@ -1,0 +1,147 @@
+{
+ "source": "GeoNames Gazetteer (https://www.geonames.org), via le paquet npm cities.json 1.1.64",
+ "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+ "extraitLe": "2026-09-28",
+ "localites": [
+  {
+   "nom": "Bras-Panon",
+   "lat": -20.99667,
+   "lng": 55.67823
+  },
+  {
+   "nom": "Cilaos",
+   "lat": -21.13641,
+   "lng": 55.47187
+  },
+  {
+   "nom": "Entre-Deux",
+   "lat": -21.23333,
+   "lng": 55.46667
+  },
+  {
+   "nom": "L'Étang-Salé",
+   "lat": -21.25,
+   "lng": 55.38333
+  },
+  {
+   "nom": "La Mare",
+   "lat": -20.8978,
+   "lng": 55.53264
+  },
+  {
+   "nom": "La Montagne",
+   "lat": -20.88877,
+   "lng": 55.42267
+  },
+  {
+   "nom": "La Plaine-des-Palmistes",
+   "lat": -21.13425,
+   "lng": 55.62819
+  },
+  {
+   "nom": "La Possession",
+   "lat": -20.92909,
+   "lng": 55.3348
+  },
+  {
+   "nom": "Le Port",
+   "lat": -20.93752,
+   "lng": 55.29415
+  },
+  {
+   "nom": "Le Tampon",
+   "lat": -21.2766,
+   "lng": 55.51766
+  },
+  {
+   "nom": "Les Avirons",
+   "lat": -21.24063,
+   "lng": 55.33685
+  },
+  {
+   "nom": "Les Trois-Bassins",
+   "lat": -21.1,
+   "lng": 55.3
+  },
+  {
+   "nom": "Petite-Île",
+   "lat": -21.35327,
+   "lng": 55.56427
+  },
+  {
+   "nom": "Piton Saint-Leu",
+   "lat": -21.21962,
+   "lng": 55.31513
+  },
+  {
+   "nom": "Saint-André",
+   "lat": -20.96333,
+   "lng": 55.65031
+  },
+  {
+   "nom": "Saint-Benoît",
+   "lat": -21.03795,
+   "lng": 55.71546
+  },
+  {
+   "nom": "Saint-Denis",
+   "lat": -20.88231,
+   "lng": 55.4504
+  },
+  {
+   "nom": "Saint-Joseph",
+   "lat": -21.3777,
+   "lng": 55.61691
+  },
+  {
+   "nom": "Saint-Leu",
+   "lat": -21.17059,
+   "lng": 55.28824
+  },
+  {
+   "nom": "Saint-Louis",
+   "lat": -21.28585,
+   "lng": 55.41124
+  },
+  {
+   "nom": "Saint-Paul",
+   "lat": -21.00961,
+   "lng": 55.27134
+  },
+  {
+   "nom": "Saint-Philippe",
+   "lat": -21.36086,
+   "lng": 55.7679
+  },
+  {
+   "nom": "Saint-Pierre",
+   "lat": -21.3393,
+   "lng": 55.47811
+  },
+  {
+   "nom": "Sainte-Marie",
+   "lat": -20.89686,
+   "lng": 55.55056
+  },
+  {
+   "nom": "Sainte-Rose",
+   "lat": -21.12858,
+   "lng": 55.79616
+  },
+  {
+   "nom": "Sainte-Suzanne",
+   "lat": -20.90616,
+   "lng": 55.60788
+  },
+  {
+   "nom": "Salazie",
+   "lat": -21.0271,
+   "lng": 55.5395
+  },
+  {
+   "nom": "Vincendo",
+   "lat": -21.37104,
+   "lng": 55.67013
+  }
+ ]
+}
