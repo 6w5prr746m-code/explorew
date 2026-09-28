@@ -1,0 +1,2288 @@
+{
+ "genereLe": "2026-09-28",
+ "source": "GeoNames Gazetteer (https://www.geonames.org), via le paquet npm cities.json 1.1.64",
+ "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+ "modeEmploi": "Relire chaque entrée « a-relire ». Pour l'accepter, passer statut à « valide » (et corriger geo si besoin). Pour une entrée « a-geocoder », saisir geo et passer statut à « valide ». Puis : npm run geo:fusionner.",
+ "modules": [
+  {
+   "code": "AV-D1",
+   "titre": "Parapente biplace au-dessus du lagon",
+   "lieu": "Saint-Leu (Colimaçons)",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "AV-D2",
+   "titre": "Canyoning Fleur Jaune, parcours découverte",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-D3",
+   "titre": "Canyoning de la Rivière des Roches",
+   "lieu": "Bras-Panon",
+   "zone": "Est",
+   "geo": {
+    "lat": -20.99667,
+    "lng": 55.67823
+   },
+   "precision": "localite",
+   "base": "Bras-Panon",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-D4",
+   "titre": "Survol des cirques en hélicoptère",
+   "lieu": "Départ côte Ouest",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "AV-D5",
+   "titre": "Canyoning du Bras Rouge",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-D6",
+   "titre": "Canyoning de la rivière Langevin",
+   "lieu": "Saint-Joseph",
+   "zone": "Sud sauvage",
+   "geo": {
+    "lat": -21.3777,
+    "lng": 55.61691
+   },
+   "precision": "localite",
+   "base": "Saint-Joseph",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-D7",
+   "titre": "Canyoning de Sainte-Suzanne",
+   "lieu": "Sainte-Suzanne",
+   "zone": "Est",
+   "geo": {
+    "lat": -20.90616,
+    "lng": 55.60788
+   },
+   "precision": "localite",
+   "base": "Sainte-Suzanne",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-D8",
+   "titre": "Canyoning de Takamaka",
+   "lieu": "Saint-Benoît",
+   "zone": "Est",
+   "geo": {
+    "lat": -21.03795,
+    "lng": 55.71546
+   },
+   "precision": "localite",
+   "base": "Saint-Benoît",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-D9",
+   "titre": "Kayak-raft sur la Rivière des Marsouins",
+   "lieu": "Saint-Benoît",
+   "zone": "Est",
+   "geo": {
+    "lat": -21.03795,
+    "lng": 55.71546
+   },
+   "precision": "localite",
+   "base": "Saint-Benoît",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-D10",
+   "titre": "Descente VTT du Maïdo avec navette",
+   "lieu": "Maïdo → côte Ouest",
+   "zone": "Hauts",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "AV-D11",
+   "titre": "Spéléo dans les tunnels de lave",
+   "lieu": "Départ Saint-Pierre",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.3393,
+    "lng": 55.47811
+   },
+   "precision": "localite",
+   "base": "Saint-Pierre",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-D12",
+   "titre": "Saut en parachute tandem (3 000 m)",
+   "lieu": "Pierrefonds",
+   "zone": "Sud",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "AV-D13",
+   "titre": "Initiation au pilotage de parapente",
+   "lieu": "Saint-Leu",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.17059,
+    "lng": 55.28824
+   },
+   "precision": "localite",
+   "base": "Saint-Leu",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-D14",
+   "titre": "Parachute ascensionnel",
+   "lieu": "Saint-Paul",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.00961,
+    "lng": 55.27134
+   },
+   "precision": "localite",
+   "base": "Saint-Paul",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-D15",
+   "titre": "Survol en ULM",
+   "lieu": "Saint-Paul",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.00961,
+    "lng": 55.27134
+   },
+   "precision": "localite",
+   "base": "Saint-Paul",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-D16",
+   "titre": "Parc aventure et accrobranche",
+   "lieu": "Saint-Pierre",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.3393,
+    "lng": 55.47811
+   },
+   "precision": "localite",
+   "base": "Saint-Pierre",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-D17",
+   "titre": "Plongée bouteille : baptême ou exploration",
+   "lieu": "Saint-Leu / Saint-Gilles",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "AV-D18",
+   "titre": "Randonnée aquatique en rivière",
+   "lieu": "Rivières de l'Est",
+   "zone": "Est",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "AV-D19",
+   "titre": "Marche sur les coulées du Grand Brûlé",
+   "lieu": "Route des Laves",
+   "zone": "Sud sauvage",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "AV-D20",
+   "titre": "Canyon de Ti Cap (saison des pluies)",
+   "lieu": "Langevin",
+   "zone": "Sud sauvage",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "AV-J1",
+   "titre": "Piton de la Fournaise, cratère Dolomieu",
+   "lieu": "Pas de Bellecombe",
+   "zone": "Volcan",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "AV-J2",
+   "titre": "Piton des Neiges, nuit à la Caverne Dufour",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-J3",
+   "titre": "Canyon du Trou Blanc",
+   "lieu": "Salazie",
+   "zone": "Salazie",
+   "geo": {
+    "lat": -21.0271,
+    "lng": 55.5395
+   },
+   "precision": "localite",
+   "base": "Salazie",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-J4",
+   "titre": "Canyon Fleur Jaune intégral",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "AV-J5",
+   "titre": "Alpinisme aux Trois Salazes",
+   "lieu": "Col du Taïbit",
+   "zone": "Cilaos",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "AV-J6",
+   "titre": "Canyon du Trou de Fer",
+   "lieu": "Bélouve",
+   "zone": "Salazie",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "AV-J7",
+   "titre": "Grand Bénare depuis le Maïdo",
+   "lieu": "Maïdo",
+   "zone": "Hauts",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "AV-J8",
+   "titre": "Tour de Mafate (GR R3)",
+   "lieu": "Mafate",
+   "zone": "Mafate",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "AV-J9",
+   "titre": "Journée 100 % adrénaline Ouest",
+   "lieu": "Maïdo → Saint-Leu",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "AV-J10",
+   "titre": "Traversée de l'île à pied (GR R2)",
+   "lieu": "Nord → Sud",
+   "zone": "Cirques",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "LA-D1",
+   "titre": "Snorkeling de l'Ermitage à La Saline",
+   "lieu": "Ermitage",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "LA-D2",
+   "titre": "Pointe au Sel puis coucher de soleil à Boucan",
+   "lieu": "Saint-Leu → Boucan Canot",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "LA-D3",
+   "titre": "Sortie en mer : dauphins et baleines",
+   "lieu": "Port de Saint-Gilles",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "LA-D4",
+   "titre": "Kayak transparent et paddle au coucher du soleil",
+   "lieu": "La Saline",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "LA-D5",
+   "titre": "Massage sur le lagon",
+   "lieu": "Côte Ouest",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "LA-D6",
+   "titre": "Plage de Boucan Canot",
+   "lieu": "Saint-Gilles",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "LA-D7",
+   "titre": "Plage des Roches Noires",
+   "lieu": "Saint-Gilles",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "LA-D8",
+   "titre": "Lagon de Saint-Leu",
+   "lieu": "Saint-Leu",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.17059,
+    "lng": 55.28824
+   },
+   "precision": "localite",
+   "base": "Saint-Leu",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "LA-D9",
+   "titre": "Sable noir de l'Étang-Salé et son gouffre",
+   "lieu": "L'Étang-Salé",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.25,
+    "lng": 55.38333
+   },
+   "precision": "localite",
+   "base": "L'Étang-Salé",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "LA-D10",
+   "titre": "Grande Anse et sa piscine naturelle",
+   "lieu": "Petite-Île",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.35327,
+    "lng": 55.56427
+   },
+   "precision": "localite",
+   "base": "Petite-Île",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "LA-D11",
+   "titre": "Bassin de baignade de Manapany",
+   "lieu": "Saint-Joseph",
+   "zone": "Sud sauvage",
+   "geo": {
+    "lat": -21.3777,
+    "lng": 55.61691
+   },
+   "precision": "localite",
+   "base": "Saint-Joseph",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "LA-D12",
+   "titre": "Cascade Langevin (Grand Galet)",
+   "lieu": "Saint-Joseph",
+   "zone": "Sud sauvage",
+   "geo": {
+    "lat": -21.3777,
+    "lng": 55.61691
+   },
+   "precision": "localite",
+   "base": "Saint-Joseph",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "LA-D13",
+   "titre": "Bassins La Paix et La Mer",
+   "lieu": "Saint-Benoît",
+   "zone": "Est",
+   "geo": {
+    "lat": -21.03795,
+    "lng": 55.71546
+   },
+   "precision": "localite",
+   "base": "Saint-Benoît",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "LA-D14",
+   "titre": "Bassins de la ravine Saint-Gilles",
+   "lieu": "Saint-Gilles",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "LA-D15",
+   "titre": "Thermes de Cilaos",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "LA-D16",
+   "titre": "Spa d'hôtel sur la côte Ouest",
+   "lieu": "Côte Ouest",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "LA-D17",
+   "titre": "Conservatoire botanique de Mascarin",
+   "lieu": "Saint-Leu (Colimaçons)",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "LA-D18",
+   "titre": "Pique-nique créole du dimanche",
+   "lieu": "Plages de l'Ouest",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "LA-D19",
+   "titre": "Coucher de soleil au Cap La Houssaye",
+   "lieu": "Saint-Paul",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.00961,
+    "lng": 55.27134
+   },
+   "precision": "localite",
+   "base": "Saint-Paul",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "LA-D20",
+   "titre": "Observer les étoiles en mer",
+   "lieu": "Côte Ouest",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "LA-J1",
+   "titre": "Sud sauvage : Grande Anse, Manapany, Cap Méchant",
+   "lieu": "Petite-Île → Saint-Philippe",
+   "zone": "Sud sauvage",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "LA-J2",
+   "titre": "La route des plages de l'Ouest",
+   "lieu": "Boucan → Saint-Leu",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "LA-J3",
+   "titre": "Journée lagon complète à l'Ermitage",
+   "lieu": "Ermitage",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "LA-J4",
+   "titre": "Cascades et bassins de l'Est",
+   "lieu": "Sainte-Suzanne → Sainte-Rose",
+   "zone": "Est",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "LA-J5",
+   "titre": "Journée bien-être à Cilaos",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "LA-J6",
+   "titre": "Saint-Pierre côté mer",
+   "lieu": "Saint-Pierre",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.3393,
+    "lng": 55.47811
+   },
+   "precision": "localite",
+   "base": "Saint-Pierre",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "LA-J7",
+   "titre": "Journée tortues : Kélonia et lagon",
+   "lieu": "Saint-Leu",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.17059,
+    "lng": 55.28824
+   },
+   "precision": "localite",
+   "base": "Saint-Leu",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "LA-J8",
+   "titre": "Croisière en catamaran",
+   "lieu": "Port de Saint-Gilles",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "LA-J9",
+   "titre": "Journée sans voiture à Saint-Gilles",
+   "lieu": "Saint-Gilles",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "LA-J10",
+   "titre": "Mini-séjour 3 jours 100 % farniente",
+   "lieu": "Côte Ouest",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "RA-D1",
+   "titre": "Lever de soleil au belvédère du Maïdo",
+   "lieu": "Maïdo (plus de 2 000 m)",
+   "zone": "Hauts",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-D2",
+   "titre": "Bélouve → belvédère du Trou de Fer",
+   "lieu": "Gîte de Bélouve",
+   "zone": "Salazie",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-D3",
+   "titre": "Voile de la Mariée et Hell-Bourg",
+   "lieu": "Salazie",
+   "zone": "Salazie",
+   "geo": {
+    "lat": -21.0271,
+    "lng": 55.5395
+   },
+   "precision": "localite",
+   "base": "Salazie",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "RA-D4",
+   "titre": "Maïdo → Piton des Orangers",
+   "lieu": "Maïdo",
+   "zone": "Hauts",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-D5",
+   "titre": "Chemin pavé Bellemène – Lougnon",
+   "lieu": "Hauts de Saint-Paul",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-D6",
+   "titre": "Boucle de la pointe des Cascades",
+   "lieu": "Sainte-Rose",
+   "zone": "Est",
+   "geo": {
+    "lat": -21.12858,
+    "lng": 55.79616
+   },
+   "precision": "localite",
+   "base": "Sainte-Rose",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "RA-D7",
+   "titre": "Hell-Bourg → Bélouve",
+   "lieu": "Hell-Bourg",
+   "zone": "Salazie",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-D8",
+   "titre": "Pic d'Adam",
+   "lieu": "Hauts de Saint-Denis",
+   "zone": "Nord",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-D9",
+   "titre": "Boucle du Cap Noir",
+   "lieu": "Dos d'Âne",
+   "zone": "Nord",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-D10",
+   "titre": "Canal Augustave → Aurère",
+   "lieu": "Nord de Mafate",
+   "zone": "Mafate",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "RA-D11",
+   "titre": "Piton Rouge",
+   "lieu": "Hauts de Saint-Leu",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-D12",
+   "titre": "Sentier littoral du Cap Méchant",
+   "lieu": "Saint-Philippe",
+   "zone": "Sud sauvage",
+   "geo": {
+    "lat": -21.36086,
+    "lng": 55.7679
+   },
+   "precision": "localite",
+   "base": "Saint-Philippe",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "RA-D13",
+   "titre": "Pas de Bellecombe → Formica Leo",
+   "lieu": "Pas de Bellecombe",
+   "zone": "Volcan",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-D14",
+   "titre": "Nez de Bœuf et cratère Commerson",
+   "lieu": "Route du Volcan",
+   "zone": "Volcan",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-D15",
+   "titre": "Roche Merveilleuse",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "RA-D16",
+   "titre": "Sentier de La Chapelle",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "RA-D17",
+   "titre": "Montée au col du Taïbit",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "RA-D18",
+   "titre": "Sentier botanique de Mare Longue",
+   "lieu": "Saint-Philippe",
+   "zone": "Sud sauvage",
+   "geo": {
+    "lat": -21.36086,
+    "lng": 55.7679
+   },
+   "precision": "localite",
+   "base": "Saint-Philippe",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "RA-D19",
+   "titre": "Col des Bœufs → Plaine des Tamarins",
+   "lieu": "Salazie",
+   "zone": "Mafate",
+   "geo": {
+    "lat": -21.0271,
+    "lng": 55.5395
+   },
+   "precision": "localite",
+   "base": "Salazie",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "RA-D20",
+   "titre": "Balade en forêt de Bébour",
+   "lieu": "Plaine des Palmistes",
+   "zone": "Est",
+   "geo": {
+    "lat": -21.13425,
+    "lng": 55.62819
+   },
+   "precision": "localite",
+   "base": "La Plaine-des-Palmistes",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "RA-J1",
+   "titre": "Mafate en 2 jours par le Col des Bœufs",
+   "lieu": "Salazie → La Nouvelle / Marla",
+   "zone": "Mafate",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "RA-J2",
+   "titre": "Cascade du Bras Rouge depuis Cilaos",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "RA-J3",
+   "titre": "Le Haut Mafate",
+   "lieu": "Départ Salazie",
+   "zone": "Mafate",
+   "geo": {
+    "lat": -21.0271,
+    "lng": 55.5395
+   },
+   "precision": "localite",
+   "base": "Salazie",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "RA-J4",
+   "titre": "Grand Bassin, le bout du monde",
+   "lieu": "Le Tampon (Bois Court)",
+   "zone": "Sud",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-J5",
+   "titre": "Roche Écrite avec nuit en gîte",
+   "lieu": "Hauts de Saint-Denis",
+   "zone": "Nord",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-J6",
+   "titre": "Bélouve → gîte du Piton des Neiges",
+   "lieu": "Bélouve",
+   "zone": "Salazie",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "RA-J7",
+   "titre": "Le Dimitile, balcon sur Cilaos",
+   "lieu": "Entre-Deux",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.23333,
+    "lng": 55.46667
+   },
+   "precision": "localite",
+   "base": "Entre-Deux",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "RA-J8",
+   "titre": "Tour du Piton des Neiges (GR R1)",
+   "lieu": "Cilaos, Salazie, Mafate",
+   "zone": "Cirques",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "RA-J9",
+   "titre": "Salazie → Mafate → Cilaos en 3 jours",
+   "lieu": "Col des Bœufs → Cilaos",
+   "zone": "Cirques",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "RA-J10",
+   "titre": "Randonnée avec un accompagnateur",
+   "lieu": "Au choix",
+   "zone": "Cirques",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "EP-D1",
+   "titre": "Marché de Saint-Paul",
+   "lieu": "Saint-Paul",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.00961,
+    "lng": 55.27134
+   },
+   "precision": "localite",
+   "base": "Saint-Paul",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D2",
+   "titre": "Domaine du Café Grillé",
+   "lieu": "Saint-Pierre",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.3393,
+    "lng": 55.47811
+   },
+   "precision": "localite",
+   "base": "Saint-Pierre",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D3",
+   "titre": "Plantation de la Vanille Roulof",
+   "lieu": "Saint-André",
+   "zone": "Est",
+   "geo": {
+    "lat": -20.96333,
+    "lng": 55.65031
+   },
+   "precision": "localite",
+   "base": "Saint-André",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D4",
+   "titre": "Saga du Rhum",
+   "lieu": "Saint-Pierre",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.3393,
+    "lng": 55.47811
+   },
+   "precision": "localite",
+   "base": "Saint-Pierre",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D5",
+   "titre": "Saint-Denis patrimonial",
+   "lieu": "Saint-Denis",
+   "zone": "Nord",
+   "geo": {
+    "lat": -20.88231,
+    "lng": 55.4504
+   },
+   "precision": "localite",
+   "base": "Saint-Denis",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D6",
+   "titre": "Distillerie Rivière du Mât",
+   "lieu": "Saint-Benoît",
+   "zone": "Est",
+   "geo": {
+    "lat": -21.03795,
+    "lng": 55.71546
+   },
+   "precision": "localite",
+   "base": "Saint-Benoît",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D7",
+   "titre": "Musée Stella Matutina",
+   "lieu": "Piton Saint-Leu",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.21962,
+    "lng": 55.31513
+   },
+   "precision": "localite",
+   "base": "Piton Saint-Leu",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D8",
+   "titre": "Musée de Villèle",
+   "lieu": "Saint-Paul",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.00961,
+    "lng": 55.27134
+   },
+   "precision": "localite",
+   "base": "Saint-Paul",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D9",
+   "titre": "MADOI, arts de l'océan Indien",
+   "lieu": "Saint-Louis",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.28585,
+    "lng": 55.41124
+   },
+   "precision": "localite",
+   "base": "Saint-Louis",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D10",
+   "titre": "Musée Léon-Dierx et Muséum",
+   "lieu": "Saint-Denis",
+   "zone": "Nord",
+   "geo": {
+    "lat": -20.88231,
+    "lng": 55.4504
+   },
+   "precision": "localite",
+   "base": "Saint-Denis",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D11",
+   "titre": "Atelier de cuisine créole",
+   "lieu": "Saint-Gilles / Les Avirons",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "EP-D12",
+   "titre": "Vanille du Sud sauvage",
+   "lieu": "Sainte-Rose / Le Tremblet",
+   "zone": "Sud sauvage",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "EP-D13",
+   "titre": "Domaine de Beaubassin",
+   "lieu": "Hauts de Saint-Denis",
+   "zone": "Nord",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "EP-D14",
+   "titre": "Labyrinthe en Champ Thé",
+   "lieu": "Hauts de Saint-Joseph",
+   "zone": "Sud",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "EP-D15",
+   "titre": "Maison du Curcuma",
+   "lieu": "Saint-Joseph",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.3777,
+    "lng": 55.61691
+   },
+   "precision": "localite",
+   "base": "Saint-Joseph",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D16",
+   "titre": "Maison du Géranium",
+   "lieu": "Le Guillaume (Saint-Paul)",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "EP-D17",
+   "titre": "Marchés de Saint-Denis",
+   "lieu": "Saint-Denis",
+   "zone": "Nord",
+   "geo": {
+    "lat": -20.88231,
+    "lng": 55.4504
+   },
+   "precision": "localite",
+   "base": "Saint-Denis",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D18",
+   "titre": "Marché couvert de Saint-Pierre",
+   "lieu": "Saint-Pierre",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.3393,
+    "lng": 55.47811
+   },
+   "precision": "localite",
+   "base": "Saint-Pierre",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D19",
+   "titre": "Temples tamouls de Saint-André",
+   "lieu": "Saint-André",
+   "zone": "Est",
+   "geo": {
+    "lat": -20.96333,
+    "lng": 55.65031
+   },
+   "precision": "localite",
+   "base": "Saint-André",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-D20",
+   "titre": "Soirée maloya",
+   "lieu": "Selon programmation",
+   "zone": "Toute l'île",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "EP-J1",
+   "titre": "Du champ à l'assiette",
+   "lieu": "Hauts de Sainte-Anne",
+   "zone": "Est",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "EP-J2",
+   "titre": "Route du sucre et du rhum",
+   "lieu": "Saint-Leu → Saint-Pierre",
+   "zone": "Sud",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "EP-J3",
+   "titre": "Route de la vanille et du rhum de l'Est",
+   "lieu": "Saint-André → Saint-Benoît",
+   "zone": "Est",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "EP-J4",
+   "titre": "Saint-Denis en une journée",
+   "lieu": "Saint-Denis",
+   "zone": "Nord",
+   "geo": {
+    "lat": -20.88231,
+    "lng": 55.4504
+   },
+   "precision": "localite",
+   "base": "Saint-Denis",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-J5",
+   "titre": "Saint-Paul, berceau de l'île",
+   "lieu": "Saint-Paul",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.00961,
+    "lng": 55.27134
+   },
+   "precision": "localite",
+   "base": "Saint-Paul",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-J6",
+   "titre": "Saint-Pierre et Saint-Louis",
+   "lieu": "Saint-Pierre / Saint-Louis",
+   "zone": "Sud",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "EP-J7",
+   "titre": "Route des épices et du thé du Sud",
+   "lieu": "Saint-Joseph → Saint-Philippe",
+   "zone": "Sud",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "EP-J8",
+   "titre": "Cilaos terroir",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "EP-J9",
+   "titre": "Hell-Bourg et Salazie",
+   "lieu": "Hell-Bourg",
+   "zone": "Salazie",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "EP-J10",
+   "titre": "Vivre une fête locale",
+   "lieu": "Selon l'événement",
+   "zone": "Toute l'île",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "FA-01",
+   "titre": "Kélonia, observatoire des tortues",
+   "lieu": "Saint-Leu",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.17059,
+    "lng": 55.28824
+   },
+   "precision": "localite",
+   "base": "Saint-Leu",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "FA-02",
+   "titre": "Aquarium de La Réunion",
+   "lieu": "Saint-Gilles",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "FA-03",
+   "titre": "Cité du Volcan",
+   "lieu": "Bourg-Murat",
+   "zone": "Volcan",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "FA-04",
+   "titre": "Croc Parc",
+   "lieu": "L'Étang-Salé",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.25,
+    "lng": 55.38333
+   },
+   "precision": "localite",
+   "base": "L'Étang-Salé",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "FA-05",
+   "titre": "Sentier sous-marin de l'Ermitage",
+   "lieu": "Ermitage",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "FA-06",
+   "titre": "Bateaux électriques de la Mare à Joncs",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "FA-07",
+   "titre": "Parc de la Luge du Maïdo",
+   "lieu": "Maïdo",
+   "zone": "Hauts",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "FA-08",
+   "titre": "Parcours acrobatiques des Palmistes",
+   "lieu": "Plaine des Palmistes",
+   "zone": "Est",
+   "geo": {
+    "lat": -21.13425,
+    "lng": 55.62819
+   },
+   "precision": "localite",
+   "base": "La Plaine-des-Palmistes",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "FA-09",
+   "titre": "Dauphins et baleines en famille",
+   "lieu": "Saint-Gilles",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "FA-10",
+   "titre": "Jardin des Parfums et des Épices",
+   "lieu": "Saint-Philippe",
+   "zone": "Sud sauvage",
+   "geo": {
+    "lat": -21.36086,
+    "lng": 55.7679
+   },
+   "precision": "localite",
+   "base": "Saint-Philippe",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "FA-11",
+   "titre": "Maison du Coco",
+   "lieu": "Saint-Leu",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.17059,
+    "lng": 55.28824
+   },
+   "precision": "localite",
+   "base": "Saint-Leu",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "FA-12",
+   "titre": "Jardin de l'État et Muséum",
+   "lieu": "Saint-Denis",
+   "zone": "Nord",
+   "geo": {
+    "lat": -20.88231,
+    "lng": 55.4504
+   },
+   "precision": "localite",
+   "base": "Saint-Denis",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "FA-13",
+   "titre": "Conservatoire de Mascarin",
+   "lieu": "Saint-Leu",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.17059,
+    "lng": 55.28824
+   },
+   "precision": "localite",
+   "base": "Saint-Leu",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "FA-14",
+   "titre": "Bassin de Manapany",
+   "lieu": "Saint-Joseph",
+   "zone": "Sud sauvage",
+   "geo": {
+    "lat": -21.3777,
+    "lng": 55.61691
+   },
+   "precision": "localite",
+   "base": "Saint-Joseph",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "FA-15",
+   "titre": "Plaine des Sables avec un guide",
+   "lieu": "Route du Volcan",
+   "zone": "Volcan",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "FA-16",
+   "titre": "Excursion 4×4 volcan et cascades",
+   "lieu": "Volcan / Sud",
+   "zone": "Volcan",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "FA-17",
+   "titre": "Jeu de piste des cases de Hell-Bourg",
+   "lieu": "Hell-Bourg",
+   "zone": "Salazie",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "FA-18",
+   "titre": "Forêt de Bélouve en famille",
+   "lieu": "Bélouve",
+   "zone": "Salazie",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "FA-19",
+   "titre": "Tunnels de lave dès 5 ans",
+   "lieu": "Départ Saint-Pierre",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.3393,
+    "lng": 55.47811
+   },
+   "precision": "localite",
+   "base": "Saint-Pierre",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "FA-20",
+   "titre": "Du champ à l'assiette en famille",
+   "lieu": "Sainte-Anne",
+   "zone": "Est",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "SL-01",
+   "titre": "Ligne touristique T du Car Jaune",
+   "lieu": "Aéroports ↔ côte Ouest",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-02",
+   "titre": "M-Ticket et carte yPass",
+   "lieu": "Réseaux de bus",
+   "zone": "Toute l'île",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-03",
+   "titre": "Téléphérique urbain de Saint-Denis",
+   "lieu": "Saint-Denis",
+   "zone": "Nord",
+   "geo": {
+    "lat": -20.88231,
+    "lng": 55.4504
+   },
+   "precision": "localite",
+   "base": "Saint-Denis",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "SL-04",
+   "titre": "Journée sans voiture à Saint-Gilles",
+   "lieu": "Saint-Gilles",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "SL-05",
+   "titre": "Le littoral Ouest à vélo",
+   "lieu": "Côte Ouest",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-06",
+   "titre": "Une semaine dans un seul village",
+   "lieu": "Hell-Bourg, Cilaos ou Entre-Deux",
+   "zone": "Cirques",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-07",
+   "titre": "Mafate, cirque sans route",
+   "lieu": "Mafate",
+   "zone": "Mafate",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "SL-08",
+   "titre": "Nuit en Accueil Paysan",
+   "lieu": "Hauts de l'île",
+   "zone": "Hauts",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-09",
+   "titre": "Roulotte à la Ferme du Kilimandjaro",
+   "lieu": "Plaine des Cafres",
+   "zone": "Volcan",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "SL-10",
+   "titre": "Camping à la ferme du Bois Joli Cœur",
+   "lieu": "Sainte-Anne",
+   "zone": "Est",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "SL-11",
+   "titre": "Rencontre avec un agriculteur",
+   "lieu": "Selon la ferme",
+   "zone": "Toute l'île",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-12",
+   "titre": "Atelier de tressage du vacoa",
+   "lieu": "Sud sauvage",
+   "zone": "Sud sauvage",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-13",
+   "titre": "Fruits de saison au marché",
+   "lieu": "Marchés",
+   "zone": "Toute l'île",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-14",
+   "titre": "Crème solaire respectueuse du récif",
+   "lieu": "Lagon",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-15",
+   "titre": "Cétacés selon la charte",
+   "lieu": "Côte Ouest",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-16",
+   "titre": "Fête religieuse, avec respect",
+   "lieu": "Selon le calendrier",
+   "zone": "Toute l'île",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-17",
+   "titre": "Journée déconnexion",
+   "lieu": "Au choix",
+   "zone": "Toute l'île",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-18",
+   "titre": "Voyager hors saison",
+   "lieu": "Toute l'île",
+   "zone": "Toute l'île",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-19",
+   "titre": "Accompagnateur local",
+   "lieu": "Au choix",
+   "zone": "Cirques",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "SL-20",
+   "titre": "Ramener des produits péï",
+   "lieu": "Marchés et producteurs",
+   "zone": "Toute l'île",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "PB-01",
+   "titre": "Basculer vers la côte Ouest",
+   "lieu": "Côte Ouest",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "PB-02",
+   "titre": "Cité du Volcan",
+   "lieu": "Bourg-Murat",
+   "zone": "Volcan",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "PB-03",
+   "titre": "Aquarium de La Réunion",
+   "lieu": "Saint-Gilles",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "PB-04",
+   "titre": "Kélonia",
+   "lieu": "Saint-Leu",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.17059,
+    "lng": 55.28824
+   },
+   "precision": "localite",
+   "base": "Saint-Leu",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "PB-05",
+   "titre": "Musée Stella Matutina",
+   "lieu": "Piton Saint-Leu",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.21962,
+    "lng": 55.31513
+   },
+   "precision": "localite",
+   "base": "Piton Saint-Leu",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "PB-06",
+   "titre": "Saga du Rhum",
+   "lieu": "Saint-Pierre",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.3393,
+    "lng": 55.47811
+   },
+   "precision": "localite",
+   "base": "Saint-Pierre",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "PB-07",
+   "titre": "Distillerie Rivière du Mât",
+   "lieu": "Saint-Benoît",
+   "zone": "Est",
+   "geo": {
+    "lat": -21.03795,
+    "lng": 55.71546
+   },
+   "precision": "localite",
+   "base": "Saint-Benoît",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "PB-08",
+   "titre": "Musée de Villèle",
+   "lieu": "Saint-Paul",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.00961,
+    "lng": 55.27134
+   },
+   "precision": "localite",
+   "base": "Saint-Paul",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "PB-09",
+   "titre": "MADOI",
+   "lieu": "Saint-Louis",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.28585,
+    "lng": 55.41124
+   },
+   "precision": "localite",
+   "base": "Saint-Louis",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "PB-10",
+   "titre": "Léon-Dierx et Muséum",
+   "lieu": "Saint-Denis",
+   "zone": "Nord",
+   "geo": {
+    "lat": -20.88231,
+    "lng": 55.4504
+   },
+   "precision": "localite",
+   "base": "Saint-Denis",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "PB-11",
+   "titre": "Thermes de Cilaos",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "PB-12",
+   "titre": "Spa d'hôtel",
+   "lieu": "Côte Ouest",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "PB-13",
+   "titre": "Atelier de cuisine créole",
+   "lieu": "Saint-Gilles / Les Avirons",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "PB-14",
+   "titre": "Tunnels de lave",
+   "lieu": "Départ Saint-Pierre",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.3393,
+    "lng": 55.47811
+   },
+   "precision": "localite",
+   "base": "Saint-Pierre",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "PB-15",
+   "titre": "Plantation de vanille",
+   "lieu": "Saint-André",
+   "zone": "Est",
+   "geo": {
+    "lat": -20.96333,
+    "lng": 55.65031
+   },
+   "precision": "localite",
+   "base": "Saint-André",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "PB-16",
+   "titre": "Marchés couverts",
+   "lieu": "Saint-Pierre / Saint-Denis",
+   "zone": "Sud",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "PB-17",
+   "titre": "Maison de la broderie",
+   "lieu": "Cilaos",
+   "zone": "Cilaos",
+   "geo": {
+    "lat": -21.13641,
+    "lng": 55.47187
+   },
+   "precision": "localite",
+   "base": "Cilaos",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "PB-18",
+   "titre": "Cascades en pleine eau",
+   "lieu": "Est / Salazie",
+   "zone": "Est",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "PB-19",
+   "titre": "Journée carnet de voyage",
+   "lieu": "Au choix",
+   "zone": "Toute l'île",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "PB-20",
+   "titre": "Jour d'alerte : rester à l'abri",
+   "lieu": "Toute l'île",
+   "zone": "Toute l'île",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "NE-01",
+   "titre": "Observatoire des Makes, de jour",
+   "lieu": "Les Makes (Saint-Louis)",
+   "zone": "Sud",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "NE-02",
+   "titre": "Soirée d'observation aux Makes",
+   "lieu": "Les Makes",
+   "zone": "Sud",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "NE-03",
+   "titre": "Sortie astronomie Makes Astro",
+   "lieu": "Les Makes",
+   "zone": "Sud",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "NE-04",
+   "titre": "Nuit en bulle transparente",
+   "lieu": "Les Makes (1 500 m)",
+   "zone": "Sud",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "NE-05",
+   "titre": "Voie lactée au Maïdo",
+   "lieu": "Maïdo / Plaine des Cafres",
+   "zone": "Hauts",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "NE-06",
+   "titre": "Étoiles en mer",
+   "lieu": "Côte Ouest",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "NE-07",
+   "titre": "Lever du soleil au Maïdo",
+   "lieu": "Maïdo",
+   "zone": "Hauts",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "NE-08",
+   "titre": "Lever du soleil au Piton des Neiges",
+   "lieu": "Caverne Dufour",
+   "zone": "Cilaos",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "NE-09",
+   "titre": "Lever du soleil à la Roche Écrite",
+   "lieu": "Plaine des Chicots",
+   "zone": "Nord",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "NE-10",
+   "titre": "Fournaise à l'aube",
+   "lieu": "Pas de Bellecombe",
+   "zone": "Volcan",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "NE-11",
+   "titre": "Bivouac à Mafate",
+   "lieu": "Campings de Mafate",
+   "zone": "Mafate",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "NE-12",
+   "titre": "Glamping à Saint-Pierre",
+   "lieu": "Saint-Pierre",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.3393,
+    "lng": 55.47811
+   },
+   "precision": "localite",
+   "base": "Saint-Pierre",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "NE-13",
+   "titre": "Nuit en roulotte",
+   "lieu": "Plaine des Cafres",
+   "zone": "Volcan",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "NE-14",
+   "titre": "Soirée maloya ou kabar",
+   "lieu": "Selon programmation",
+   "zone": "Toute l'île",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "NE-15",
+   "titre": "Coucher de soleil au Cap La Houssaye",
+   "lieu": "Saint-Paul",
+   "zone": "Ouest",
+   "geo": {
+    "lat": -21.00961,
+    "lng": 55.27134
+   },
+   "precision": "localite",
+   "base": "Saint-Paul",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  },
+  {
+   "code": "NE-16",
+   "titre": "Coucher de soleil à Boucan",
+   "lieu": "Saint-Gilles",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "NE-17",
+   "titre": "Kayak transparent au crépuscule",
+   "lieu": "La Saline",
+   "zone": "Ouest",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "NE-18",
+   "titre": "Observer une éruption en sécurité",
+   "lieu": "Selon l'éruption",
+   "zone": "Volcan",
+   "geo": null,
+   "statut": "sans-point-unique",
+   "note": "Itinéraire, plusieurs lieux ou lieu variable : pas de point unique."
+  },
+  {
+   "code": "NE-19",
+   "titre": "Soirée à Hell-Bourg",
+   "lieu": "Hell-Bourg",
+   "zone": "Salazie",
+   "geo": null,
+   "statut": "a-geocoder",
+   "note": "Site précis absent de la source : à relever sur une carte officielle (IGN Géoportail) ou OpenStreetMap."
+  },
+  {
+   "code": "NE-20",
+   "titre": "Nuit à Grand Bassin",
+   "lieu": "Le Tampon",
+   "zone": "Sud",
+   "geo": {
+    "lat": -21.2766,
+    "lng": 55.51766
+   },
+   "precision": "localite",
+   "base": "Le Tampon",
+   "source": "GeoNames (CC BY 4.0)",
+   "statut": "a-relire",
+   "note": "Point central de la localité, pas le site exact de l'activité."
+  }
+ ]
+}

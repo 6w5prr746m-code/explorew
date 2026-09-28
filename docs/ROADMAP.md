@@ -22,7 +22,7 @@ Ordre pensé pour ne pas perdre de temps : d'abord mettre l'app en ligne et la f
 ## Étape 2 — Contenu (en continu)
 
 - [ ] Traiter `docs/A-VERIFIER.md` (18 modules et quelques infos transverses).
-- [ ] Renseigner `geo` (lat/lng) pour les 200 modules : la carte devient exacte.
+- [ ] Renseigner `geo` (lat/lng) pour les 200 modules : la carte devient exacte. Proposition en relecture dans `docs/geo/PROPOSITION.md` (80 points de localité à relire, 65 sites à relever sur IGN/OSM, 55 sans point unique).
 - [ ] Renseigner `source` (URL reunion.fr ou office de tourisme) et `verifieLe` pour chaque module.
 - [ ] Rédiger les **fiches complètes** des 80 modules additionnels (FA, SL, PB, NE) au gabarit : essentiel, créneau, saison, réservation, astuce, plan B, combo.
 - [ ] Ajouter des champs `saison` (mois idéaux) et `reservation` (oui/non + délai) pour filtrer par mois de voyage.

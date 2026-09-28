@@ -9,7 +9,9 @@
     "validate": "node scripts/validate-data.mjs",
     "a-verifier": "node scripts/list-a-verifier.mjs",
     "pdf": "node scripts/build-book-pdf.mjs",
-    "test": "playwright test"
+    "test": "playwright test",
+    "geo:proposer": "node scripts/propose-geo.mjs",
+    "geo:fusionner": "node scripts/merge-geo.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1",

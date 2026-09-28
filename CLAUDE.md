@@ -76,6 +76,8 @@ npm run dev          # sert public/ sur http://localhost:5173
 npm run validate     # contrôle des données (obligatoire avant commit)
 npm test             # tests Playwright de bout en bout (tests/), lancés aussi en CI
 npm run a-verifier   # régénère docs/A-VERIFIER.md
+npm run geo:proposer # propose des coordonnées GPS dans docs/geo/ (source GeoNames, rien n'est fusionné)
+npm run geo:fusionner # fusionne dans modules.json les entrées passées à « valide »
 npm install && npx playwright install chromium && npm run pdf   # régénère le Book PDF
 ```
 
