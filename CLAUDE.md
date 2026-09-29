@@ -45,7 +45,7 @@ book/                   PDF du Book généré
 - `main.js` : point d'entrée, initialise les modules dans l'ordre et expose `window.__PEI` et `window.__printBook()` (utilisés par `scripts/build-book-pdf.mjs`).
 - `data.js` (référentiels, modules), `state.js` (état localStorage), `util.js`.
 - `explorer.js` (filtres, liste), `module-sheet.js` (fiche), `trip.js` (voyage), `carnet.js`, `pratique.js`, `nav.js`, `render.js` (`renderAll`).
-- `map.js` (carte SVG, bascule Liste/Carte), `visuals.js` (bannières), `share.js` (partage `#t=`, QR, import), `print.js` (voyage et Book), `backup.js` (export / restauration JSON, onglet Carnet).
+- `map.js` (carte SVG, bascule Liste/Carte), `visuals.js` (bannières), `share.js` (partage `#t=`, QR, import), `print.js` (voyage et Book), `backup.js` (export / restauration JSON, onglet Carnet), `theme.js` (thèmes Épure et Désert, clair ou sombre : `data-skin` et `data-theme` sur `<html>`, `S.skin` et `S.mode`, réglage Apparence dans Pratique, proposition unique dans le Carnet).
 
 Chaque module n'exécute rien au chargement : il exporte des fonctions et un `initXxx()` appelé par `main.js`, ce qui évite les soucis d'imports circulaires. Tout nouveau fichier de `js/` doit être ajouté à `CORE` dans `sw.js`.
 
@@ -64,7 +64,8 @@ Profils : AV Aventurier · LA Lagon · RA Randonneur · EP Épicurien (30 module
 
 ## Règles de design
 
-- Tokens CSS dans `:root` (clair) + redéfinis pour le sombre (`prefers-color-scheme` et `[data-theme]`). Ne jamais coder une couleur en dur hors tokens.
+- Deux thèmes (`docs/design/THEMES.md`) : Épure par défaut (Graphite en sombre) et Désert via `[data-skin="desert"]` (Bivouac en sombre). Tokens CSS dans `:root` + redéfinis pour chaque thème et pour le sombre (`prefers-color-scheme` et `[data-theme]`). Ne jamais coder une couleur en dur hors des blocs de tokens. `boot.js` applique le thème avant le rendu.
+- Contrastes AA (4,5:1) vérifiés dans les quatre combinaisons pour le texte, le texte secondaire, l'accent et les couleurs de profils.
 - Chaque profil a sa couleur (`--AV`, `--LA`, …), utilisée pour les liserés, codes et points de carte.
 - Typo : Instrument Serif (titres), Figtree (texte), JetBrains Mono (codes).
 - Mobile d'abord (400 px), marge latérale 16 px, zones tactiles ≥ 40 px, focus visible.
