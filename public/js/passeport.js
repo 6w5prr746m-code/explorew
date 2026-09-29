@@ -24,7 +24,10 @@ function reflex(start){const n=[...document.querySelectorAll("#reflexes .check")
 export function safetyFor(m){
   const t=norm([m.t,m.l,m.e,m.a].filter(Boolean).join(" "));
   const walk=m.z==="Volcan"||m.p==="RA"||m.p==="AV"||/sentier|volcan/.test(t);
-  const swim=/baign|riviere|ravine|bassin|cascade/.test(t);
+  // Activités d'eau (mer, lagon, rivière, bassin, canyon). Mieux vaut un rappel de trop qu'un rappel manquant ;
+  // les noms propres sans activité d'eau (distilleries, Beaubassin) sont écartés. À remplacer par un champ de données.
+  const eau=/baign|\bnag|snorkel|plongee|palmes|tuba|kayak|paddle|\bsurf|canyon|bassin|cascade|ravine|piscine naturelle|sentier sous-marin|plage|riviere|lagon/;
+  const swim=eau.test(t)&&!(/distillerie|beaubassin/.test(t)&&!/baign/.test(t));
   return (walk?reflex("Avant de marcher"):"")+(swim?reflex("Baignade"):"");
 }
 

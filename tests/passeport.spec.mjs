@@ -56,6 +56,19 @@ test.describe("Passeport étendu", () => {
     await expect(page.locator("#sheet .done-safe")).toHaveCount(0);
   });
 
+  test("rappel « Baignade » sur les activités d'eau (snorkeling, plongée, canyoning), pas sur une distillerie", async ({ page }) => {
+    await openApp(page);
+    const swim = (await page.locator("#reflexes .check", { hasText: "Baignade" }).textContent()).trim();
+    for (const code of ["LA-D1", "AV-D17", "AV-D5", "LA-D14"]) {
+      await openSheet(page, code);
+      const txt = (await page.locator(`#sheet [data-done-box="${code}"] .done-safe`).textContent()).replace(/\s+/g, " ");
+      expect(txt, code).toContain(swim.replace(/\s+/g, " "));
+      await page.locator("#pclose").click();
+    }
+    await openSheet(page, "EP-D6");
+    await expect(page.locator('#sheet [data-done-box="EP-D6"] .done-safe .check', { hasText: "Baignade" })).toHaveCount(0);
+  });
+
   test("le bouton « Fait » existe aussi dans la vue « Aujourd'hui », avec son rappel", async ({ page }) => {
     await page.clock.setFixedTime(new Date("2026-10-14T08:00:00+04:00"));
     await page.addInitScript(e => { if (!sessionStorage.getItem("seeded")) { localStorage.setItem("carnetpei.v1", e); sessionStorage.setItem("seeded", "1"); } },
