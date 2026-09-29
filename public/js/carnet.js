@@ -1,6 +1,7 @@
 /* Carnet : passeport des cirques, mots créoles, coups de cœur. */
 import { S, save } from "./state.js";
 import { $, esc, col } from "./util.js";
+import { offerDesert } from "./theme.js";
 
 const STAMPS=[["cilaos","Cirque de Cilaos","RA"],["salazie","Cirque de Salazie","LA"],["mafate","Cirque de Mafate","EP"],["volcan","Piton de la Fournaise","AV"],["lagon","Lagon","LA"],["table","Table créole","EP"]];
 export function renderCarnet(){
@@ -11,7 +12,7 @@ export function renderCarnet(){
   $("#back").value=S.back||"";
 }
 export function initCarnet(){
-  $("#stamps").onclick=e=>{const b=e.target.closest("[data-s]");if(!b)return;S.stamps[b.dataset.s]=!S.stamps[b.dataset.s];save();renderCarnet()};
+  $("#stamps").onclick=e=>{const b=e.target.closest("[data-s]");if(!b)return;const k=b.dataset.s;S.stamps[k]=!S.stamps[k];save();renderCarnet();if(S.stamps[k])offerDesert()};
   $("#wordform").onsubmit=e=>{e.preventDefault();const v=$("#word").value.trim();if(!v)return;S.words.unshift(v);$("#word").value="";save();renderCarnet()};
   $("#words").onclick=e=>{const b=e.target.closest("[data-w]");if(!b)return;S.words.splice(+b.dataset.w,1);save();renderCarnet()};
   $("#back").oninput=e=>{S.back=e.target.value;save()};

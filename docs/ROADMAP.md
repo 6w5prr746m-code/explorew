@@ -24,7 +24,7 @@ Ordre pensé pour ne pas perdre de temps : d'abord mettre l'app en ligne et la f
 
 À traiter dans cet ordre, **en priorité sur les cases restantes des étapes 1 et 2**. Chaque livrable respecte les garde-fous : aucune mécanique qui culpabilise (série de jours, fausse rareté), aucun tampon ni badge qui récompense la performance (sommet, niveau 3, vitesse, heure de départ), rappels de sécurité toujours visibles à côté des actions, pas de compte ni de pistage, aucun chiffre non sourcé.
 
-- [ ] **Thèmes Épure (par défaut) et Désert**, clair et sombre (Graphite, Bivouac), selon `docs/design/THEMES.md`.
+- [x] **Thèmes Épure (par défaut) et Désert**, clair et sombre (Graphite, Bivouac), selon `docs/design/THEMES.md` : réglage « Apparence » dans Pratique, proposition unique dans le Carnet au premier tampon (`js/theme.js`).
 - [ ] **Vue « Aujourd'hui »** : à l'ouverture pendant le séjour, le jour en cours (matin, après-midi, soir), les réflexes du jour, et une bascule **Plan B pluie** qui propose pour le créneau les modules PB ou le `planB` du module prévu.
 - [ ] **Export agenda (.ics)** du voyage : un événement par créneau, avec rappels « réserver » et « vérifier la veille l'état des sentiers (onf.fr) et du volcan (OVPF) ». Fichier généré dans le navigateur, sans serveur.
 - [ ] **Passeport étendu** : bouton « Fait » sur chaque module, qui pose un tampon daté ; collection par zone et par profil. Le tampon récompense l'expérience vécue, jamais la performance ; un module volcan, sentier ou baignade garde son rappel de sécurité à côté du bouton.

@@ -1,4 +1,12 @@
 /* Charge les données puis l'application, et enregistre le service worker (hors ligne). */
+// Thème choisi (js/theme.js) posé sur <html> avant tout rendu, pour éviter un flash de l'autre thème.
+(function preTheme(){
+  try{
+    const s=JSON.parse(localStorage.getItem("carnetpei.v1"))||{},r=document.documentElement;
+    r.dataset.skin=s.skin==="desert"?"desert":"epure";
+    if(s.mode==="light"||s.mode==="dark")r.dataset.theme=s.mode;
+  }catch(e){}
+})();
 (async function boot(){
   try{
     const res=await fetch("data/modules.json",{cache:"no-cache"});

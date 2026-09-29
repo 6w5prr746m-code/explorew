@@ -39,8 +39,10 @@ function restore(text){
   let next;
   try{next=parseBackup(text)}catch(err){toast("Fichier illisible : choisissez un export Carnet Péï");return}
   if(!confirm(`Remplacer votre voyage et votre carnet actuels par ceux du fichier (${next.days.length} jours) ?`))return;
+  // L'apparence est un réglage de l'appareil : elle ne vient pas du fichier et reste celle choisie ici.
+  const keep={skin:S.skin,mode:S.mode,deserOffered:S.deserOffered};
   for(const k of Object.keys(S))delete S[k];
-  Object.assign(S,next);
+  Object.assign(S,next,keep);
   save();renderAll();renderPrat();
   toast("Données restaurées");
 }

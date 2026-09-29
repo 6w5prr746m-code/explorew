@@ -14,7 +14,9 @@ import { banner } from "./visuals.js";
 import { initShare, importFromHash, encodeTrip, decodeTrip, applyTrip } from "./share.js";
 import { initPrint, printBook } from "./print.js";
 import { initBackup } from "./backup.js";
+import { initTheme } from "./theme.js";
 
+initTheme();
 $("#nbmod").textContent=MODS.length;
 initModuleSheet();initExplorer();initTrip();initCarnet();initPratique();initNav();
 renderPrat();
