@@ -4,6 +4,7 @@ import { S, save, blankDay, DEST_DEFAUT } from "./state.js";
 import { $, toast } from "./util.js";
 import { renderAll } from "./render.js";
 import { renderPrat } from "./pratique.js";
+import { cleanDone } from "./passeport.js";
 
 const FORMAT="carnet-pei";
 
@@ -32,7 +33,7 @@ export function parseBackup(text){
   });
   const obj=v=>v&&typeof v==="object"&&!Array.isArray(v)?v:{};
   return{dest:typeof e.dest==="string"&&e.dest?e.dest:DEST_DEFAUT,fmt:days.length,start:/^\d{4}-\d{2}-\d{2}$/.test(e.start)?e.start:"",example:false,days,
-    stamps:obj(e.stamps),words:Array.isArray(e.words)?e.words.filter(w=>typeof w==="string"):[],back:str(e.back),checks:obj(e.checks)};
+    stamps:obj(e.stamps),done:cleanDone(e.done),words:Array.isArray(e.words)?e.words.filter(w=>typeof w==="string"):[],back:str(e.back),checks:obj(e.checks)};
 }
 
 function restore(text){

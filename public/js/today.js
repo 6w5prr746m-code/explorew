@@ -5,6 +5,7 @@ import { $, esc, col } from "./util.js";
 import { openModule } from "./module-sheet.js";
 import { renderAll } from "./render.js";
 import { switchView } from "./nav.js";
+import { doneBlock } from "./passeport.js";
 
 const PB_MAX=3;
 // Zone des modules valables partout (repli quand aucun module PB n'existe dans la zone du créneau).
@@ -53,7 +54,7 @@ export function renderToday(){
     <button class="btn rain" id="today-rain" aria-pressed="${rain}">Il pleut ? Plan B</button></div>
     ${SLOTS.map(([k,v])=>{
       const list=d.slots[k].map((c,j)=>[c,j]).filter(([c])=>BY[c]);
-      const body=list.length?list.map(([c,j])=>`${modBtn(c)}${rain?`<div class="tpb"><span class="lbl">Plan B pour ${c}</span>${planBFor(BY[c],null,codes).map(a=>altRow(a,`data-swap="${k}:${j}:${a.c}"`,"Remplacer")).join("")}</div>`:""}`).join("")
+      const body=list.length?list.map(([c,j])=>`${modBtn(c)}${doneBlock(c,true)}${rain?`<div class="tpb"><span class="lbl">Plan B pour ${c}</span>${planBFor(BY[c],null,codes).map(a=>altRow(a,`data-swap="${k}:${j}:${a.c}"`,"Remplacer")).join("")}</div>`:""}`).join("")
         :`<p class="tempty">Créneau libre</p>${rain?`<div class="tpb"><span class="lbl">Plan B pluie</span>${planBFor(null,dayZone,codes).map(a=>altRow(a,`data-put="${k}:${a.c}"`,"Ajouter")).join("")}</div>`:""}`;
       return `<div class="tslot" data-slot="${k}"><span class="lbl">${v}</span>${body}</div>`}).join("")}
     <button class="btn ghost tfull" id="today-full">Voir la journée complète</button>
