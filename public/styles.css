@@ -169,6 +169,33 @@ dialog::backdrop{background:var(--scrim)}
 .stamp{aspect-ratio:1;max-width:100%;border:1.5px dashed var(--line);border-radius:50%;background:var(--surface);display:grid;place-items:center;text-align:center;padding:8px;font-size:12px;font-weight:600;color:var(--muted)}
 .stamp.on{border-style:solid;border-color:var(--c);color:var(--c);transform:rotate(-8deg);background:var(--surface-2)}
 .stamp.on::before{content:"✓";display:block;font:400 26px/1 var(--display)}
+/* passeport étendu (js/passeport.js) : bouton « Fait », rappel de sécurité, « Mes tampons » */
+.done-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.done-btn{min-height:40px;min-width:88px;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.done-btn::before{content:"";width:14px;height:14px;border-radius:50%;border:1.5px dashed var(--muted);flex:none}
+.done-btn[aria-pressed="true"]{border-color:var(--c);color:var(--c);background:var(--surface-2)}
+.done-btn[aria-pressed="true"]::before{border:2px solid var(--c);box-shadow:inset 0 0 0 2px var(--surface-2),inset 0 0 0 7px var(--c)}
+.done-date{font:500 12px var(--mono);color:var(--c)}
+.done-safe{margin-top:6px;font-size:13.5px;border-left:2px solid var(--line);padding-left:8px}
+.done-safe .check{padding:2px 0}
+/* vue « Aujourd'hui » : module à gauche, « Fait » à droite, rappel dessous sur toute la largeur */
+.tslot{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:8px;align-items:start}
+.tslot>*{grid-column:1/-1}
+.tslot>.tmod{grid-column:1}
+.done.compact{display:contents}
+.done.compact .done-row{grid-column:2;margin-top:6px}
+.done.compact .done-date{display:none}
+.done.compact .done-btn{min-width:0}
+.done.compact .done-safe{grid-column:1/-1}
+.tzone{margin-top:12px}
+.tzone:first-child{margin-top:0}
+.tzone h4{font:700 11px/1.4 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.tzone ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.tampon{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;text-align:left;background:var(--surface-2);border:0;border-radius:10px;padding:6px 10px;color:var(--ink)}
+.tampon .seal{flex:none;width:48px;height:48px;border-radius:50%;border:2px solid var(--c);display:grid;place-items:center;color:var(--c);font:500 9px/1 var(--mono);letter-spacing:-.02em}
+.tampon .tt{display:grid;min-width:0}
+.tampon .tt b{font-weight:600;font-size:14px;line-height:1.3}
+.tampon .td{font-size:12.5px;color:var(--muted)}
 .panel{background:var(--surface);border:0;box-shadow:var(--shadow);border-radius:18px;padding:14px;margin-bottom:12px}
 .panel h3{font:400 22px/1.2 var(--display);margin-bottom:8px}
 .check{display:flex;gap:10px;align-items:flex-start;padding:6px 0}
@@ -244,6 +271,12 @@ dialog::backdrop{background:var(--scrim)}
 [data-skin="desert"] .offer{border:1px dashed var(--accent)}
 [data-skin="desert"] .stamp{border:2px dashed var(--line);font-family:var(--mono);text-transform:uppercase;font-size:10px;letter-spacing:.06em}
 [data-skin="desert"] .stamp.on{border:3px double var(--c);transform:rotate(-12deg);background:none}
+[data-skin="desert"] .tampon{background:none;border:1px dashed var(--line);border-radius:var(--r)}
+[data-skin="desert"] .tampon .seal{border:3px double var(--c);transform:rotate(-10deg);text-transform:uppercase}
+[data-skin="desert"] .done-btn[aria-pressed="true"]{background:none;border:2px double var(--c)}
+[data-skin="desert"] .done-btn[aria-pressed="true"]::before{box-shadow:inset 0 0 0 2px var(--surface),inset 0 0 0 7px var(--c)}
+[data-skin="desert"] .done-date{transform:rotate(-2deg);display:inline-block}
+[data-skin="desert"] .done-safe{border-left-style:dashed}
 [data-skin="desert"] .sheet{border-radius:10px 10px 0 0;border-top:3px double var(--accent)}
 @media print{
   @page{size:A5;margin:12mm 11mm}
@@ -269,7 +302,8 @@ dialog::backdrop{background:var(--scrim)}
   body.book .bidx span{display:block;break-inside:avoid}
 }
 
-@media (prefers-reduced-motion:no-preference){.card,.add,.stamp,.opt{transition:transform .15s,background .15s}.card:active{transform:scale(.99)}.offer{animation:offer-in .2s ease-out}}
+@media (prefers-reduced-motion:no-preference){.card,.add,.stamp,.opt{transition:transform .15s,background .15s}.card:active{transform:scale(.99)}.offer{animation:offer-in .2s ease-out}.done-btn.stamped::before{animation:stamp-in .22s ease-out}}
+@keyframes stamp-in{from{transform:scale(1.6) rotate(-20deg);opacity:0}to{transform:none;opacity:1}}
 @keyframes offer-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 @media print{
   header.top,nav.tabs,section.view,.toast,dialog{display:none!important}
