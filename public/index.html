@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Carnet Péï</title>
 <meta name="description" content="1001 façons de découvrir La Réunion : 200 modules à piocher pour composer son voyage sur mesure.">
-<meta name="theme-color" content="#0A7F86">
+<meta name="theme-color" content="#F5F5F7">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -85,6 +85,19 @@
       <div class="check"><span class="lbl" style="min-width:8px">·</span><span><b>Avant de marcher</b> : état des sentiers sur onf.fr, volcan sur le site de l'OVPF, vigilance Météo-France.</span></div>
       <div class="check"><span class="lbl" style="min-width:8px">·</span><span><b>Baignade</b> : uniquement dans le lagon ou les zones surveillées et aménagées.</span></div>
       <div class="check"><span class="lbl" style="min-width:8px">·</span><span><b>Nuit tôt</b> : vers 17 h 30 en hiver, 19 h en été. Frontale dans le sac.</span></div>
+    </div>
+    <div class="panel" id="appearance"><h3>Apparence</h3>
+      <p class="lbl" id="skin-lbl">Thème</p>
+      <div class="opts" role="group" aria-labelledby="skin-lbl">
+        <button class="opt" data-set-skin="epure" aria-pressed="true">Épure<small>clair et aéré</small></button>
+        <button class="opt" data-set-skin="desert" aria-pressed="false">Désert<small>carnet de terrain</small></button>
+      </div>
+      <p class="lbl" id="mode-lbl">Mode</p>
+      <div class="opts three" role="group" aria-labelledby="mode-lbl">
+        <button class="opt" data-set-mode="auto" aria-pressed="true">Automatique</button>
+        <button class="opt" data-set-mode="light" aria-pressed="false">Clair</button>
+        <button class="opt" data-set-mode="dark" aria-pressed="false">Sombre</button>
+      </div>
     </div>
     <div class="panel"><h3>Check-list</h3><div id="checklist"></div></div>
     <div class="panel"><h3>Lexique créole</h3><div style="overflow-x:auto"><table class="lex" id="lex"></table></div></div>
