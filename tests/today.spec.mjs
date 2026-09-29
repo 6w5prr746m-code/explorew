@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures.mjs";
 import { openApp, tab } from "./helpers.mjs";
 
 // Vue « Aujourd'hui » : jour en cours calculé dans le fuseau de la destination (Indian/Reunion, UTC+4).

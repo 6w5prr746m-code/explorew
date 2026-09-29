@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures.mjs";
 import { openApp, tab } from "./helpers.mjs";
 
 // Thèmes Épure (défaut) et Désert, en clair et en sombre (docs/design/THEMES.md).

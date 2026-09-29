@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures.mjs";
 import { openApp, tab, emptyTrip } from "./helpers.mjs";
 
 test.describe("Chargement", () => {
