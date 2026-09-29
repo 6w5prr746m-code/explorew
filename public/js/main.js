@@ -15,12 +15,13 @@ import { initShare, importFromHash, encodeTrip, decodeTrip, applyTrip } from "./
 import { initPrint, printBook } from "./print.js";
 import { initBackup } from "./backup.js";
 import { initTheme } from "./theme.js";
+import { initToday } from "./today.js";
 
 initTheme();
 $("#nbmod").textContent=MODS.length;
 initModuleSheet();initExplorer();initTrip();initCarnet();initPratique();initNav();
 renderPrat();
-initMap();initShare();initPrint();initBackup();
+initMap();initShare();initPrint();initBackup();initToday();
 
 // API globale conservée pour les scripts (build-book-pdf.mjs) et le débogage
 window.__PEI={DEST,MODS,BY,PROFILES,PICTOS,S,SLOTS,save,renderAll,toast,dayDate,switchView,openModule,renderMap,banner,encodeTrip,decodeTrip,applyTrip,get rows(){return rows}};

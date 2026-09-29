@@ -39,6 +39,7 @@
   <!-- VOYAGE -->
   <section class="view" id="v-trip" hidden>
     <h2>Mon voyage</h2>
+    <section class="panel today" id="today" hidden></section>
     <div class="tripbar">
       <label><span class="lbl">Format</span>
         <select id="fmt"><option value="7">7 jours · l'essentiel</option><option value="10">10 jours · classiques</option><option value="15">15 jours · grand tour</option><option value="20">20 jours · nature</option><option value="25">25 jours · slow</option><option value="30">30 jours · la totale</option></select></label>
@@ -79,7 +80,7 @@
     <h2>Pratique</h2>
     <div class="panel"><h3>Le Book imprimé</h3><p class="sub" style="margin-bottom:10px">Les 200 fiches, le mode d'emploi, la grille du jour, votre itinéraire et l'index, mis en page au format A5.</p><button class="btn primary" id="printbook">Imprimer le Book complet</button></div>
     <div class="panel"><h3>Urgences</h3><div class="urg"><a href="tel:112"><b>112</b>Urgences</a><a href="tel:15"><b>15</b>SAMU</a><a href="tel:18"><b>18</b>Pompiers</a></div></div>
-    <div class="panel"><h3>Les réflexes du jour</h3>
+    <div class="panel" id="reflexes"><h3>Les réflexes du jour</h3>
       <div class="check"><span class="lbl" style="min-width:8px">·</span><span><b>Partir tôt</b> : les sommets se couvrent vers 11 h. Volcan, Maïdo et belvédères à l'aube.</span></div>
       <div class="check"><span class="lbl" style="min-width:8px">·</span><span><b>Est humide, Ouest sec</b> : s'il pleut dans l'Est, basculer vers la côte Ouest.</span></div>
       <div class="check"><span class="lbl" style="min-width:8px">·</span><span><b>Avant de marcher</b> : état des sentiers sur onf.fr, volcan sur le site de l'OVPF, vigilance Météo-France.</span></div>

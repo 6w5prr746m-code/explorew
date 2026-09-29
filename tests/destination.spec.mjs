@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures.mjs";
 import { openApp, tab } from "./helpers.mjs";
 
 // La destination (data/destinations/reunion.json) ne change rien de visible pour le voyageur.

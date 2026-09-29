@@ -2,5 +2,6 @@
 import { renderList } from "./explorer.js";
 import { renderTrip } from "./trip.js";
 import { renderCarnet } from "./carnet.js";
+import { renderToday } from "./today.js";
 
-export function renderAll(){renderList();renderTrip();renderCarnet()}
+export function renderAll(){renderList();renderTrip();renderCarnet();renderToday()}
