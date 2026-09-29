@@ -4,5 +4,6 @@ import { renderTrip } from "./trip.js";
 import { renderCarnet } from "./carnet.js";
 import { renderToday } from "./today.js";
 import { renderTampons } from "./passeport.js";
+import { renderAgenda } from "./agenda.js";
 
-export function renderAll(){renderList();renderTrip();renderCarnet();renderToday();renderTampons()}
+export function renderAll(){renderList();renderTrip();renderCarnet();renderToday();renderAgenda();renderTampons()}

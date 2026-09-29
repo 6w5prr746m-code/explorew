@@ -114,6 +114,8 @@ dialog::backdrop{background:var(--scrim)}
 .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .btn.ghost{background:transparent}
 .btn.small{padding:6px 10px;font-size:13px}
+#agenda{min-height:40px}
+.btn[aria-disabled="true"]{color:var(--muted);border-style:dashed;cursor:not-allowed}
 .picker{display:grid;gap:10px;margin-top:10px}
 .picker .row select{flex:1;min-width:0;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:10px}
 /* trip */
