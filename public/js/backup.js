@@ -1,6 +1,6 @@
 /* Mes données : export et restauration de l'état utilisateur (fichier JSON). */
 import { SLOTS, BY } from "./data.js";
-import { S, save, blankDay } from "./state.js";
+import { S, save, blankDay, DEST_DEFAUT } from "./state.js";
 import { $, toast } from "./util.js";
 import { renderAll } from "./render.js";
 import { renderPrat } from "./pratique.js";
@@ -31,7 +31,7 @@ export function parseBackup(text){
     return n;
   });
   const obj=v=>v&&typeof v==="object"&&!Array.isArray(v)?v:{};
-  return{fmt:days.length,start:/^\d{4}-\d{2}-\d{2}$/.test(e.start)?e.start:"",example:false,days,
+  return{dest:typeof e.dest==="string"&&e.dest?e.dest:DEST_DEFAUT,fmt:days.length,start:/^\d{4}-\d{2}-\d{2}$/.test(e.start)?e.start:"",example:false,days,
     stamps:obj(e.stamps),words:Array.isArray(e.words)?e.words.filter(w=>typeof w==="string"):[],back:str(e.back),checks:obj(e.checks)};
 }
 

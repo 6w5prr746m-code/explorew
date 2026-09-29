@@ -9,8 +9,9 @@
 })();
 (async function boot(){
   try{
-    const res=await fetch("data/modules.json",{cache:"no-cache"});
-    window.__MODULES=await res.json();
+    // Modules et destination en parallèle (la destination porte zones, carte et libellés propres au lieu).
+    const get=u=>fetch(u,{cache:"no-cache"}).then(r=>{if(!r.ok)throw new Error(u);return r.json()});
+    [window.__MODULES,window.__DEST]=await Promise.all([get("data/modules.json"),get("data/destinations/reunion.json")]);
   }catch(e){
     document.body.insertAdjacentHTML("afterbegin",'<p style="padding:16px">Impossible de charger les modules. Vérifiez la connexion puis rechargez la page.</p>');
     return;

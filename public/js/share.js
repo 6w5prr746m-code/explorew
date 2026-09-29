@@ -1,5 +1,5 @@
 /* Partage d'un voyage : encodage dans l'URL (#t=), QR code, import. */
-import { SLOTS, BY } from "./data.js";
+import { SLOTS, BY, DEST } from "./data.js";
 import { S, save } from "./state.js";
 import { $, esc, toast } from "./util.js";
 import { dlg } from "./module-sheet.js";
@@ -23,7 +23,7 @@ export function initShare(){
    <p class="sub">La personne qui reçoit le lien peut aussi le coller dans « Importer ».</p>`;
     try{new QRCode($("#qr"),{text:link,width:180,height:180,correctLevel:QRCode.CorrectLevel.L})}catch(e){$("#qr").remove()}
     $("#copy").onclick=async()=>{try{await navigator.clipboard.writeText(link);toast("Lien copié")}catch(e){$("#sharelink").select();toast("Sélectionné : copiez-le")}};
-    if($("#nshare"))$("#nshare").onclick=()=>navigator.share({title:"Mon voyage à La Réunion",text:"Mon itinéraire Carnet Péï",url:link}).catch(()=>{});
+    if($("#nshare"))$("#nshare").onclick=()=>navigator.share({title:DEST.libelles.partage,text:"Mon itinéraire Carnet Péï",url:link}).catch(()=>{});
     $("#sclose").onclick=()=>dlg.close();
     if(!dlg.open)dlg.showModal();
   };

@@ -1,7 +1,7 @@
 /* Service worker : pré-cache de l'app, réseau d'abord puis cache (hors ligne à Mafate).
    Incrémenter VERSION à chaque déploiement qui modifie les fichiers de l'app. */
-const VERSION="carnetpei-v7";
-const CORE=["./","index.html","styles.css","boot.js","data/modules.json","manifest.webmanifest","icons/icon.svg","icons/icon-192.png","icons/icon-512.png",
+const VERSION="carnetpei-v8";
+const CORE=["./","index.html","styles.css","boot.js","data/modules.json","data/destinations/reunion.json","manifest.webmanifest","icons/icon.svg","icons/icon-192.png","icons/icon-512.png",
   "fonts/fonts.css","fonts/figtree-latin.woff2","fonts/instrument-serif-latin.woff2","fonts/instrument-serif-italic-latin.woff2","fonts/jetbrains-mono-500-latin.woff2","vendor/qrcode.min.js",
   "js/backup.js","js/carnet.js","js/data.js","js/explorer.js","js/main.js","js/map.js","js/module-sheet.js","js/nav.js","js/pratique.js","js/print.js","js/render.js","js/share.js","js/state.js","js/theme.js","js/trip.js","js/util.js","js/visuals.js"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(VERSION).then(c=>c.addAll(CORE)));self.skipWaiting()});
