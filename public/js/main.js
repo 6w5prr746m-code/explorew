@@ -1,5 +1,5 @@
 /* Carnet Péï — point d'entrée de l'application (modules ES, sans build). */
-import { MODS, BY, PROFILES, PICTOS, SLOTS } from "./data.js";
+import { MODS, BY, PROFILES, PICTOS, SLOTS, DEST } from "./data.js";
 import { S, save, dayDate } from "./state.js";
 import { $, toast } from "./util.js";
 import { initExplorer, rows } from "./explorer.js";
@@ -23,7 +23,7 @@ renderPrat();
 initMap();initShare();initPrint();initBackup();
 
 // API globale conservée pour les scripts (build-book-pdf.mjs) et le débogage
-window.__PEI={MODS,BY,PROFILES,PICTOS,S,SLOTS,save,renderAll,toast,dayDate,switchView,openModule,renderMap,banner,encodeTrip,decodeTrip,applyTrip,get rows(){return rows}};
+window.__PEI={DEST,MODS,BY,PROFILES,PICTOS,S,SLOTS,save,renderAll,toast,dayDate,switchView,openModule,renderMap,banner,encodeTrip,decodeTrip,applyTrip,get rows(){return rows}};
 window.__printBook=printBook;
 
 importFromHash();

@@ -1,0 +1,215 @@
+{
+  "id": "reunion",
+  "nom": "La Réunion",
+  "libelles": {
+    "titreBook": "1001 façons de découvrir La Réunion",
+    "partage": "Mon voyage à La Réunion",
+    "carte": "Carte de La Réunion",
+    "sourcePrincipale": "reunion.fr (Île de la Réunion Tourisme)"
+  },
+  "fuseau": "Indian/Reunion",
+  "zones": [
+    "Ouest",
+    "Hauts",
+    "Sud",
+    "Sud sauvage",
+    "Volcan",
+    "Est",
+    "Nord",
+    "Cilaos",
+    "Salazie",
+    "Mafate",
+    "Cirques",
+    "Toute l'île"
+  ],
+  "carte": {
+    "largeur": 660,
+    "hauteur": 590,
+    "echelle": 1000,
+    "ratio": 1.07,
+    "marge": 10,
+    "origine": [55.2, -20.86],
+    "zoneParDefaut": "Toute l'île",
+    "contour": [
+      [55.45, -20.872],
+      [55.53, -20.89],
+      [55.61, -20.905],
+      [55.66, -20.95],
+      [55.72, -21.02],
+      [55.79, -21.12],
+      [55.83, -21.18],
+      [55.84, -21.26],
+      [55.8, -21.33],
+      [55.77, -21.365],
+      [55.7, -21.382],
+      [55.62, -21.388],
+      [55.55, -21.377],
+      [55.48, -21.347],
+      [55.41, -21.3],
+      [55.34, -21.282],
+      [55.29, -21.222],
+      [55.278, -21.17],
+      [55.23, -21.08],
+      [55.215, -21.03],
+      [55.26, -21],
+      [55.29, -20.935],
+      [55.36, -20.925],
+      [55.41, -20.882]
+    ],
+    "localites": [
+      ["Colimaçons", 55.3, -21.13],
+      ["Mascarin", 55.3, -21.13],
+      ["Pointe au Sel", 55.285, -21.2],
+      ["Piton Saint-Leu", 55.32, -21.19],
+      ["Saint-Leu", 55.285, -21.17],
+      ["Étang-Salé", 55.34, -21.27],
+      ["Ermitage", 55.225, -21.08],
+      ["La Saline", 55.235, -21.1],
+      ["Boucan", 55.222, -21.035],
+      ["Roches Noires", 55.222, -21.05],
+      ["Saint-Gilles", 55.225, -21.055],
+      ["Cap La Houssaye", 55.235, -21.018],
+      ["Le Guillaume", 55.32, -21.03],
+      ["Bellemène", 55.31, -21.02],
+      ["Saint-Paul", 55.27, -21.005],
+      ["Les Avirons", 55.34, -21.24],
+      ["Maïdo", 55.383, -21.071],
+      ["Dos d'Âne", 55.4, -20.99],
+      ["Aurère", 55.43, -21],
+      ["Col des Bœufs", 55.47, -21.045],
+      ["La Nouvelle", 55.43, -21.07],
+      ["Marla", 55.445, -21.1],
+      ["Mafate", 55.42, -21.06],
+      ["Taïbit", 55.46, -21.115],
+      ["Caverne Dufour", 55.48, -21.095],
+      ["Piton des Neiges", 55.48, -21.1],
+      ["Cilaos", 55.472, -21.135],
+      ["Bélouve", 55.545, -21.07],
+      ["Trou de Fer", 55.55, -21.08],
+      ["Hell-Bourg", 55.52, -21.065],
+      ["Salazie", 55.54, -21.03],
+      ["Bébour", 55.58, -21.11],
+      ["Plaine des Palmistes", 55.63, -21.13],
+      ["Palmistes", 55.63, -21.13],
+      ["Bourg-Murat", 55.57, -21.21],
+      ["Plaine des Cafres", 55.57, -21.21],
+      ["Pas de Bellecombe", 55.688, -21.22],
+      ["Route du Volcan", 55.63, -21.22],
+      ["Makes", 55.41, -21.2],
+      ["Entre-Deux", 55.47, -21.25],
+      ["Bois Court", 55.55, -21.22],
+      ["Le Tampon", 55.52, -21.27],
+      ["Tampon", 55.52, -21.27],
+      ["Pierrefonds", 55.43, -21.32],
+      ["Saint-Louis", 55.41, -21.285],
+      ["Saint-Pierre", 55.478, -21.34],
+      ["Petite-Île", 55.55, -21.37],
+      ["Grande Anse", 55.55, -21.37],
+      ["Manapany", 55.595, -21.375],
+      ["Hauts de Saint-Joseph", 55.62, -21.33],
+      ["Saint-Joseph", 55.62, -21.38],
+      ["Langevin", 55.645, -21.37],
+      ["Le Tremblet", 55.8, -21.3],
+      ["Route des Laves", 55.81, -21.25],
+      ["Saint-Philippe", 55.765, -21.36],
+      ["Cap Méchant", 55.73, -21.375],
+      ["Sainte-Rose", 55.795, -21.13],
+      ["Anse des Cascades", 55.82, -21.17],
+      ["Sainte-Anne", 55.74, -21.06],
+      ["Saint-Benoît", 55.715, -21.035],
+      ["Bras-Panon", 55.68, -21],
+      ["Saint-André", 55.65, -20.965],
+      ["Sainte-Suzanne", 55.61, -20.91],
+      ["Hauts de Saint-Denis", 55.46, -20.93],
+      ["Plaine des Chicots", 55.45, -20.95],
+      ["Saint-Denis", 55.45, -20.885]
+    ],
+    "centresZones": {
+      "Ouest": [55.25, -21.06],
+      "Hauts": [55.36, -21.09],
+      "Sud": [55.47, -21.31],
+      "Sud sauvage": [55.72, -21.35],
+      "Volcan": [55.66, -21.22],
+      "Est": [55.69, -21.06],
+      "Nord": [55.46, -20.9],
+      "Cilaos": [55.47, -21.135],
+      "Salazie": [55.53, -21.05],
+      "Mafate": [55.43, -21.07],
+      "Cirques": [55.48, -21.09],
+      "Toute l'île": [55.52, -21.15]
+    },
+    "cirques": [
+      {
+        "centre": [55.42, -21.06],
+        "rayon": 38,
+        "nom": "Mafate",
+        "dy": -44
+      },
+      {
+        "centre": [55.53, -21.05],
+        "rayon": 36,
+        "nom": "Salazie",
+        "dy": -42
+      },
+      {
+        "centre": [55.47, -21.135],
+        "rayon": 34,
+        "nom": "Cilaos",
+        "dy": 48
+      },
+      {
+        "centre": [55.705, -21.235],
+        "rayon": 40,
+        "nom": "Volcan",
+        "dy": -46
+      }
+    ],
+    "villes": [
+      {
+        "pos": [55.45, -20.875],
+        "nom": "Saint-Denis",
+        "dx": 0,
+        "dy": -8
+      },
+      {
+        "pos": [55.478, -21.345],
+        "nom": "Saint-Pierre",
+        "dx": 0,
+        "dy": 18
+      },
+      {
+        "pos": [55.225, -21.055],
+        "nom": "St-Gilles",
+        "dx": -6,
+        "dy": 0,
+        "ancre": "end"
+      },
+      {
+        "pos": [55.7, -20.99],
+        "nom": "St-Benoît",
+        "dx": 8,
+        "dy": 0,
+        "ancre": "start"
+      }
+    ]
+  },
+  "urgences": [
+    {
+      "numero": "112",
+      "libelle": "Urgences"
+    },
+    {
+      "numero": "15",
+      "libelle": "SAMU"
+    },
+    {
+      "numero": "18",
+      "libelle": "Pompiers"
+    }
+  ],
+  "sourcesSecurite": [
+    "onf.fr",
+    "OVPF",
+    "Météo-France"
+  ]
+}

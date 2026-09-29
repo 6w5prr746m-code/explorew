@@ -1,6 +1,8 @@
-/* Référentiels et modules (chargés par boot.js dans window.__MODULES). */
+/* Référentiels, destination et modules (chargés par boot.js dans window.__DEST et window.__MODULES). */
+// Destination : libellés, zones, carte et urgences propres au lieu (data/destinations/<id>.json)
+export const DEST=window.__DEST;
 export const PROFILES={AV:"Aventurier",LA:"Lagon & farniente",RA:"Randonneur",EP:"Épicurien & culture",FA:"Famille",SL:"Slow & responsable",PB:"Plan B pluie",NE:"Nuit & étoiles"};
-export const ZONES=["Ouest","Hauts","Sud","Sud sauvage","Volcan","Est","Nord","Cilaos","Salazie","Mafate","Cirques","Toute l'île"];
+export const ZONES=DEST.zones;
 export const PICTOS={FAM:"Famille",BUS:"Sans voiture","€":"Petit budget",PLUIE:"Jour de pluie",AUBE:"Lève-tôt",LOCAL:"Rencontre"};
 export const SLOTS=[["m","Matin"],["a","Après-midi"],["s","Soirée"]];
 // Les modules sont chargés par boot.js depuis data/modules.json
