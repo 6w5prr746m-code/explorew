@@ -211,6 +211,20 @@ dialog::backdrop{background:var(--scrim)}
 .words{display:grid;gap:6px;margin-top:8px}
 .words div{display:flex;justify-content:space-between;gap:8px;background:var(--surface-2);border-radius:8px;padding:6px 10px;font-size:14px}
 .inline-form{display:flex;gap:6px;margin-top:8px}
+/* « Je reviens pour… » (js/souvenir.js) : bascule sur la fiche, liste dans le Carnet */
+.back2-btn{min-height:40px;display:inline-flex;align-items:center;gap:8px}
+.back2-btn::before{content:"";width:10px;height:10px;border:1.5px solid var(--muted);transform:rotate(45deg);flex:none}
+.back2-btn[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);background:var(--surface-2)}
+.back2-btn[aria-pressed="true"]::before{border-color:var(--accent);background:var(--accent)}
+#back2{margin:0 0 10px}
+#back2 .b2{align-items:center;padding:0 0 0 4px}
+.b2-open{flex:1;min-width:0;min-height:40px;display:flex;align-items:center;gap:8px;text-align:left;background:none;border:0;padding:4px 6px;color:var(--ink)}
+.b2-open .code{flex:none;font:500 11px var(--mono);color:var(--c)}
+.b2-rm{min-height:40px;min-width:40px;padding:0 8px}
+#back-panel .lbl{display:block;margin-bottom:4px}
+#nexttrip{margin-top:10px;min-height:40px}
+[data-skin="desert"] .back2-btn[aria-pressed="true"]{background:none;border:2px double var(--accent)}
+[data-skin="desert"] #back2 .b2{background:none;border:1px dashed var(--line);border-radius:var(--r)}
 .inline-form input{flex:1;min-width:0;border:1px solid var(--line);background:var(--surface-2);border-radius:8px;padding:8px}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(92px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--ground);padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;z-index:20;box-shadow:var(--shadow)}
 .print-only{display:none}
@@ -323,4 +337,31 @@ dialog::backdrop{background:var(--scrim)}
     --AV:#C8452B; --LA:#0A7F86; --RA:#3F7A3A; --EP:#A8741A; --FA:#B8517A; --SL:#6B7327; --PB:#4D6A8C; --NE:#4B4690;
     --grain:transparent; color-scheme: light;
   }
+}
+
+/* Carnet souvenir (js/souvenir.js) : esprit carnet de terrain (Désert), en noir et blanc lisible.
+   Couleurs des tokens d'impression ci-dessus : aucune couleur de profil, rien ne dépend du thème à l'écran. */
+@media print{
+  body.souvenir .print-only{color:var(--ink);font:10pt/1.45 var(--body)}
+  body.souvenir .sv-page{break-before:page}
+  body.souvenir .sv-cover{height:150mm;display:flex;flex-direction:column;justify-content:flex-end;border:3pt double var(--ink);padding:14pt}
+  body.souvenir .sv-cover h1{font:italic 400 30pt/1.05 var(--display);margin:4pt 0 10pt}
+  body.souvenir .sv-cover p{margin:2pt 0}
+  body.souvenir .sv-dates{font-size:11pt}
+  body.souvenir .sv-len{font:500 9pt var(--mono);letter-spacing:.06em;text-transform:uppercase}
+  body.souvenir .sv-k{font:700 8pt var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0}
+  body.souvenir .sv-page h2{font:italic 400 22pt/1.1 var(--display);margin:2pt 0 10pt;padding-bottom:4pt;border-bottom:1pt dashed var(--ink)}
+  body.souvenir .sv-field{break-inside:avoid;margin:0 0 9pt}
+  body.souvenir .sv-lbl{font:700 7.5pt var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 2pt}
+  body.souvenir .sv-txt{margin:0;white-space:pre-line;border-left:1.5pt dashed var(--line);padding-left:7pt}
+  body.souvenir ul{list-style:none;margin:0;padding:0}
+  body.souvenir .sv-mods li{margin:2pt 0}
+  body.souvenir .sv-code{font:500 8.5pt var(--mono);border:.75pt solid var(--ink);padding:0 3pt;margin-right:4pt}
+  body.souvenir .sv-seals{display:grid;gap:6pt}
+  body.souvenir .sv-seals li{display:flex;align-items:center;gap:9pt;break-inside:avoid}
+  body.souvenir .sv-seal{flex:none;width:40pt;height:40pt;border-radius:50%;border:2.5pt double var(--ink);display:grid;place-items:center;font:500 6.5pt var(--mono);text-transform:uppercase;transform:rotate(-10deg)}
+  body.souvenir .sv-tt{display:grid}
+  body.souvenir .sv-date{font:500 8pt var(--mono);color:var(--muted)}
+  body.souvenir .sv-words li{padding:4pt 0;border-bottom:.75pt dotted var(--line)}
+  body.souvenir .sv-back .sv-mods{margin-bottom:10pt}
 }

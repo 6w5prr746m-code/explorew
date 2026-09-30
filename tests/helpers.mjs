@@ -11,7 +11,12 @@ export async function openApp(page, path = "/") {
   return { errors, external };
 }
 
-export const tab = (page, v) => page.locator(`nav.tabs button[data-v="${v}"]`).click();
+// Attend que l'app soit initialisée (window.__PEI) : juste après un rechargement, un clic
+// sur un onglet avant que main.js ait branché la navigation serait perdu.
+export async function tab(page, v) {
+  await page.waitForFunction(() => !!window.__PEI);
+  await page.locator(`nav.tabs button[data-v="${v}"]`).click();
+}
 
 // Part d'un voyage vide (l'app démarre sur la trame d'exemple).
 export async function emptyTrip(page) {

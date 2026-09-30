@@ -72,7 +72,10 @@
       <form class="inline-form" id="wordform"><input id="word" placeholder="Ex. : Ti lampé = doucement" aria-label="Mot créole"><button class="btn small primary">Ajouter</button></form>
       <div class="words" id="words"></div></div>
     <div class="panel"><h3>Mes coups de cœur</h3><div id="hearts" class="words"></div></div>
-    <div class="panel"><h3>Je reviens pour…</h3><textarea id="back" rows="3" style="width:100%;border:1px solid var(--line);background:var(--surface-2);border-radius:8px;padding:8px;color:var(--ink)" placeholder="Les modules que je n'ai pas eu le temps de faire"></textarea></div>
+    <div class="panel" id="back-panel"><h3>Je reviens pour…</h3><div class="words" id="back2"></div>
+      <label class="lbl" for="back">Mes notes</label><textarea id="back" rows="3" style="width:100%;border:1px solid var(--line);background:var(--surface-2);border-radius:8px;padding:8px;color:var(--ink)" placeholder="Les modules que je n'ai pas eu le temps de faire"></textarea>
+      <button class="btn" id="nexttrip" hidden>Préparer mon prochain voyage</button></div>
+    <div class="panel" id="souvenir-panel"><h3>Mon carnet souvenir</h3><p class="sub" style="margin-bottom:10px">Votre récit de fin de voyage au format A5 : les jours, les tampons, les mots créoles et « Je reviens pour… ».</p><button class="btn primary" id="printsouvenir">Imprimer mon carnet souvenir</button></div>
     <div class="panel"><h3>Mes données</h3><p class="sub" style="margin-bottom:10px">Votre voyage et votre carnet ne sont enregistrés que dans ce navigateur. Exportez-les dans un fichier pour les mettre à l'abri ou les retrouver sur un autre appareil.</p>
       <div class="row"><button class="btn primary" id="backup-export">Exporter mes données</button><button class="btn" id="backup-import">Restaurer depuis un fichier</button></div>
       <input type="file" id="backup-file" accept="application/json,.json" hidden></div>
