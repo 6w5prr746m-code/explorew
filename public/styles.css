@@ -217,6 +217,10 @@ dialog::backdrop{background:var(--scrim)}
 .words{display:grid;gap:6px;margin-top:8px}
 .words div{display:flex;justify-content:space-between;gap:8px;background:var(--surface-2);border-radius:8px;padding:6px 10px;font-size:14px}
 .inline-form{display:flex;gap:6px;margin-top:8px}
+/* Carte postale (js/carte-postale.js) : bouton du Carnet et aperçu dans la feuille */
+#souvenir-panel .row .btn,.sheet .pc-row .btn{min-height:40px}
+#postcard-hint{margin-top:8px}
+.pc-img{display:block;width:100%;max-width:340px;height:auto;margin:12px auto;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
 /* « Je reviens pour… » (js/souvenir.js) : bascule sur la fiche, liste dans le Carnet */
 .back2-btn{min-height:40px;display:inline-flex;align-items:center;gap:8px}
 .back2-btn::before{content:"";width:10px;height:10px;border:1.5px solid var(--muted);transform:rotate(45deg);flex:none}

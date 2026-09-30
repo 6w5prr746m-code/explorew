@@ -29,9 +29,13 @@ Ordre pensé pour ne pas perdre de temps : d'abord mettre l'app en ligne et la f
 - [x] **Vue « Aujourd'hui »** : à l'ouverture pendant le séjour, le jour en cours (matin, après-midi, soir), les réflexes du jour, et une bascule **Plan B pluie** qui propose pour le créneau les modules PB ou le `planB` du module prévu.
 - [x] **Export agenda (.ics)** du voyage : un événement par créneau, avec rappels « réserver » et « vérifier la veille l'état des sentiers (onf.fr) et du volcan (OVPF) ». Fichier généré dans le navigateur, sans serveur.
 - [x] **Passeport étendu** : bouton « Fait » sur chaque module, qui pose un tampon daté ; collection par zone et par profil. Le tampon récompense l'expérience vécue, jamais la performance ; un module volcan, sentier ou baignade garde son rappel de sécurité à côté du bouton.
-- [ ] **Carnet souvenir et carte postale** : récit de fin de voyage (jours, tampons, coups de cœur, mots appris) imprimable, image de partage sans données personnelles (carte, trajet, tampons), et « Je reviens pour… » transformé en liste de modules qui préremplit le prochain voyage. *Partie A faite le 30 septembre : carnet souvenir imprimable et « Je reviens pour… » en liste de modules. Reste : la carte postale (image de partage).*
+- [x] **Carnet souvenir et carte postale** : récit de fin de voyage (jours, tampons, coups de cœur, mots appris) imprimable, image de partage sans données personnelles (carte, trajet, tampons), et « Je reviens pour… » transformé en liste de modules qui préremplit le prochain voyage. *Partie A (carnet souvenir, liste « Je reviens pour… ») et partie B (carte postale) faites le 30 septembre.*
 - [ ] **« Vérifié le… » sur chaque fiche** (validé le 29 septembre) : date de vérification, source (ou « Source à venir ») et étiquette visible sur les champs « à vérifier ». Le bouton « Signaler une info » attend le choix du canal par le CEO (à creuser : issue GitHub ou autre).
 - [ ] **Bilan d'équilibre du voyage** (validé le 29 septembre) : dans l'onglet Voyage, conseils neutres tirés des règles d'or du Book (doublons, créneaux vides, changements de zone, journées tampon, jours sans plan B). Jamais de score ni de ton culpabilisant.
+- [ ] **Audit d'accessibilité en CI** (validé le 30 septembre, avec `@axe-core/playwright` en dépendance de dev) : aucune violation « serious » ou « critical » dans les 4 onglets et les 4 thèmes. Corriger la carte au clavier, les libellés des boutons « × » du voyage et le retour du focus après une fiche.
+- [ ] **Champ `securite` sur chaque module** (validé le 30 septembre) : `["marche"]`, `["baignade"]`, les deux ou `[]`, rempli et relu à la main (PR de contenu, pour le CEO). L'app l'utilise à la place de la détection par mots-clés du passeport et de l'agenda.
+- [ ] **« Envies du groupe »** (validé le 30 septembre, après l'étape 1 bis) : lien « Donnez vos envies », chaque proche coche ses envies ou « pas pour moi » et renvoie un lien. Les avis s'ajoutent au voyage sans jamais le remplacer. Sans compte ni serveur, lien v:1 toujours accepté.
+- [ ] **Tableau de santé du contenu** (validé le 30 septembre) : `npm run sante-contenu` produit `docs/SANTE-CONTENU.md` par destination (ancienneté de `verifieLe`, source hors domaines officiels, doublons, renvois à sens unique, champs manquants). **Seuil de péremption et liste des domaines officiels : à fixer par le CEO.**
 
 ## Étape 2 — Contenu (en continu)
 
@@ -56,7 +60,7 @@ Ordre pensé pour ne pas perdre de temps : d'abord mettre l'app en ligne et la f
 ## Étape 4 — Comptes et conformité
 
 - [ ] Comptes et synchronisation entre appareils (ex. Supabase) : voyage partagé en famille, modification à plusieurs.
-- [ ] Mesure d'audience respectueuse de la vie privée (Plausible ou équivalent), sans cookies.
+- [ ] **Avancée par le CEO le 30 septembre (à traiter avant l'étape 4)** : mesure d'audience respectueuse de la vie privée (Plausible ou équivalent, **outil à choisir par le CEO**), sans cookies.
 - [ ] Pages légales dans l'app : mentions légales, politique de confidentialité (RGPD), crédits et licences.
 - [ ] Traiter les issues « Info à corriger » ouvertes par les voyageurs.
 

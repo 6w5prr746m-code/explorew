@@ -157,7 +157,7 @@ test.describe("Partage", () => {
     // Réimport dans un navigateur vierge
     const p2 = await context.browser().newPage({ viewport: { width: 400, height: 800 } });
     p2.once("dialog", d => d.accept());
-    await p2.goto(link.replace(/^https?:\/\/[^/]+/, "http://localhost:5173"));
+    await p2.goto(link.replace(/^https?:\/\/[^/]+/, new URL(page.url()).origin));
     await expect(p2.locator("#v-trip")).toBeVisible();
     await expect(p2.locator("#k-mod")).toHaveText(placed);
     expect(p2.url()).not.toContain("#t=");
