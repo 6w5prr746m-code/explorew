@@ -112,7 +112,7 @@ export async function buildPostcard(canvas){
   if(rows){
     const ty=FOOT-stampsH;
     ctx.textAlign="left";ctx.textBaseline="alphabetic";ctx.fillStyle=c.muted;ctx.font=`700 24px ${BODY}`;
-    ctx.fillText(`TAMPONS « FAIT » · ${n}`,X0,ty+28);
+    ctx.fillText("TAMPONS « FAIT »",X0,ty+28);
     const items=d.tampons.slice(0,shown).map(code=>[code,token(BY[code].p)||c.accent]);
     if(shown<n)items.push([`+${n-shown}`,c.muted]);
     items.forEach(([label,col],i)=>{
@@ -137,7 +137,7 @@ export async function buildPostcard(canvas){
 export function altText(d){
   const e=d.trajet.length,t=d.tampons.length;
   return `Carte postale Carnet Péï : ${d.nom}, ${d.jours} jours. Silhouette de l'île avec le trajet du voyage en ${e} étape${e>1?"s":""} numérotées par jour`
-    +(t?`, et ${t} tampon${t>1?"s":""} « Fait » : ${d.tampons.join(", ")}.`:".")
+    +(t?`, et les tampons « Fait » : ${d.tampons.join(", ")}.`:".")
     +` Composez le vôtre : ${d.url}`;
 }
 

@@ -56,7 +56,8 @@ test.describe("Carte postale", () => {
     await openPostcard(page);
     const img = page.locator("#pcimg");
     await expect(img).toHaveAttribute("alt", /Carte postale Carnet Péï : La Réunion, 7 jours/);
-    await expect(img).toHaveAttribute("alt", /2 tampons « Fait » : LA-D1, RA-D1/);
+    await expect(img).toHaveAttribute("alt", /les tampons « Fait » : LA-D1, RA-D1/);
+    await expect(img).not.toHaveAttribute("alt", /\d+ tampons?/); // garde-fou : aucun compteur
     expect(await img.evaluate(i => [i.naturalWidth, i.naturalHeight])).toEqual([1080, 1350]);
     for (const b of await page.locator("#sheet .pc-row .btn").all()) expect((await b.boundingBox()).height).toBeGreaterThanOrEqual(40);
 
@@ -89,6 +90,7 @@ test.describe("Carte postale", () => {
     expect(all).toContain("7 jours");
     expect(all).toContain("RA-D1");
     for (const s of ["zq7", "987", "2027", "mars", "#t="]) expect(all).not.toContain(s);
+    expect(all).not.toMatch(/FAIT » ·/); // garde-fou : aucun compteur de tampons
     const i = texts.indexOf("Composez le vôtre :");
     expect(i).toBeGreaterThanOrEqual(0);
     const url = texts[i + 1];
