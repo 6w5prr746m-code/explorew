@@ -18,16 +18,18 @@ import { initTheme } from "./theme.js";
 import { initToday } from "./today.js";
 import { initPasseport } from "./passeport.js";
 import { initAgenda } from "./agenda.js";
+import { initSouvenir, buildSouvenir } from "./souvenir.js";
 
 initTheme();
 $("#nbmod").textContent=MODS.length;
 initModuleSheet();initExplorer();initTrip();initCarnet();initPratique();initNav();
 renderPrat();
-initMap();initShare();initPrint();initBackup();initToday();initAgenda();initPasseport();
+initMap();initShare();initPrint();initBackup();initToday();initAgenda();initPasseport();initSouvenir();
 
 // API globale conservée pour les scripts (build-book-pdf.mjs) et le débogage
 window.__PEI={DEST,MODS,BY,PROFILES,PICTOS,S,SLOTS,save,renderAll,toast,dayDate,switchView,openModule,renderMap,banner,encodeTrip,decodeTrip,applyTrip,get rows(){return rows}};
 window.__printBook=printBook;
+window.__buildSouvenir=buildSouvenir;
 
 importFromHash();
 renderAll();

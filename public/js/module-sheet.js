@@ -5,6 +5,7 @@ import { $, esc, col, toast, niveau } from "./util.js";
 import { banner } from "./visuals.js";
 import { renderAll } from "./render.js";
 import { doneBlock } from "./passeport.js";
+import { backBtn } from "./souvenir.js";
 
 export const dlg=$("#dlg");
 // Créneau choisi depuis « + Module » dans le voyage, appliqué à la prochaine fiche ouverte
@@ -22,6 +23,7 @@ function renderSheet(code,focusAdd){
     <div class="facts">${facts.map(([k,v])=>`<div class="fact"><span class="lbl">${k}</span><b>${esc(v)}</b></div>`).join("")}</div>
     ${m.f.length?`<div class="tags" style="margin-bottom:6px">${m.f.map(f=>`<span class="tag">${esc(f)} · ${PICTOS[f]||""}</span>`).join("")}</div>`:""}
     <div class="block">${doneBlock(code)}</div>
+    <div class="block back2-box">${backBtn(code)}</div>
     ${m.a?`<div class="block"><span class="lbl">Ce qu'on ne vous dit pas</span><p>${esc(m.a)}</p></div>`:""}
     ${m.pb?`<div class="block"><span class="lbl">Plan B</span><p>${refLink(m.pb)}</p></div>`:""}
     ${m.k?`<div class="block"><span class="lbl">${m.full?"À combiner avec":"Fiche détaillée"}</span><p>${refLink(m.k)}</p></div>`:""}

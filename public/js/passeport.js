@@ -46,17 +46,21 @@ export function toggleDone(code){
   save();
 }
 
-// Mes tampons : groupés par zone (ordre des zones de la destination), puis par date.
-export function renderTampons(){
-  const box=$("#tampons");if(!box)return;
+// Tampons groupés par zone (ordre des zones de la destination), puis par date : [[zone, [{m,d}]]].
+// Partagé avec le carnet souvenir (js/souvenir.js).
+export function doneByZone(){
   const list=Object.entries(S.done).filter(([c])=>BY[c]).map(([c,d])=>({m:BY[c],d}));
-  if(!list.length){box.innerHTML=`<p class="sub">Touchez « Fait » sur une fiche quand vous l'avez vécue.</p>`;return}
   list.sort((a,b)=>a.d.localeCompare(b.d)||a.m.c.localeCompare(b.m.c));
   const zones=[...DEST.zones,...new Set(list.map(x=>x.m.z).filter(z=>!DEST.zones.includes(z)))];
-  box.innerHTML=zones.map(z=>{
-    const items=list.filter(x=>x.m.z===z);if(!items.length)return"";
-    return `<section class="tzone"><h4>${esc(z)}</h4><ul>${items.map(({m,d})=>`<li><button class="tampon" data-open="${m.c}" style="--c:${col(m.p)}"><span class="seal">${m.c}</span><span class="tt"><b>${esc(m.t)}</b><span class="td">${shortDate(d)}</span></span></button></li>`).join("")}</ul></section>`;
-  }).join("");
+  return zones.map(z=>[z,list.filter(x=>x.m.z===z)]).filter(([,items])=>items.length);
+}
+
+// Mes tampons : groupés par zone, puis par date.
+export function renderTampons(){
+  const box=$("#tampons");if(!box)return;
+  const groups=doneByZone();
+  if(!groups.length){box.innerHTML=`<p class="sub">Touchez « Fait » sur une fiche quand vous l'avez vécue.</p>`;return}
+  box.innerHTML=groups.map(([z,items])=>`<section class="tzone"><h4>${esc(z)}</h4><ul>${items.map(({m,d})=>`<li><button class="tampon" data-open="${m.c}" style="--c:${col(m.p)}"><span class="seal">${m.c}</span><span class="tt"><b>${esc(m.t)}</b><span class="td">${shortDate(d)}</span></span></button></li>`).join("")}</ul></section>`).join("");
 }
 
 export function initPasseport(){
