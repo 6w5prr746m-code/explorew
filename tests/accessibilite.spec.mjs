@@ -104,6 +104,10 @@ test.describe("Accessibilité au clavier", () => {
     await expect(pills.first().locator(".x")).toHaveAttribute("aria-label", attendu);
     await expect(page.locator('.pill .x[aria-label="Retirer"]')).toHaveCount(0);
     await expect(page.locator('details[data-i="1"] .pill .x').first()).toHaveAttribute("aria-label", / du jour 2$/);
+    // Zone tactile d'au moins 40 px (CLAUDE.md), même si axe ne l'exige pas en WCAG 2.1
+    const box = await pills.first().locator(".x").boundingBox();
+    expect(box.width).toBeGreaterThanOrEqual(40);
+    expect(box.height).toBeGreaterThanOrEqual(40);
   });
 
   test("à la fermeture d'une fiche, le focus revient sur ce qui l'a ouverte, même après un ajout", async ({ page }) => {
