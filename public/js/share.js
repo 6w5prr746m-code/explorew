@@ -2,7 +2,7 @@
 import { SLOTS, BY, DEST } from "./data.js";
 import { S, save } from "./state.js";
 import { $, esc, toast } from "./util.js";
-import { dlg } from "./module-sheet.js";
+import { dlg, showSheet } from "./module-sheet.js";
 import { renderAll } from "./render.js";
 import { switchView } from "./nav.js";
 
@@ -17,15 +17,15 @@ export function initShare(){
     const code=encodeTrip();const link=BASE+"#t="+code;
     $("#sheet").innerHTML=`<div class="grab"></div><h2>Partager mon voyage</h2>
    <p class="sub">Le lien contient uniquement le format, la date et les modules placés : ni notes, ni budget, ni hébergements.</p>
-   <div class="qr" id="qr"></div>
+   <div class="qr" id="qr" role="img" aria-label="QR code du lien de partage"></div>
    <label class="lbl" for="sharelink">Lien</label><textarea id="sharelink" rows="3" readonly>${esc(link)}</textarea>
    <div class="row"><button class="btn primary" id="copy">Copier le lien</button>${navigator.share?'<button class="btn" id="nshare">Envoyer…</button>':""}<button class="btn ghost" id="sclose">Fermer</button></div>
    <p class="sub">La personne qui reçoit le lien peut aussi le coller dans « Importer ».</p>`;
-    try{new QRCode($("#qr"),{text:link,width:180,height:180,correctLevel:QRCode.CorrectLevel.L})}catch(e){$("#qr").remove()}
+    try{new QRCode($("#qr"),{text:link,width:180,height:180,correctLevel:QRCode.CorrectLevel.L});$("#qr").querySelectorAll("img").forEach(i=>i.alt="")}catch(e){$("#qr").remove()}
     $("#copy").onclick=async()=>{try{await navigator.clipboard.writeText(link);toast("Lien copié")}catch(e){$("#sharelink").select();toast("Sélectionné : copiez-le")}};
     if($("#nshare"))$("#nshare").onclick=()=>navigator.share({title:DEST.libelles.partage,text:"Mon itinéraire Carnet Péï",url:link}).catch(()=>{});
     $("#sclose").onclick=()=>dlg.close();
-    if(!dlg.open)dlg.showModal();
+    showSheet();
   };
   $("#import").onclick=()=>{
     $("#sheet").innerHTML=`<div class="grab"></div><h2>Importer un voyage</h2>
@@ -34,7 +34,7 @@ export function initShare(){
    <div class="row"><button class="btn primary" id="impgo">Importer</button><button class="btn ghost" id="impclose">Annuler</button></div>`;
     $("#impgo").onclick=()=>{try{applyTrip(decodeTrip($("#impcode").value));dlg.close();toast("Voyage importé")}catch(e){toast("Code illisible : vérifiez le lien copié")}};
     $("#impclose").onclick=()=>dlg.close();
-    if(!dlg.open)dlg.showModal();
+    showSheet();
   };
 }
 // Lien reçu : propose d'importer le voyage partagé
