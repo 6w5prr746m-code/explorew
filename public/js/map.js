@@ -19,9 +19,15 @@ function circle(c,r,label,dy){const [x,y]=P(c);return `<circle cx="${x}" cy="${y
 const cirques=()=>C.cirques.map(z=>circle(z.centre,z.rayon,z.nom,z.dy)).join("");
 const villes=()=>C.villes.map(v=>{const [x,y]=P(v.pos);return `<text x="${x+v.dx}" y="${y+v.dy}" class="city"${v.ancre?` text-anchor="${v.ancre}"`:""}>${v.nom}</text>`}).join("\n    ");
 
+// Géométrie partagée avec la carte postale (js/carte-postale.js) : dimensions, contour (chemin SVG), cirques, projection.
+export const GEO={W,H,coast,cirques:C.cirques,P};
+export const pointOf=c=>PT[c];
+// Trajet du voyage : [[numéro du jour, code], …] dans l'ordre des jours et des créneaux.
+export function tripPoints(){const trip=[];S.days.forEach((d,i)=>SLOTS.forEach(([k])=>d.slots[k].forEach(c=>{if(PT[c])trip.push([i+1,c])})));return trip}
+
 export function renderMap(rows){
   const el=$("#map");if(!el||el.hidden)return;
-  const trip=[];S.days.forEach((d,i)=>SLOTS.forEach(([k])=>d.slots[k].forEach(c=>{if(PT[c])trip.push([i+1,c])})));
+  const trip=tripPoints();
   const route=trip.length>1?`<polyline class="route" points="${trip.map(([,c])=>PT[c].join(",")).join(" ")}"/>`:"";
   el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${DEST.libelles.carte} avec ${rows.length} modules">
     <defs><pattern id="sea" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M0 7q3.5-3 7 0t7 0" class="wave"/></pattern></defs>
