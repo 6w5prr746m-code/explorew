@@ -4,7 +4,7 @@
 :root[data-skin="epure"]{
   --ground:#F5F5F7; --surface:#FFFFFF; --surface-2:#F2F2F5; --ink:#1D1D1F; --muted:#6E6E73; --line:#E4E4E9;
   --accent:#00767C; --accent-ink:#FFFFFF; --accent-soft:#E3F2F2; --lava:#D2462B;
-  --AV:#D2462B; --LA:#00767C; --RA:#2A7D38; --EP:#946118; --FA:#C2417A; --SL:#6E7A1F; --PB:#3A6EA5; --NE:#5B4FC7;
+  --AV:#C44128; --LA:#00767C; --RA:#2A7D38; --EP:#946118; --FA:#BD3F77; --SL:#6A751E; --PB:#3A6EA5; --NE:#5B4FC7;
   --glass:rgba(255,255,255,.72); --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px -12px rgba(0,0,0,.12);
   --r:16px;
 }
@@ -31,8 +31,8 @@
 /* ---------- Désert (carnet de terrain) ---------- */
 :root[data-skin="desert"]{
   --ground:#EEE2CD; --surface:#F8F0E1; --surface-2:#EBDDC3; --ink:#3A281A; --muted:#6B5440; --line:#D5BF9C;
-  --accent:#A94A26; --accent-ink:#FFF6EA; --accent-soft:#F0D6C2; --lava:#A94A26;
-  --AV:#A94A26; --LA:#2F6F73; --RA:#5E6B2E; --EP:#855A14; --FA:#9C4A5E; --SL:#6F6A3A; --PB:#4E6173; --NE:#4A3F6B;
+  --accent:#A24724; --accent-ink:#FFF6EA; --accent-soft:#F0D6C2; --lava:#A24724;
+  --AV:#A24724; --LA:#2D6B6F; --RA:#5C682D; --EP:#855A14; --FA:#99495C; --SL:#696437; --PB:#4E6173; --NE:#4A3F6B;
   --grain:rgba(90,60,30,.05); --shadow:0 10px 24px -14px rgba(58,40,26,.45);
   --r:6px;
 }
