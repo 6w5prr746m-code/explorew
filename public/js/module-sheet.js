@@ -1,7 +1,7 @@
 /* Fiche module : feuille de détail et ajout au voyage. */
 import { PROFILES, PICTOS, SLOTS, BY } from "./data.js";
 import { S, touched, dayDate } from "./state.js";
-import { $, esc, col, toast, niveau } from "./util.js";
+import { $, esc, col, toast, niveau, dateLongue, domaine, aVerifier } from "./util.js";
 import { banner } from "./visuals.js";
 import { renderAll } from "./render.js";
 import { doneBlock } from "./passeport.js";
@@ -12,6 +12,13 @@ export const dlg=$("#dlg");
 let pendingSlot=null;
 export function setPendingSlot(p){pendingSlot=p}
 function refLink(code){return BY[code]?`<button class="link" data-open="${code}">${code} · ${esc(BY[code].t)}</button>`:esc(code)}
+// Étiquette sobre à côté d'un champ dont le texte contient « à vérifier » (le texte n'est pas modifié)
+export function verifTag(txt,champ){return aVerifier(txt)?`<span class="averif" role="note" aria-label="${esc(champ)} : information à vérifier avant de partir">À vérifier</span>`:""}
+// Pied de fiche : date de vérification et source (lien vers le domaine, ou « Source à venir »)
+export function verifLine(m){
+  const d=dateLongue(m.vl),dom=domaine(m.src);
+  return `<p class="verif">${d?`<span>Vérifié le ${d}</span>`:""}<span>${dom?`Source : <a href="${esc(m.src)}" target="_blank" rel="noopener">${esc(dom)}</a>`:"Source à venir"}</span></p>`;
+}
 function renderSheet(code,focusAdd){
   const m=BY[code];if(!m)return;
   const facts=[["Zone",m.z],["Lieu",m.l],m.d&&["Durée",m.d],m.n&&["Niveau",m.n+" · "+niveau(m.n)],m.b&&["Budget",m.b]].filter(Boolean);
@@ -19,17 +26,18 @@ function renderSheet(code,focusAdd){
   $("#sheet").innerHTML=`<div class="grab"></div>${banner(m)}
     <span class="code" style="--c:${col(m.p)}">${m.c} · ${PROFILES[m.p]}</span>
     <h2>${esc(m.t)}</h2>
-    <p style="margin:0">${esc(m.e)}</p>
-    <div class="facts">${facts.map(([k,v])=>`<div class="fact"><span class="lbl">${k}</span><b>${esc(v)}</b></div>`).join("")}</div>
+    <p style="margin:0">${esc(m.e)}${verifTag(m.e,"Essentiel")}</p>
+    <div class="facts">${facts.map(([k,v])=>`<div class="fact"><span class="lbl">${k}</span><b>${esc(v)}</b>${verifTag(v,k)}</div>`).join("")}</div>
     ${m.f.length?`<div class="tags" style="margin-bottom:6px">${m.f.map(f=>`<span class="tag">${esc(f)} · ${PICTOS[f]||""}</span>`).join("")}</div>`:""}
     <div class="block">${doneBlock(code)}</div>
     <div class="block back2-box">${backBtn(code)}</div>
-    ${m.a?`<div class="block"><span class="lbl">Ce qu'on ne vous dit pas</span><p>${esc(m.a)}</p></div>`:""}
+    ${m.a?`<div class="block"><span class="lbl">Ce qu'on ne vous dit pas</span><p>${esc(m.a)}${verifTag(m.a,"Astuce")}</p></div>`:""}
     ${m.pb?`<div class="block"><span class="lbl">Plan B</span><p>${refLink(m.pb)}</p></div>`:""}
     ${m.k?`<div class="block"><span class="lbl">${m.full?"À combiner avec":"Fiche détaillée"}</span><p>${refLink(m.k)}</p></div>`:""}
     <div class="block" id="pick"><span class="lbl">Ajouter à mon voyage</span>
       <div class="picker"><div class="row"><select id="pday" aria-label="Jour">${dayOpts}</select><select id="pslot" aria-label="Créneau">${SLOTS.map(([k,v])=>`<option value="${k}">${v}</option>`).join("")}</select></div>
-      <div class="row"><button class="btn primary" id="padd">Ajouter</button><button class="btn ghost" id="pclose">Fermer</button></div></div></div>`;
+      <div class="row"><button class="btn primary" id="padd">Ajouter</button><button class="btn ghost" id="pclose">Fermer</button></div></div></div>
+    ${verifLine(m)}`;
   $("#sheet").onclick=e=>{const o=e.target.closest("[data-open]");if(o)openModule(o.dataset.open)};
   $("#padd").onclick=()=>{const i=+$("#pday").value,k=$("#pslot").value;S.days[i].slots[k].push(code);touched();dlg.close();toast(`Ajouté au jour ${i+1}`);renderAll()};
   $("#pclose").onclick=()=>dlg.close();
