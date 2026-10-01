@@ -3,8 +3,10 @@
 const VERSION="carnetpei-v23";
 const CORE=["./","index.html","styles.css","boot.js","data/modules.json","data/destinations/reunion.json","manifest.webmanifest","icons/icon.svg","icons/icon-192.png","icons/icon-512.png",
   "fonts/fonts.css","fonts/figtree-latin.woff2","fonts/instrument-serif-latin.woff2","fonts/instrument-serif-italic-latin.woff2","fonts/jetbrains-mono-500-latin.woff2","vendor/qrcode.min.js",
-  "js/agenda.js","js/backup.js","js/bilan.js","js/carnet.js","js/carte-postale.js","js/data.js","js/explorer.js","js/main.js","js/map.js","js/migrations.js","js/module-sheet.js","js/nav.js","js/passeport.js","js/pratique.js","js/print.js","js/render.js","js/share.js","js/souvenir.js","js/state.js","js/theme.js","js/today.js","js/trip.js","js/util.js","js/visuals.js"];
+  "js/agenda.js","js/backup.js","js/bilan.js","js/carnet.js","js/carte-postale.js","js/data.js","js/explorer.js","js/hors-ligne.js","js/main.js","js/map.js","js/migrations.js","js/module-sheet.js","js/nav.js","js/passeport.js","js/pratique.js","js/print.js","js/render.js","js/share.js","js/souvenir.js","js/state.js","js/theme.js","js/today.js","js/trip.js","js/util.js","js/visuals.js"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(VERSION).then(c=>c.addAll(CORE)));self.skipWaiting()});
+/* La page (js/hors-ligne.js) demande VERSION et CORE par message, pour vérifier le cache sans dupliquer la liste. */
+self.addEventListener("message",e=>{if(e.data==="carnetpei:core"&&e.ports[0])e.ports[0].postMessage({version:VERSION,core:CORE})});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==VERSION).map(x=>caches.delete(x)))));self.clients.claim()});
 /* Délai maximal d'attente du réseau, en millisecondes. Au-delà, la copie en cache est servie si elle existe (réseau faible
    au démarrage : l'app s'ouvre au lieu de rester blanche) ; la requête réseau continue et met le cache à jour pour la fois suivante.

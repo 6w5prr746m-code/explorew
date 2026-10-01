@@ -1,7 +1,11 @@
 // Vérifie data/modules.json (codes uniques, renvois valides, zones et filtres connus)
-// et data/destinations/reunion.json (champs attendus par l'app).
+// et data/destinations/reunion.json (champs attendus par l'app),
+// ainsi que la structure de docs/sources/proposition.json s'il existe.
 // Usage : npm run validate   (échoue en CI si une erreur est trouvée)
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
+import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { controlerStructure } from "./sources-format.mjs";
 const mods = JSON.parse(readFileSync(new URL("../public/data/modules.json", import.meta.url)));
 const dest = JSON.parse(readFileSync(new URL("../public/data/destinations/reunion.json", import.meta.url)));
 const FILTRES = ["FAM","BUS","€","PLUIE","AUBE","LOCAL"];
@@ -49,6 +53,15 @@ for (const m of mods) {
 }
 for (const m of mods) for (const k of ["planB","combo"]) {
   const v = m[k]; if (v && /^[A-Z]{2}-[DJ0-9]/.test(v) && !codes.has(v)) errors.push(`${m.code} : ${k} renvoie vers ${v} qui n'existe pas`);
+}
+// Sources proposées (docs/sources/proposition.json) : structure contrôlée seulement si le fichier existe.
+// --sources <fichier> pour contrôler un autre fichier (tests).
+const iSrc = process.argv.indexOf("--sources");
+const cheminSources = iSrc >= 0 ? resolve(process.argv[iSrc + 1]) : fileURLToPath(new URL("../docs/sources/proposition.json", import.meta.url));
+if (existsSync(cheminSources)) {
+  let prop;
+  try { prop = JSON.parse(readFileSync(cheminSources, "utf8")); } catch (e) { errors.push(`sources : JSON illisible (${e.message})`); }
+  if (prop !== undefined) errors.push(...controlerStructure(prop, codes));
 }
 const aVerifier = mods.filter(m => JSON.stringify(m).includes("vérifier")).length;
 const sansGeo = mods.filter(m => !m.geo).length;

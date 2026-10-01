@@ -4,7 +4,7 @@ Relecture du fichier `docs/sources/proposition.json` : 20 modules sans `source`,
 
 Pour accepter une entrée : passer son `statut` à « valide » dans le JSON ; pour la refuser : « rejete ». La colonne « Note » signale les écarts entre la page et le module : ils ne sont pas corrigés, c'est au CEO de trancher.
 
-Le script de fusion cité dans le JSON (`scripts/merge-sources.mjs`) n'existe pas encore dans le dépôt : il reste à écrire avant toute fusion.
+Pour fusionner : passer les entrées acceptées à « valide » dans `proposition.json`, puis lancer `node scripts/merge-sources.mjs` (voir `docs/sources/LISEZMOI.md`).
 
 | Code | Module | Source | Extraits | Note |
 | --- | --- | --- | --- | --- |
