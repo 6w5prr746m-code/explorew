@@ -21,12 +21,13 @@ import { initPasseport } from "./passeport.js";
 import { initAgenda } from "./agenda.js";
 import { initSouvenir, buildSouvenir } from "./souvenir.js";
 import { initCartePostale, buildPostcard } from "./carte-postale.js";
+import { initBilan } from "./bilan.js";
 
 initTheme();
 // Avant tout rendu : codes renommés ou retirés de data/modules.json (créneaux fantômes).
 initMigrations();
 $("#nbmod").textContent=MODS.length;
-initModuleSheet();initExplorer();initTrip();initCarnet();initPratique();initNav();
+initModuleSheet();initExplorer();initTrip();initBilan();initCarnet();initPratique();initNav();
 renderPrat();
 initMap();initShare();initPrint();initBackup();initToday();initAgenda();initPasseport();initSouvenir();initCartePostale();
 

@@ -6,6 +6,7 @@ import { openModule, setPendingSlot } from "./module-sheet.js";
 import { renderAll } from "./render.js";
 import { renderCarnet } from "./carnet.js";
 import { switchView } from "./nav.js";
+import { renderBilan } from "./bilan.js";
 
 function resizeDays(n){while(S.days.length<n)S.days.push(blankDay());if(S.days.length>n)S.days.length=n}
 export function renderTrip(){
@@ -32,6 +33,7 @@ export function renderTrip(){
           <label class="wide">Notes / ressentis<textarea id="notes${i}" data-f="${i}:notes" rows="2" placeholder="Rencontre, saveur, mot créole appris…">${esc(d.notes)}</textarea></label>
         </div></div></details>`}).join("");
   const n=placed;const b=$("#tripbadge");b.hidden=!n;b.textContent=n;
+  renderBilan();
 }
 export function initTrip(){
   $("#fmt").onchange=e=>{const n=+e.target.value;const dropped=S.days.slice(n).some(d=>SLOTS.some(([k])=>d.slots[k].length));if(dropped&&!confirm("Les jours au-delà de J"+n+" contiennent des modules. Les supprimer ?")){e.target.value=S.fmt;return}S.fmt=n;resizeDays(n);touched();renderTrip()};
