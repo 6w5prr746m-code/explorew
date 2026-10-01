@@ -15,6 +15,7 @@ import { initShare, importFromHash, encodeTrip, decodeTrip, applyTrip } from "./
 import { initPrint, printBook } from "./print.js";
 import { initBackup } from "./backup.js";
 import { initTheme } from "./theme.js";
+import { initMigrations } from "./migrations.js";
 import { initToday } from "./today.js";
 import { initPasseport } from "./passeport.js";
 import { initAgenda } from "./agenda.js";
@@ -22,6 +23,8 @@ import { initSouvenir, buildSouvenir } from "./souvenir.js";
 import { initCartePostale, buildPostcard } from "./carte-postale.js";
 
 initTheme();
+// Avant tout rendu : codes renommés ou retirés de data/modules.json (créneaux fantômes).
+initMigrations();
 $("#nbmod").textContent=MODS.length;
 initModuleSheet();initExplorer();initTrip();initCarnet();initPratique();initNav();
 renderPrat();

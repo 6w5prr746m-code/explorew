@@ -271,6 +271,12 @@ dialog::backdrop{background:var(--scrim)}
 .opt small{display:block;font-weight:400;font-size:12px;color:var(--muted)}
 .opt[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent)}
 .opt[aria-pressed="true"] small{color:var(--ink)}
+/* messages discrets sous l'en-tête (modules retirés, sauvegarde impossible) */
+.avis{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;margin-top:12px;background:var(--accent-soft);color:var(--ink);border-radius:12px;padding:10px 12px;font-size:13px}
+.avis-txt{min-width:0}
+.avis p{margin:0}
+.avis .avis-t{font-weight:700;margin-bottom:2px}
+.avis-x{flex:none;min-height:40px;min-width:40px}
 .offer{margin-top:12px;background:var(--accent-soft);border-radius:12px;padding:12px}
 .offer p{margin:0 0 2px;font-weight:700}
 .offer .sub{margin:0 0 10px;font-weight:400;color:var(--ink)}
@@ -291,7 +297,7 @@ dialog::backdrop{background:var(--scrim)}
 [data-skin="desert"] .card h3{font:400 19px/1.2 var(--display)}
 [data-skin="desert"] .code{letter-spacing:.06em}
 [data-skin="desert"] .chip,[data-skin="desert"] .search input{border:1px solid var(--line)}
-[data-skin="desert"] .chip,[data-skin="desert"] .btn,[data-skin="desert"] .search input,[data-skin="desert"] .filters select,[data-skin="desert"] .seg,[data-skin="desert"] .opt,[data-skin="desert"] .offer{border-radius:var(--r)}
+[data-skin="desert"] .chip,[data-skin="desert"] .btn,[data-skin="desert"] .search input,[data-skin="desert"] .filters select,[data-skin="desert"] .seg,[data-skin="desert"] .opt,[data-skin="desert"] .offer,[data-skin="desert"] .avis{border-radius:var(--r)}
 [data-skin="desert"] .chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 [data-skin="desert"] .add{border:1px solid var(--line)}
 [data-skin="desert"] .add.on{border-color:var(--accent)}
@@ -299,7 +305,7 @@ dialog::backdrop{background:var(--scrim)}
 [data-skin="desert"] .panel h3,[data-skin="desert"] h2{font-style:italic}
 [data-skin="desert"] .tag,[data-skin="desert"] .picto{border-style:dashed}
 [data-skin="desert"] .picto[aria-pressed="true"]{color:var(--ink)}
-[data-skin="desert"] .offer{border:1px dashed var(--accent)}
+[data-skin="desert"] .offer,[data-skin="desert"] .avis{border:1px dashed var(--accent)}
 [data-skin="desert"] .stamp{border:2px dashed var(--line);font-family:var(--mono);text-transform:uppercase;font-size:10px;letter-spacing:.06em}
 [data-skin="desert"] .stamp.on{border:3px double var(--c);transform:rotate(-12deg);background:none}
 [data-skin="desert"] .tampon{background:none;border:1px dashed var(--line);border-radius:var(--r)}
