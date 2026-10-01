@@ -1,7 +1,6 @@
 /* Impression : itinéraire du voyage et Book complet (A5). */
 import { PROFILES, PICTOS, SLOTS, MODS, BY, DEST } from "./data.js";
 import { S, dayDate } from "./state.js";
-import { REGLES_OR } from "./bilan.js";
 import { $, esc, toast, dateCourte } from "./util.js";
 
 function fiche(m){
@@ -18,7 +17,7 @@ export function printBook(){
   const grid=`<section class="bp"><h3>Grille du jour</h3><table class="bg">${["Jour · date","Zone / camp de base","Matin","Après-midi","Soirée","Hébergement","Budget prévu / dépensé","Météo · plan B","Coup de cœur","Notes / ressentis"].map(r=>`<tr><th>${r}</th><td></td></tr>`).join("")}</table></section>`;
   const trip=S.days.some(d=>SLOTS.some(([k])=>d.slots[k].length))?`<section class="bp"><h3>Mon itinéraire · ${S.fmt} jours</h3>${S.days.map((d,i)=>`<p class="bday"><b>J${i+1}${S.start?" · "+dayDate(i):""}</b> — ${SLOTS.map(([k,v])=>v+" : "+(d.slots[k].map(c=>BY[c]?c+" "+BY[c].t:c).join(", ")||"—")).join(" · ")}</p>`).join("")}</section>`:"";
   $("#printout").innerHTML=`<section class="bcover"><p class="bk">Carnet de voyage interactif</p><h1>${DEST.libelles.titreBook}</h1><p>${MODS.length} modules à piocher · 8 profils · formats de 7 à 30 jours</p><p class="bsrc">Source principale : ${DEST.libelles.sourcePrincipale}. Horaires, tarifs et accès à vérifier avant de partir. Édition du ${new Date().toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"})}.</p></section>
-  <section class="bp"><h3>Mode d'emploi</h3><p>1. Choisissez votre durée. 2. Choisissez un ou deux profils. 3. Piochez les modules et reportez leur code dans la grille du jour. 4. Vérifiez la météo et les réservations.</p><p><b>Niveaux</b> : 1 accessible à tous · 2 bonne condition · 3 sportif. <b>Budget</b> : € jusqu'à 20 € · €€ 20 à 80 € · €€€ plus de 80 € par personne.</p><p><b>Pictos</b> : ${Object.entries(PICTOS).map(([k,v])=>k+" "+v).join(" · ")}.</p><p><b>Règles d'or</b> : ${REGLES_OR}. Baignade uniquement dans le lagon ou les zones surveillées. Urgences : ${DEST.urgences.map(u=>u.numero).join(", ")}.</p></section>
+  <section class="bp"><h3>Mode d'emploi</h3><p>1. Choisissez votre durée. 2. Choisissez un ou deux profils. 3. Piochez les modules et reportez leur code dans la grille du jour. 4. Vérifiez la météo et les réservations.</p><p><b>Niveaux</b> : 1 accessible à tous · 2 bonne condition · 3 sportif. <b>Budget</b> : € jusqu'à 20 € · €€ 20 à 80 € · €€€ plus de 80 € par personne.</p><p><b>Pictos</b> : ${Object.entries(PICTOS).map(([k,v])=>k+" "+v).join(" · ")}.</p><p><b>Règles d'or</b> : un camp de base par zone, les Hauts le matin, le littoral l'après-midi, une journée tampon tous les 4 à 5 jours. Baignade uniquement dans le lagon ou les zones surveillées. Urgences : ${DEST.urgences.map(u=>u.numero).join(", ")}.</p></section>
   ${trip}${grid}
   ${Object.entries(PROFILES).map(([p,name])=>`<section class="bprof"><h2 style="--c:var(--${p})">${name}</h2>${MODS.filter(m=>m.p===p).map(fiche).join("")}</section>`).join("")}
   <section class="bp"><h3>Index des modules</h3><div class="bidx">${MODS.map(m=>`<span><b>${m.c}</b> ${esc(m.t)}</span>`).join("")}</div></section>`;

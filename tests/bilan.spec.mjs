@@ -137,7 +137,7 @@ test.describe("Bilan d'équilibre", () => {
     await expect(tog).toHaveAttribute("aria-expanded", "false");
     await expect(tog).toHaveText("Afficher");
     await expect(page.locator("#bilan-body")).toBeHidden();
-    await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("carnetpei.v1")).bilanReplie)).toBe(true);
+    await expect.poll(() => page.evaluate(() => (JSON.parse(localStorage.getItem("carnetpei.v1"))||{}).bilanReplie)).toBe(true);
 
     await page.reload();
     await tab(page, "trip");

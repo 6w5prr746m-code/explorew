@@ -5,7 +5,7 @@ import { SLOTS, BY } from "./data.js";
 import { S, save } from "./state.js";
 import { $, esc } from "./util.js";
 
-// Texte des règles d'or, repris du Book (print.js l'utilise aussi).
+// Même texte que les règles d’or du Book (print.js), à garder identique.
 export const REGLES_OR="un camp de base par zone, les Hauts le matin, le littoral l'après-midi, une journée tampon tous les 4 à 5 jours";
 const REGLE_CAMP="Règle d'or du Book : un camp de base par zone.";
 const REGLE_TAMPON="Règle d'or du Book : une journée tampon tous les 4 à 5 jours.";
