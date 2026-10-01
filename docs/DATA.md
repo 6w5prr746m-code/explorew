@@ -39,7 +39,7 @@ Tableau de 200 objets. Exemple :
 | securite | liste | réflexes de sécurité de l'onglet Pratique qui s'appliquent : `marche` (sentier, volcan, cirque, canyon, montagne → « Avant de marcher »), `baignade` (mer, lagon, rivière, bassin, cascade, canyon → « Baignade ») ; `[]` sinon. Obligatoire, sans doublon. Classement relu dans `docs/SECURITE-CLASSEMENT.md` |
 | geo | objet ou null | `{ "lat": -21.24, "lng": 55.71 }` — **prioritaire** sur le placement approximatif de la carte |
 | photo | objet ou null | prévu : `{ "src": "…", "credit": "…", "licence": "…" }` |
-| source | URL ou null | page officielle ayant servi à vérifier le module |
+| source | URL ou null | page officielle ayant servi à vérifier le module ; proposée avec extrait cité puis fusionnée par `node scripts/merge-sources.mjs` (voir `docs/sources/LISEZMOI.md`) |
 | verifieLe | date ISO | dernière vérification |
 
 ## Ajouter un module
