@@ -631,7 +631,7 @@
   "titre": "Grand Bénare depuis le Maïdo",
   "zone": "Hauts",
   "lieu": "Maïdo",
-  "duree": "Journée (à vérifier)",
+  "duree": "6 h aller / retour (15,4 km)",
   "niveau": 3,
   "budget": "Gratuit",
   "filtres": [
@@ -648,8 +648,8 @@
   ],
   "geo": null,
   "photo": null,
-  "source": null,
-  "verifieLe": "2026-09-19"
+  "source": "https://www.reunion.fr/offres/maido-grand-benare-saint-paul-fr-575462/",
+  "verifieLe": "2026-10-01"
  },
  {
   "code": "AV-J8",
@@ -1690,7 +1690,7 @@
   "titre": "Boucle du Cap Noir",
   "zone": "Nord",
   "lieu": "Dos d'Âne",
-  "duree": "≈ 2 h (à vérifier)",
+  "duree": "2 h (boucle de 3 km)",
   "niveau": 2,
   "budget": "Gratuit",
   "filtres": [
@@ -1706,8 +1706,8 @@
   ],
   "geo": null,
   "photo": null,
-  "source": null,
-  "verifieLe": "2026-09-19"
+  "source": "https://www.onf.fr/vivre-la-foret/activites/+/128d::le-sentier-du-cap-noir-et-de-la-roche-verre-bouteille.html",
+  "verifieLe": "2026-10-01"
  },
  {
   "code": "RA-D10",
@@ -1791,7 +1791,7 @@
   "titre": "Pas de Bellecombe → Formica Leo",
   "zone": "Volcan",
   "lieu": "Pas de Bellecombe",
-  "duree": "≈ 1 h A/R (à vérifier)",
+  "duree": "1 h aller / retour (2,9 km)",
   "niveau": 1,
   "budget": "Gratuit",
   "filtres": [
@@ -1809,8 +1809,8 @@
   ],
   "geo": null,
   "photo": null,
-  "source": null,
-  "verifieLe": "2026-09-19"
+  "source": "https://www.reunion.fr/offres/formica-leo-sainte-rose-fr-4233605/",
+  "verifieLe": "2026-10-01"
  },
  {
   "code": "RA-D14",
@@ -2026,7 +2026,7 @@
   "titre": "Cascade du Bras Rouge depuis Cilaos",
   "zone": "Cilaos",
   "lieu": "Cilaos",
-  "duree": "Journée (à vérifier)",
+  "duree": "4 h 35 aller / retour (11,3 km)",
   "niveau": 2,
   "budget": "Gratuit",
   "filtres": [
@@ -2043,8 +2043,8 @@
   ],
   "geo": null,
   "photo": null,
-  "source": null,
-  "verifieLe": "2026-09-19"
+  "source": "https://www.reunion.fr/offres/cascade-bras-rouge-cilaos-fr-575432/",
+  "verifieLe": "2026-10-01"
  },
  {
   "code": "RA-J3",
@@ -3208,7 +3208,7 @@
   "filtres": [
    "FAM"
   ],
-  "essentiel": "Cocoteraie et ateliers autour de la noix de coco (à vérifier).",
+  "essentiel": "Exploitation agricole de 7 hectares sur les hauteurs de Saint-Leu : visite de la cocoteraie, initiation au tressage des palmes et atelier culinaire autour de la noix de coco.",
   "astuce": "",
   "planB": "",
   "combo": "",
@@ -3216,8 +3216,8 @@
   "securite": [],
   "geo": null,
   "photo": null,
-  "source": null,
-  "verifieLe": "2026-09-19"
+  "source": "https://www.reunion.fr/organisez/nos-experiences/les-secrets-du-coco/",
+  "verifieLe": "2026-10-01"
  },
  {
   "code": "FA-12",
