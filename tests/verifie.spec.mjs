@@ -46,15 +46,15 @@ test.describe("Vérifié le", () => {
 
   test("étiquette « À vérifier » sur les champs concernés, sans toucher au texte", async ({ page }) => {
     await openApp(page);
-    // AV-J7 : durée à vérifier (docs/A-VERIFIER.md)
-    await ouvrir(page, "AV-J7");
+    // RA-D4 : durée à vérifier (docs/A-VERIFIER.md)
+    await ouvrir(page, "RA-D4");
     const duree = page.locator("#sheet .fact", { hasText: "Durée" });
     await expect(duree.locator(".averif")).toHaveText("À vérifier");
     await expect(duree.locator(".averif")).toHaveAttribute("aria-label", "Durée : information à vérifier avant de partir");
-    await expect(duree.locator("b")).toHaveText(mod("AV-J7").duree);
+    await expect(duree.locator("b")).toHaveText(mod("RA-D4").duree);
     await expect(page.locator("#sheet .averif")).toHaveCount(1);
-    // FA-11 : essentiel à vérifier
-    await ouvrir(page, "FA-11");
+    // SL-03 : essentiel à vérifier
+    await ouvrir(page, "SL-03");
     await expect(page.locator("#sheet .averif")).toHaveCount(1);
     await expect(page.locator("#sheet .averif")).toHaveAttribute("aria-label", /^Essentiel/);
     // AV-J1 : rien à vérifier
