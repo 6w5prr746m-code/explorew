@@ -1792,7 +1792,7 @@
   "zone": "Volcan",
   "lieu": "Pas de Bellecombe",
   "duree": "1 h aller / retour (2,9 km)",
-  "niveau": 1,
+  "niveau": 2,
   "budget": "Gratuit",
   "filtres": [
    "FAM",
@@ -1870,7 +1870,7 @@
   "titre": "Sentier de La Chapelle",
   "zone": "Cilaos",
   "lieu": "Cilaos",
-  "duree": "≈ 4 h A/R (à vérifier)",
+  "duree": "5 h aller / retour (9,8 km)",
   "niveau": 2,
   "budget": "Gratuit",
   "filtres": [
@@ -1887,8 +1887,8 @@
   ],
   "geo": null,
   "photo": null,
-  "source": null,
-  "verifieLe": "2026-09-19"
+  "source": "https://www.reunion.fr/offres/le-sentier-de-la-chapelle-cilaos-fr-4095922/",
+  "verifieLe": "2026-10-01"
  },
  {
   "code": "RA-D17",
@@ -2033,7 +2033,7 @@
    "€"
   ],
   "essentiel": "Descente jusqu'à la cascade et aux bassins, pique-nique, remontée.",
-  "astuce": "La remontée se fait en plein soleil : partir tôt.",
+  "astuce": "La remontée se fait en plein soleil : partir tôt. Selon reunion.fr : « Le site est dangereux car la dalle est très lisse et glissante et il est imprudent de s'approcher du bord. »",
   "planB": "LA-D15",
   "combo": "AV-D5",
   "fiche": "complete",
@@ -2103,7 +2103,7 @@
   "titre": "Roche Écrite avec nuit en gîte",
   "zone": "Nord",
   "lieu": "Hauts de Saint-Denis",
-  "duree": "2 jours (à vérifier)",
+  "duree": "2 jours : 7 h 20 de marche aller / retour (18,5 km) depuis Mamode Camp, nuit au gîte de la Plaine des Chicots",
   "niveau": 2,
   "budget": "€€",
   "filtres": [
@@ -2119,8 +2119,8 @@
   ],
   "geo": null,
   "photo": null,
-  "source": null,
-  "verifieLe": "2026-09-19"
+  "source": "https://www.reunion.fr/offres/la-roche-ecrite-depuis-mamode-camp-saint-denis-fr-575436/",
+  "verifieLe": "2026-10-01"
  },
  {
   "code": "RA-J6",

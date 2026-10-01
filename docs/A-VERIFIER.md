@@ -8,11 +8,9 @@ Liste générée par `npm run a-verifier` à partir de `public/data/modules.json
 | LA-J8 | Croisière en catamaran | astuce | [ ] |
 | RA-D4 | Maïdo → Piton des Orangers | duree | [ ] |
 | RA-D12 | Sentier littoral du Cap Méchant | duree | [ ] |
-| RA-D16 | Sentier de La Chapelle | duree | [ ] |
 | RA-D17 | Montée au col du Taïbit | duree | [ ] |
 | RA-D19 | Col des Bœufs → Plaine des Tamarins | duree | [ ] |
 | RA-D20 | Balade en forêt de Bébour | duree | [ ] |
-| RA-J5 | Roche Écrite avec nuit en gîte | duree | [ ] |
 | RA-J7 | Le Dimitile, balcon sur Cilaos | duree | [ ] |
 | SL-03 | Téléphérique urbain de Saint-Denis | essentiel | [ ] |
 | PB-14 | Tunnels de lave | essentiel | [ ] |
