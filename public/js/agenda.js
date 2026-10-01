@@ -6,9 +6,6 @@ import { S } from "./state.js";
 import { $, toast } from "./util.js";
 
 const FICHIER="carnet-pei-voyage.ics";
-// Jours qui reçoivent le rappel « Avant de marcher » : un module dans les Hauts (volcan, cirques) ou de profil Randonneur / Aventurier.
-const ZONES_RAPPEL=new Set(["Volcan","Cirques","Cilaos","Salazie","Mafate","Hauts"]);
-const PROFILS_RAPPEL=new Set(["RA","AV"]);
 // Rappel la veille : un événement « toute la journée » commence à minuit (heure locale du calendrier) ;
 // -PT12H place donc le rappel la veille à midi. C'est un choix d'affichage, pas une donnée du module.
 const TRIGGER_VEILLE="-PT12H";
@@ -39,8 +36,9 @@ const plusJours=(iso,n)=>new Date(isoDay(iso)+n*864e5).toISOString().slice(0,10)
 const dateICS=iso=>iso.replace(/-/g,"");
 const stamp=d=>d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
 
+// Jours qui reçoivent le rappel « Avant de marcher » : un module du jour dont le champ `securite` contient "marche".
 export function needsReminder(codes){
-  return codes.some(c=>BY[c]&&(ZONES_RAPPEL.has(BY[c].z)||PROFILS_RAPPEL.has(BY[c].p)));
+  return codes.some(c=>BY[c]?.sec.includes("marche"));
 }
 
 // Construit le calendrier du voyage ; null sans date d'arrivée.

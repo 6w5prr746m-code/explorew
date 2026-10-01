@@ -2,7 +2,7 @@
    et section « Mes tampons » du Carnet. Le tampon récompense l'expérience vécue : aucun compte, score, série ni heure. */
 import { BY, DEST } from "./data.js";
 import { S, save } from "./state.js";
-import { $, esc, col, norm } from "./util.js";
+import { $, esc, col } from "./util.js";
 import { todayISO } from "./today.js";
 import { openModule } from "./module-sheet.js";
 
@@ -21,14 +21,10 @@ export function shortDate(iso){return new Date(iso+"T12:00:00Z").toLocaleDateStr
 
 // Rappels de sécurité : repris mot pour mot des réflexes de l'onglet Pratique (#reflexes), jamais réécrits ici.
 function reflex(start){const n=[...document.querySelectorAll("#reflexes .check")].find(x=>x.querySelector("b")?.textContent.trim().startsWith(start));return n?n.outerHTML:""}
+// Quels réflexes s'appliquent : champ `securite` du module (data/modules.json), classé à la main (docs/SECURITE-CLASSEMENT.md).
 export function safetyFor(m){
-  const t=norm([m.t,m.l,m.e,m.a].filter(Boolean).join(" "));
-  const walk=m.z==="Volcan"||m.p==="RA"||m.p==="AV"||/sentier|volcan/.test(t);
-  // Activités d'eau (mer, lagon, rivière, bassin, canyon). Mieux vaut un rappel de trop qu'un rappel manquant ;
-  // les noms propres sans activité d'eau (distilleries, Beaubassin) sont écartés. À remplacer par un champ de données.
-  const eau=/baign|\bnag|snorkel|plongee|palmes|tuba|kayak|paddle|\bsurf|canyon|bassin|cascade|ravine|piscine naturelle|sentier sous-marin|plage|riviere|lagon/;
-  const swim=eau.test(t)&&!(/distillerie|beaubassin/.test(t)&&!/baign/.test(t));
-  return (walk?reflex("Avant de marcher"):"")+(swim?reflex("Baignade"):"");
+  const sec=m.sec||[];
+  return (sec.includes("marche")?reflex("Avant de marcher"):"")+(sec.includes("baignade")?reflex("Baignade"):"");
 }
 
 // Bloc « Fait » : bouton bascule, date du tampon, rappel de sécurité éventuel.
