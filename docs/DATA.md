@@ -18,6 +18,7 @@ Tableau de 200 objets. Exemple :
   "planB": "FA-03",
   "combo": "AV-D19",
   "fiche": "complete",
+  "securite": ["marche"],
   "geo": null,
   "photo": null,
   "source": null,
@@ -35,6 +36,7 @@ Tableau de 200 objets. Exemple :
 | filtres | liste | `FAM` famille · `BUS` sans voiture · `€` petit budget · `PLUIE` jour de pluie · `AUBE` lève-tôt · `LOCAL` rencontre |
 | planB, combo | code ou texte libre | un code doit exister (contrôlé par `npm run validate`) |
 | fiche | texte | `complete` (profils principaux) ou `courte` (profils additionnels) |
+| securite | liste | réflexes de sécurité de l'onglet Pratique qui s'appliquent : `marche` (sentier, volcan, cirque, canyon, montagne → « Avant de marcher »), `baignade` (mer, lagon, rivière, bassin, cascade, canyon → « Baignade ») ; `[]` sinon. Obligatoire, sans doublon. Classement relu dans `docs/SECURITE-CLASSEMENT.md` |
 | geo | objet ou null | `{ "lat": -21.24, "lng": 55.71 }` — **prioritaire** sur le placement approximatif de la carte |
 | photo | objet ou null | prévu : `{ "src": "…", "credit": "…", "licence": "…" }` |
 | source | URL ou null | page officielle ayant servi à vérifier le module |
