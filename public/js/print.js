@@ -1,7 +1,7 @@
 /* Impression : itinéraire du voyage et Book complet (A5). */
 import { PROFILES, PICTOS, SLOTS, MODS, BY, DEST } from "./data.js";
 import { S, dayDate } from "./state.js";
-import { $, esc, toast } from "./util.js";
+import { $, esc, toast, dateCourte } from "./util.js";
 
 function fiche(m){
   const facts=[m.z+(m.l&&m.l!==m.z?" · "+m.l:""),m.d,m.n?"niveau "+m.n:"",m.b,m.f.join(" ")].filter(Boolean).join("  |  ");
@@ -10,6 +10,7 @@ function fiche(m){
    <p class="bm">${esc(facts)}</p><p>${esc(m.e)}</p>
    ${m.a?`<p><b>Ce qu'on ne vous dit pas.</b> ${esc(m.a)}</p>`:""}
    ${m.pb?`<p><b>Plan B.</b> ${esc(ref(m.pb))}</p>`:""}${m.k?`<p><b>${m.full?"À combiner avec":"Voir aussi"}.</b> ${esc(ref(m.k))}</p>`:""}
+   ${m.vl?`<p class="bv">vérifié le ${dateCourte(m.vl)}</p>`:""}
    <p class="bn">Fait le ___ / ___ &nbsp;·&nbsp; Ma note ☆☆☆☆☆ &nbsp;·&nbsp; ________________________</p></article>`;
 }
 export function printBook(){
