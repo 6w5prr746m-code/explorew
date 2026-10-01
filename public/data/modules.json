@@ -17,6 +17,7 @@
   "planB": "Musée du sel, Pointe au Sel",
   "combo": "LA-D1",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -39,6 +40,10 @@
   "planB": "LA-D15",
   "combo": "EP-J8",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -59,6 +64,10 @@
   "planB": "EP-D3",
   "combo": "AV-D9",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -81,6 +90,7 @@
   "planB": "AV-D15",
   "combo": "RA-D1",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -101,6 +111,10 @@
   "planB": "Maison de la broderie",
   "combo": "RA-J2",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -123,6 +137,10 @@
   "planB": "AV-D11",
   "combo": "LA-J1",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -145,6 +163,10 @@
   "planB": "EP-D3",
   "combo": "EP-J3",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -165,6 +187,10 @@
   "planB": "Belvédère de Takamaka",
   "combo": "LA-J3",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -185,6 +211,9 @@
   "planB": "AV-D18",
   "combo": "AV-D3",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -207,6 +236,9 @@
   "planB": "EP-D7",
   "combo": "AV-J9",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -229,6 +261,9 @@
   "planB": "FA-03",
   "combo": "AV-D19",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -249,6 +284,7 @@
   "planB": "AV-D16",
   "combo": "LA-J6",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -269,6 +305,7 @@
   "planB": "FA-01",
   "combo": "AV-D1",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -291,6 +328,9 @@
   "planB": "EP-D1",
   "combo": "LA-D2",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -313,6 +353,7 @@
   "planB": "AV-D4",
   "combo": "LA-D1",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -335,6 +376,7 @@
   "planB": "FA-03",
   "combo": "AV-D11",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -355,6 +397,9 @@
   "planB": "LA-D1",
   "combo": "LA-J3",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -375,6 +420,10 @@
   "planB": "EP-D3",
   "combo": "AV-D9",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -398,6 +447,9 @@
   "planB": "FA-10",
   "combo": "AV-D11",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -418,6 +470,10 @@
   "planB": "AV-D6",
   "combo": "LA-J1",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -441,6 +497,9 @@
   "planB": "FA-03",
   "combo": "AV-D19",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -463,6 +522,9 @@
   "planB": "AV-D5",
   "combo": "LA-J5",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -483,6 +545,10 @@
   "planB": "RA-D3",
   "combo": "EP-J9",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -503,6 +569,10 @@
   "planB": "AV-D2",
   "combo": "EP-J8",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -523,6 +593,9 @@
   "planB": "RA-D17",
   "combo": "AV-J8",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -543,6 +616,10 @@
   "planB": "RA-D2",
   "combo": "AV-D4",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -566,6 +643,9 @@
   "planB": "RA-D1",
   "combo": "AV-D10",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -588,6 +668,9 @@
   "planB": "RA-J1",
   "combo": "LA-J3",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -608,6 +691,9 @@
   "planB": "AV-D14",
   "combo": "LA-J10",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -630,6 +716,9 @@
   "planB": "AV-J8",
   "combo": "LA-J10",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -654,6 +743,9 @@
   "planB": "LA-D17",
   "combo": "LA-D4",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -676,6 +768,9 @@
   "planB": "EP-D7",
   "combo": "LA-D6",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -698,6 +793,9 @@
   "planB": "FA-01",
   "combo": "LA-D1",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -720,6 +818,9 @@
   "planB": "LA-D19",
   "combo": "LA-D1",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -740,6 +841,9 @@
   "planB": "LA-D16",
   "combo": "LA-D1",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -764,6 +868,9 @@
   "planB": "LA-D7",
   "combo": "LA-D2",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -788,6 +895,9 @@
   "planB": "FA-02",
   "combo": "LA-D3",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -811,6 +921,9 @@
   "planB": "FA-01",
   "combo": "AV-D1",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -834,6 +947,9 @@
   "planB": "FA-04",
   "combo": "LA-D17",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -857,6 +973,9 @@
   "planB": "LA-D11",
   "combo": "LA-J1",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -880,6 +999,9 @@
   "planB": "LA-D10",
   "combo": "LA-J1",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -903,6 +1025,9 @@
   "planB": "AV-D11",
   "combo": "AV-D6",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -925,6 +1050,9 @@
   "planB": "EP-D3",
   "combo": "AV-D3",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -947,6 +1075,9 @@
   "planB": "LA-D7",
   "combo": "LA-D6",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -969,6 +1100,7 @@
   "planB": "Maison de la broderie",
   "combo": "AV-J2",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -991,6 +1123,7 @@
   "planB": "LA-D5",
   "combo": "LA-J3",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1013,6 +1146,7 @@
   "planB": "EP-D7",
   "combo": "AV-D1",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1036,6 +1170,9 @@
   "planB": "EP-J1",
   "combo": "LA-D1",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1058,6 +1195,9 @@
   "planB": "LA-D6",
   "combo": "LA-D14",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1078,6 +1218,7 @@
   "planB": "NE-05",
   "combo": "LA-J3",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1100,6 +1241,9 @@
   "planB": "FA-10",
   "combo": "AV-D19",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1123,6 +1267,9 @@
   "planB": "FA-02",
   "combo": "LA-D19",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1145,6 +1292,9 @@
   "planB": "LA-D16",
   "combo": "LA-D20",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1167,6 +1317,9 @@
   "planB": "EP-D3",
   "combo": "AV-D9",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1189,6 +1342,9 @@
   "planB": "Maison de la broderie",
   "combo": "AV-J2",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1212,6 +1368,9 @@
   "planB": "EP-D4",
   "combo": "AV-D12",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1234,6 +1393,9 @@
   "planB": "LA-D17",
   "combo": "AV-D1",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1256,6 +1418,9 @@
   "planB": "LA-D3",
   "combo": "LA-D7",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1279,6 +1444,10 @@
   "planB": "FA-02",
   "combo": "LA-J2",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1301,6 +1470,9 @@
   "planB": "LA-D16",
   "combo": "LA-D20",
   "fiche": "complete",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1325,6 +1497,9 @@
   "planB": "LA-J2",
   "combo": "AV-D10",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1348,6 +1523,9 @@
   "planB": "RA-D20",
   "combo": "RA-J6",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1371,6 +1549,7 @@
   "planB": "EP-J9",
   "combo": "RA-D7",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1394,6 +1573,9 @@
   "planB": "RA-D1",
   "combo": "LA-D1",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1417,6 +1599,9 @@
   "planB": "EP-D1",
   "combo": "EP-D1",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1440,6 +1625,10 @@
   "planB": "Notre-Dame-des-Laves",
   "combo": "AV-D19",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1462,6 +1651,9 @@
   "planB": "RA-D3",
   "combo": "RA-D2",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1484,6 +1676,9 @@
   "planB": "EP-D5",
   "combo": "EP-D5",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1506,6 +1701,9 @@
   "planB": "RA-D8",
   "combo": "RA-J1",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1528,6 +1726,9 @@
   "planB": "RA-D9",
   "combo": "AV-J8",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1550,6 +1751,9 @@
   "planB": "LA-D17",
   "combo": "LA-D8",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1573,6 +1777,9 @@
   "planB": "FA-10",
   "combo": "LA-J1",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1597,6 +1804,9 @@
   "planB": "FA-03",
   "combo": "RA-D14",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1620,6 +1830,9 @@
   "planB": "FA-03",
   "combo": "AV-J1",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1643,6 +1856,9 @@
   "planB": "LA-D15",
   "combo": "LA-J5",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1665,6 +1881,10 @@
   "planB": "RA-D15",
   "combo": "LA-D15",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1688,6 +1908,9 @@
   "planB": "RA-D15",
   "combo": "RA-J9",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1712,6 +1935,9 @@
   "planB": "FA-10",
   "combo": "RA-D12",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1735,6 +1961,9 @@
   "planB": "RA-D3",
   "combo": "RA-J1",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1758,6 +1987,9 @@
   "planB": "FA-03",
   "combo": "RA-D2",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1780,6 +2012,9 @@
   "planB": "RA-D19",
   "combo": "LA-J3",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1802,6 +2037,10 @@
   "planB": "LA-D15",
   "combo": "AV-D5",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1824,6 +2063,9 @@
   "planB": "RA-D19",
   "combo": "RA-J1",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1846,6 +2088,10 @@
   "planB": "Belvédère de Bois Court",
   "combo": "AV-J1",
   "fiche": "complete",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1868,6 +2114,9 @@
   "planB": "RA-D8",
   "combo": "EP-J4",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1890,6 +2139,9 @@
   "planB": "RA-D2",
   "combo": "AV-J2",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1912,6 +2164,9 @@
   "planB": "Cases créoles de l'Entre-Deux",
   "combo": "RA-J10",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1934,6 +2189,9 @@
   "planB": "AV-J8",
   "combo": "LA-J10",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1956,6 +2214,9 @@
   "planB": "RA-J1",
   "combo": "LA-J5",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -1978,6 +2239,9 @@
   "planB": "RA-J1",
   "combo": "RA-J7",
   "fiche": "complete",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2002,6 +2266,7 @@
   "planB": "EP-D8",
   "combo": "EP-J5",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2024,6 +2289,7 @@
   "planB": "EP-D4",
   "combo": "EP-D18",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2048,6 +2314,7 @@
   "planB": "EP-D6",
   "combo": "EP-D19",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2070,6 +2337,7 @@
   "planB": "EP-D9",
   "combo": "EP-J6",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2093,6 +2361,7 @@
   "planB": "EP-D10",
   "combo": "EP-D17",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2115,6 +2384,7 @@
   "planB": "EP-D3",
   "combo": "EP-J3",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2138,6 +2408,7 @@
   "planB": "LA-D17",
   "combo": "EP-J2",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2160,6 +2431,7 @@
   "planB": "EP-D16",
   "combo": "EP-D16",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2182,6 +2454,7 @@
   "planB": "EP-D4",
   "combo": "EP-J6",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2206,6 +2479,7 @@
   "planB": "EP-D13",
   "combo": "EP-D5",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2230,6 +2504,7 @@
   "planB": "EP-D7",
   "combo": "EP-D1",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2252,6 +2527,7 @@
   "planB": "FA-10",
   "combo": "AV-D19",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2275,6 +2551,7 @@
   "planB": "EP-D10",
   "combo": "EP-J4",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2298,6 +2575,7 @@
   "planB": "EP-D15",
   "combo": "EP-J7",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2321,6 +2599,7 @@
   "planB": "EP-D14",
   "combo": "EP-J7",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2343,6 +2622,7 @@
   "planB": "EP-D8",
   "combo": "RA-D1",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2366,6 +2646,7 @@
   "planB": "EP-D10",
   "combo": "EP-D5",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2389,6 +2670,7 @@
   "planB": "EP-D4",
   "combo": "LA-J6",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2412,6 +2694,7 @@
   "planB": "EP-D3",
   "combo": "EP-J3",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2434,6 +2717,7 @@
   "planB": "Soirée séga",
   "combo": "EP-J10",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2457,6 +2741,7 @@
   "planB": "EP-D11",
   "combo": "EP-J3",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2479,6 +2764,7 @@
   "planB": "EP-D9",
   "combo": "LA-J6",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2502,6 +2788,7 @@
   "planB": "EP-D6",
   "combo": "LA-J4",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2524,6 +2811,7 @@
   "planB": "EP-D10",
   "combo": "RA-D8",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2546,6 +2834,7 @@
   "planB": "EP-D8",
   "combo": "LA-D6",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2568,6 +2857,7 @@
   "planB": "EP-D9",
   "combo": "LA-J6",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2591,6 +2881,7 @@
   "planB": "EP-D15",
   "combo": "LA-J1",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2613,6 +2904,7 @@
   "planB": "LA-D15",
   "combo": "AV-J2",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2636,6 +2928,7 @@
   "planB": "RA-D3",
   "combo": "RA-D7",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2658,6 +2951,7 @@
   "planB": "EP-D20",
   "combo": "EP-D20",
   "fiche": "complete",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2681,6 +2975,7 @@
   "planB": "",
   "combo": "LA-J7",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2705,6 +3000,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2728,6 +3024,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2750,6 +3047,7 @@
   "planB": "",
   "combo": "LA-D9",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2773,6 +3071,9 @@
   "planB": "",
   "combo": "LA-D1",
   "fiche": "courte",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2795,6 +3096,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2817,6 +3119,7 @@
   "planB": "",
   "combo": "RA-D1",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2839,6 +3142,7 @@
   "planB": "",
   "combo": "AV-D16",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2861,6 +3165,9 @@
   "planB": "",
   "combo": "LA-D3",
   "fiche": "courte",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2883,6 +3190,7 @@
   "planB": "",
   "combo": "EP-J7",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2905,6 +3213,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2928,6 +3237,7 @@
   "planB": "",
   "combo": "EP-D10",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2950,6 +3260,7 @@
   "planB": "",
   "combo": "LA-D17",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2973,6 +3284,9 @@
   "planB": "",
   "combo": "LA-D11",
   "fiche": "courte",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -2995,6 +3309,9 @@
   "planB": "",
   "combo": "RA-D13",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3017,6 +3334,10 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3040,6 +3361,7 @@
   "planB": "",
   "combo": "EP-J9",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3063,6 +3385,9 @@
   "planB": "",
   "combo": "RA-D2",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3085,6 +3410,9 @@
   "planB": "",
   "combo": "AV-D11",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3108,6 +3436,7 @@
   "planB": "",
   "combo": "EP-J1",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3131,6 +3460,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3153,6 +3483,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3175,6 +3506,7 @@
   "planB": "",
   "combo": "EP-J4",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3198,6 +3530,10 @@
   "planB": "",
   "combo": "LA-J9",
   "fiche": "courte",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3220,6 +3556,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3242,6 +3579,9 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3264,6 +3604,9 @@
   "planB": "",
   "combo": "RA-J1",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3286,6 +3629,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3308,6 +3652,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3331,6 +3676,9 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3353,6 +3701,7 @@
   "planB": "",
   "combo": "EP-J1",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3375,6 +3724,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3398,6 +3748,7 @@
   "planB": "",
   "combo": "EP-D1",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3420,6 +3771,9 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3440,6 +3794,9 @@
   "planB": "",
   "combo": "LA-D3",
   "fiche": "courte",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3462,6 +3819,7 @@
   "planB": "",
   "combo": "EP-J10",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3484,6 +3842,10 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3504,6 +3866,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3526,6 +3889,9 @@
   "planB": "",
   "combo": "RA-J10",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3548,6 +3914,7 @@
   "planB": "",
   "combo": "EP-D18",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3570,6 +3937,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3593,6 +3961,7 @@
   "planB": "",
   "combo": "FA-03",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3616,6 +3985,7 @@
   "planB": "",
   "combo": "FA-02",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3639,6 +4009,7 @@
   "planB": "",
   "combo": "FA-01",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3661,6 +4032,7 @@
   "planB": "",
   "combo": "EP-D7",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3683,6 +4055,7 @@
   "planB": "",
   "combo": "EP-D4",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3705,6 +4078,7 @@
   "planB": "",
   "combo": "EP-D6",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3727,6 +4101,7 @@
   "planB": "",
   "combo": "EP-D8",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3749,6 +4124,7 @@
   "planB": "",
   "combo": "EP-D9",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3771,6 +4147,7 @@
   "planB": "",
   "combo": "EP-D10",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3793,6 +4170,7 @@
   "planB": "",
   "combo": "LA-D15",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3815,6 +4193,7 @@
   "planB": "",
   "combo": "LA-D16",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3837,6 +4216,7 @@
   "planB": "",
   "combo": "EP-D11",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3859,6 +4239,9 @@
   "planB": "",
   "combo": "AV-D11",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3881,6 +4264,7 @@
   "planB": "",
   "combo": "EP-D3",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3903,6 +4287,7 @@
   "planB": "",
   "combo": "EP-D18",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3925,6 +4310,7 @@
   "planB": "",
   "combo": "EP-J8",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3947,6 +4333,9 @@
   "planB": "",
   "combo": "RA-D3",
   "fiche": "courte",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3969,6 +4358,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3991,6 +4381,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4013,6 +4404,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4033,6 +4425,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4053,6 +4446,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4073,6 +4467,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4095,6 +4490,9 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4115,6 +4513,7 @@
   "planB": "",
   "combo": "LA-D20",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4138,6 +4537,9 @@
   "planB": "",
   "combo": "RA-D1",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4160,6 +4562,9 @@
   "planB": "",
   "combo": "AV-J2",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4182,6 +4587,9 @@
   "planB": "",
   "combo": "RA-J5",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4204,6 +4612,9 @@
   "planB": "",
   "combo": "AV-J1",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4224,6 +4635,9 @@
   "planB": "",
   "combo": "SL-07",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4246,6 +4660,7 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4266,6 +4681,7 @@
   "planB": "",
   "combo": "SL-09",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4288,6 +4704,7 @@
   "planB": "",
   "combo": "EP-D20",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4310,6 +4727,9 @@
   "planB": "",
   "combo": "LA-D19",
   "fiche": "courte",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4332,6 +4752,9 @@
   "planB": "",
   "combo": "LA-D2",
   "fiche": "courte",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4352,6 +4775,9 @@
   "planB": "",
   "combo": "LA-D4",
   "fiche": "courte",
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4372,6 +4798,9 @@
   "planB": "",
   "combo": "",
   "fiche": "courte",
+  "securite": [
+   "marche"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4394,6 +4823,7 @@
   "planB": "",
   "combo": "EP-J9",
   "fiche": "courte",
+  "securite": [],
   "geo": null,
   "photo": null,
   "source": null,
@@ -4414,6 +4844,10 @@
   "planB": "",
   "combo": "RA-J4",
   "fiche": "courte",
+  "securite": [
+   "marche",
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,

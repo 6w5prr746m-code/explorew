@@ -69,6 +69,28 @@ test.describe("Passeport étendu", () => {
     await expect(page.locator('#sheet [data-done-box="EP-D6"] .done-safe .check', { hasText: "Baignade" })).toHaveCount(0);
   });
 
+  test("chaque module a un champ securite valide, et les rappels en découlent", async ({ page }) => {
+    await openApp(page);
+    const r = await page.evaluate(async () => {
+      const { MODS } = await import("/js/data.js");
+      const { safetyFor } = await import("/js/passeport.js");
+      const bad = window.__MODULES.filter(m => !Array.isArray(m.securite) || new Set(m.securite).size !== m.securite.length
+        || m.securite.some(s => !["marche", "baignade"].includes(s))).map(m => m.code);
+      const off = MODS.filter(m => {
+        const h = safetyFor(m);
+        return h.includes("Avant de marcher") !== m.sec.includes("marche") || h.includes("<b>Baignade</b>") !== m.sec.includes("baignade");
+      }).map(m => m.c);
+      return { n: MODS.length, bad, off };
+    });
+    expect(r.n).toBe(200);
+    expect(r.bad).toEqual([]);
+    expect(r.off).toEqual([]);
+    // Cité du Volcan : musée en intérieur, plus de rappel malgré la zone Volcan.
+    await openSheet(page, "FA-03");
+    await expect(page.locator('#sheet [data-done="FA-03"]')).toBeVisible();
+    await expect(page.locator("#sheet .done-safe")).toHaveCount(0);
+  });
+
   test("le bouton « Fait » existe aussi dans la vue « Aujourd'hui », avec son rappel", async ({ page }) => {
     await page.clock.setFixedTime(new Date("2026-10-14T08:00:00+04:00"));
     await page.addInitScript(e => { if (!sessionStorage.getItem("seeded")) { localStorage.setItem("carnetpei.v1", e); sessionStorage.setItem("seeded", "1"); } },

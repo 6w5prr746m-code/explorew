@@ -110,12 +110,18 @@ test.describe("Export agenda", () => {
     expect(errors).toEqual([]);
   });
 
-  test("buildICS : rappel selon la zone ou le profil", async ({ page }) => {
+  test("buildICS : rappel si un module du jour a « marche » dans securite", async ({ page }) => {
     await openApp(page);
     const r = await page.evaluate(async () => {
       const { needsReminder } = await import("/js/agenda.js");
-      return [needsReminder(["AV-J1"]), needsReminder(["LA-D1"]), needsReminder(["RA-D1"]), needsReminder([])];
+      const { MODS } = await import("/js/data.js");
+      const ex = [needsReminder(["AV-J1"]), needsReminder(["LA-D1"]), needsReminder(["RA-D1"]), needsReminder([]),
+        needsReminder(["FA-03"]), needsReminder(["NE-20"]), needsReminder(["LA-D1", "SL-07"])];
+      const off = MODS.filter(m => needsReminder([m.c]) !== m.sec.includes("marche")).map(m => m.c);
+      return { ex, off };
     });
-    expect(r).toEqual([true, false, true, false]);
+    // AV-J1 volcan, RA-D1 Maïdo, NE-20 Grand Bassin à pied, SL-07 Mafate : rappel ; lagon seul ou Cité du Volcan (musée) : aucun.
+    expect(r.ex).toEqual([true, false, true, false, false, true, true]);
+    expect(r.off).toEqual([]);
   });
 });

@@ -5,6 +5,7 @@ import { readFileSync } from "node:fs";
 const mods = JSON.parse(readFileSync(new URL("../public/data/modules.json", import.meta.url)));
 const dest = JSON.parse(readFileSync(new URL("../public/data/destinations/reunion.json", import.meta.url)));
 const FILTRES = ["FAM","BUS","€","PLUIE","AUBE","LOCAL"];
+const SECURITE = ["marche","baignade"];
 const PROFILS = {AV:"aventurier",LA:"lagon",RA:"randonneur",EP:"epicurien",FA:"famille",SL:"slow",PB:"plan-b-pluie",NE:"nuit-etoiles"};
 const errors = []; const codes = new Set();
 
@@ -39,6 +40,11 @@ for (const m of mods) {
   for (const f of m.filtres) if (!FILTRES.includes(f)) errors.push(`${m.code} : filtre inconnu « ${f} »`);
   if (!m.titre || !m.essentiel) errors.push(`${m.code} : titre ou essentiel manquant`);
   if (m.niveau !== null && ![1,2,3].includes(m.niveau)) errors.push(`${m.code} : niveau invalide`);
+  if (!Array.isArray(m.securite)) errors.push(`${m.code} : securite manquant (tableau attendu, éventuellement vide)`);
+  else {
+    for (const s of m.securite) if (!SECURITE.includes(s)) errors.push(`${m.code} : securite inconnue « ${s} » (marche ou baignade)`);
+    if (new Set(m.securite).size !== m.securite.length) errors.push(`${m.code} : securite en double`);
+  }
   if (m.geo && (typeof m.geo.lat !== "number" || typeof m.geo.lng !== "number")) errors.push(`${m.code} : geo invalide`);
 }
 for (const m of mods) for (const k of ["planB","combo"]) {
