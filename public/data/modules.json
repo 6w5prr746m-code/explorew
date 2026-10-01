@@ -328,7 +328,9 @@
   "planB": "EP-D1",
   "combo": "LA-D2",
   "fiche": "complete",
-  "securite": [],
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -791,7 +793,9 @@
   "planB": "FA-01",
   "combo": "LA-D1",
   "fiche": "complete",
-  "securite": [],
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3161,7 +3165,9 @@
   "planB": "",
   "combo": "LA-D3",
   "fiche": "courte",
-  "securite": [],
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,
@@ -3788,7 +3794,9 @@
   "planB": "",
   "combo": "LA-D3",
   "fiche": "courte",
-  "securite": [],
+  "securite": [
+   "baignade"
+  ],
   "geo": null,
   "photo": null,
   "source": null,

@@ -4,7 +4,7 @@ Champ `securite` de `public/data/modules.json` : quels réflexes de l'onglet Pra
 `marche` → « Avant de marcher » (fiche, vue Aujourd'hui, rappel agenda la veille) ; `baignade` → « Baignade » (fiche, vue Aujourd'hui).
 Classement fait le 2026-10-01 d'après titre, lieu, zone, essentiel et astuce, sans information nouvelle. En cas de doute, le rappel est gardé.
 
-Répartition : 50 `marche` seul · 33 `baignade` seul · 20 les deux · 97 aucun.
+Répartition : 50 `marche` seul · 37 `baignade` seul · 20 les deux · 93 aucun.
 
 ## Cas où j'ai hésité (à relire en priorité)
 
@@ -19,6 +19,8 @@ Inclus par prudence :
 - **RA-D6** (pointe des Cascades) : cascades qui tombent dans l'océan → `baignade` en plus de `marche`.
 - **RA-J4, NE-20** (Grand Bassin) : bassin et cascade au bout du sentier → `baignade` en plus de `marche`.
 - **LA-D2, LA-D5, LA-D18, LA-J6, SL-10** : la baignade n'est pas l'activité principale mais elle est possible sur place → `baignade`.
+
+Ajoutés par le CTO à la relecture, par prudence : **AV-D14, LA-D3, FA-09, SL-15** → `baignade` (activités en mer, une mise à l'eau reste possible).
 
 Laissés sans rappel (choix discutables) :
 - **AV-D9** (kayak-raft) : `baignade` seul, pas de sentier décrit.
@@ -48,7 +50,7 @@ Laissés sans rappel (choix discutables) :
 | AV-D11 | Spéléo dans les tunnels de lave | `marche` | Progression à pied dans des tunnels de lave |
 | AV-D12 | Saut en parachute tandem (3 000 m) | aucun | Saut en parachute, ni marche ni baignade |
 | AV-D13 | Initiation au pilotage de parapente | aucun | Vol en parapente, ni sentier ni mise à l'eau |
-| AV-D14 | Parachute ascensionnel | aucun | Tracté par bateau dans les airs, pas de baignade |
+| AV-D14 | Parachute ascensionnel | baignade | En mer, tracté par bateau : rappel par prudence (CTO) |
 | AV-D15 | Survol en ULM | aucun | Vol en ULM, ni marche ni baignade |
 | AV-D16 | Parc aventure et accrobranche | aucun | Parcours dans les arbres en parc aménagé |
 | AV-D17 | Plongée bouteille : baptême ou exploration | `baignade` | Plongée bouteille en mer |
@@ -103,7 +105,7 @@ Laissés sans rappel (choix discutables) :
 | FA-06 | Bateaux électriques de la Mare à Joncs | aucun | Petits bateaux sur un étang, sans baignade |
 | FA-07 | Parc de la Luge du Maïdo | aucun | Parc de loisirs aménagé |
 | FA-08 | Parcours acrobatiques des Palmistes | aucun | Parcours acrobatique en parc aménagé |
-| FA-09 | Dauphins et baleines en famille | aucun | Sortie en bateau, sans mise à l'eau décrite |
+| FA-09 | Dauphins et baleines en famille | baignade | Sortie en mer : rappel par prudence (CTO) |
 | FA-10 | Jardin des Parfums et des Épices | aucun | Jardin de plantes aménagé |
 | FA-11 | Maison du Coco | aucun | Cocoteraie et ateliers |
 | FA-12 | Jardin de l'État et Muséum | aucun | Jardin public et musée en ville |
@@ -117,7 +119,7 @@ Laissés sans rappel (choix discutables) :
 | FA-20 | Du champ à l'assiette en famille | aucun | Visite de ferme et repas |
 | LA-D1 | Snorkeling de l'Ermitage à La Saline | `baignade` | Snorkeling dans le lagon |
 | LA-D2 | Pointe au Sel puis coucher de soleil à Boucan | `baignade` | Plage de Boucan Canot, baignade possible |
-| LA-D3 | Sortie en mer : dauphins et baleines | aucun | Sortie en bateau, aucune mise à l'eau décrite |
+| LA-D3 | Sortie en mer : dauphins et baleines | baignade | Sortie en mer : rappel par prudence (CTO) |
 | LA-D4 | Kayak transparent et paddle au coucher du soleil | `baignade` | Kayak et paddle sur le lagon |
 | LA-D5 | Massage sur le lagon | `baignade` | Soin au bord du lagon, baignade possible |
 | LA-D6 | Plage de Boucan Canot | `baignade` | Plage avec zone de baignade |
@@ -229,7 +231,7 @@ Laissés sans rappel (choix discutables) :
 | SL-12 | Atelier de tressage du vacoa | aucun | Atelier d'artisanat |
 | SL-13 | Fruits de saison au marché | aucun | Marché |
 | SL-14 | Crème solaire respectueuse du récif | `baignade` | Geste pour la baignade dans le lagon |
-| SL-15 | Cétacés selon la charte | aucun | Observation des cétacés depuis un bateau |
+| SL-15 | Cétacés selon la charte | baignade | Sortie en mer : rappel par prudence (CTO) |
 | SL-16 | Fête religieuse, avec respect | aucun | Fête religieuse |
 | SL-17 | Journée déconnexion | `marche`, `baignade` | Une randonnée et un bassin au programme |
 | SL-18 | Voyager hors saison | aucun | Conseil de calendrier, pas une activité |
