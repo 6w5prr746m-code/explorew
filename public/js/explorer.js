@@ -26,12 +26,11 @@ export function renderList(){
   $("#count").textContent=rows.length+(rows.length>1?" modules":" module")+(F.p?" · "+PROFILES[F.p]:"");
   $("#list").innerHTML=rows.length?rows.map(m=>{
     const meta=[m.z!==m.l?m.l:m.z,m.d,m.n?"niv. "+m.n:"",m.b].filter(Boolean).join(" · ");
-    return `<div class="card" style="--c:${col(m.p)}" data-c="${m.c}" role="button" tabindex="0">
-      <div><span class="code">${m.c}</span><h3>${esc(m.t)}</h3><div class="meta">${esc(meta)}</div>${m.f.length?`<div class="tags">${m.f.map(f=>`<span class="tag">${esc(f)}</span>`).join("")}</div>`:""}</div>
+    return `<div class="card" style="--c:${col(m.p)}" data-c="${m.c}">
+      <div><span class="code">${m.c}</span><h3><button class="open" data-c="${m.c}">${esc(m.t)}</button></h3><div class="meta">${esc(meta)}</div>${m.f.length?`<div class="tags">${m.f.map(f=>`<span class="tag">${esc(f)}</span>`).join("")}</div>`:""}</div>
       <button class="add ${inTrip(m.c)?"on":""}" data-add="${m.c}" aria-label="${inTrip(m.c)?"Déjà dans mon voyage":"Ajouter à mon voyage"}">${inTrip(m.c)?"✓":"+"}</button></div>`}).join(""):`<div class="empty">Aucun module ne correspond. Retirez un filtre.</div>`;
 }
 export function initExplorer(){
   $("#list").addEventListener("click",e=>{const a=e.target.closest("[data-add]");if(a){openModule(a.dataset.add,true);return}const c=e.target.closest(".card");if(c)openModule(c.dataset.c)});
-  $("#list").addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target.classList.contains("card"))openModule(e.target.dataset.c)});
     buildFilters();
 }

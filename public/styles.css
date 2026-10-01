@@ -5,7 +5,7 @@
 :root{
   --ground:#F5F5F7; --surface:#FFFFFF; --surface-2:#F2F2F5; --ink:#1D1D1F; --muted:#6E6E73; --line:#E4E4E9;
   --accent:#00767C; --accent-ink:#FFFFFF; --accent-soft:#E3F2F2; --lava:#D2462B;
-  --AV:#D2462B; --LA:#00767C; --RA:#2A7D38; --EP:#946118; --FA:#C2417A; --SL:#6E7A1F; --PB:#3A6EA5; --NE:#5B4FC7;
+  --AV:#C44128; --LA:#00767C; --RA:#2A7D38; --EP:#946118; --FA:#BD3F77; --SL:#6A751E; --PB:#3A6EA5; --NE:#5B4FC7;
   --glass:rgba(255,255,255,.72); --glass-solid:var(--surface); --grain:transparent; --scrim:rgba(0,0,0,.35);
   --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px -12px rgba(0,0,0,.12);
   --r:16px;
@@ -30,8 +30,8 @@
 }
 :root[data-skin="desert"]{
   --ground:#EEE2CD; --surface:#F8F0E1; --surface-2:#EBDDC3; --ink:#3A281A; --muted:#6B5440; --line:#D5BF9C;
-  --accent:#A94A26; --accent-ink:#FFF6EA; --accent-soft:#F0D6C2; --lava:#A94A26;
-  --AV:#A94A26; --LA:#2F6F73; --RA:#5E6B2E; --EP:#855A14; --FA:#9C4A5E; --SL:#6F6A3A; --PB:#4E6173; --NE:#4A3F6B;
+  --accent:#A24724; --accent-ink:#FFF6EA; --accent-soft:#F0D6C2; --lava:#A24724;
+  --AV:#A24724; --LA:#2D6B6F; --RA:#5C682D; --EP:#855A14; --FA:#99495C; --SL:#696437; --PB:#4E6173; --NE:#4A3F6B;
   --glass:var(--ground); --glass-solid:var(--ground); --grain:rgba(90,60,30,.05); --scrim:rgba(40,26,14,.45); --shadow:0 10px 24px -14px rgba(58,40,26,.45);
   --r:6px; color-scheme: light;
 }
@@ -92,6 +92,12 @@ h3{font-size:15px;margin:0}
 .card .meta{font-size:12.5px;color:var(--muted);margin-top:3px}
 .code{font:500 11.5px var(--mono);color:var(--c)}
 .card h3{font-weight:600;margin-top:1px}
+/* Toute la carte ouvre la fiche via le bouton du titre (pas de contrôles imbriqués) ; le bouton + reste au-dessus. */
+.card .open{background:none;border:0;padding:0;font:inherit;color:inherit;text-align:left}
+.card .open::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.card .open:focus-visible{outline:0}
+.card:has(.open:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.card .add{position:relative;z-index:1}
 .tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
 .tag{font:500 10.5px var(--mono);color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
 .add{width:40px;height:40px;border-radius:50%;border:1px solid var(--surface-2);background:var(--surface-2);font-size:22px;line-height:1;display:grid;place-items:center;color:var(--accent)}
@@ -147,7 +153,7 @@ dialog::backdrop{background:var(--scrim)}
 .slot .h{display:flex;justify-content:space-between;align-items:center}
 .pill{display:flex;align-items:center;gap:8px;background:var(--surface-2);border-left:3px solid var(--c);border-radius:8px;padding:7px 8px 7px 10px;margin-top:6px}
 .pill button.t{flex:1;text-align:left;background:none;border:0;padding:0;font-weight:600;font-size:14px}
-.pill .x{background:none;border:0;color:var(--muted);font-size:18px;line-height:1;padding:2px 6px}
+.pill .x{background:none;border:0;color:var(--muted);font-size:18px;line-height:1;padding:0;min-width:40px;min-height:40px;margin:-6px -6px -6px 0;display:grid;place-items:center;border-radius:8px}
 .fields{display:grid;grid-template-columns:1fr 1fr;gap:8px;border-top:1px solid var(--line);padding-top:10px}
 .fields label{display:grid;gap:3px;font-size:12px;color:var(--muted)}
 .fields input,.fields textarea{border:1px solid var(--line);background:var(--surface-2);border-radius:8px;padding:8px;font-size:14px;color:var(--ink);min-width:0}
