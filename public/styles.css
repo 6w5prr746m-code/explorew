@@ -288,6 +288,11 @@ dialog::backdrop{background:var(--scrim)}
 .avis p{margin:0}
 .avis .avis-t{font-weight:700;margin-bottom:2px}
 .avis-x{flex:none;min-height:40px;min-width:40px}
+/* encart Hors ligne (Pratique) */
+.hors-ligne .hl-etat{margin:0;font-weight:600;color:var(--ink)}
+.hors-ligne #hl-verif{min-height:40px;margin-top:10px}
+.hors-ligne .hl-rappel:not(:empty){margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.hors-ligne .hl-rappel .check{padding:0}
 .offer{margin-top:12px;background:var(--accent-soft);border-radius:12px;padding:12px}
 .offer p{margin:0 0 2px;font-weight:700}
 .offer .sub{margin:0 0 10px;font-weight:400;color:var(--ink)}
