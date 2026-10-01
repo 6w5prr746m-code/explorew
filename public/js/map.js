@@ -29,15 +29,15 @@ export function renderMap(rows){
   const el=$("#map");if(!el||el.hidden)return;
   const trip=tripPoints();
   const route=trip.length>1?`<polyline class="route" points="${trip.map(([,c])=>PT[c].join(",")).join(" ")}"/>`:"";
-  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${DEST.libelles.carte} avec ${rows.length} modules">
-    <defs><pattern id="sea" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M0 7q3.5-3 7 0t7 0" class="wave"/></pattern></defs>
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="group" aria-label="${DEST.libelles.carte} avec ${rows.length} modules">
+    <g aria-hidden="true"><defs><pattern id="sea" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M0 7q3.5-3 7 0t7 0" class="wave"/></pattern></defs>
     <rect width="${W}" height="${H}" fill="url(#sea)"/>
     <path d="${coast}" class="land"/>
     ${cirques()}
     ${villes()}
-    ${route}
-    ${rows.map(m=>{const [x,y]=PT[m.c];return `<circle class="pin" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="6" style="fill:var(--${m.p})" data-c="${m.c}" tabindex="0"><title>${m.c} · ${esc(m.t)}</title></circle>`}).join("")}
-    ${trip.map(([d,c])=>{const [x,y]=PT[c];return `<g class="tp" data-c="${c}"><circle cx="${x}" cy="${y}" r="10"/><text x="${x}" y="${y+3.5}">${d}</text></g>`}).join("")}
+    ${route}</g>
+    ${rows.map(m=>{const [x,y]=PT[m.c];return `<circle class="pin" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="6" style="fill:var(--${m.p})" data-c="${m.c}" tabindex="0" role="button" aria-label="${m.c} · ${esc(m.t)}"><title>${m.c} · ${esc(m.t)}</title></circle>`}).join("")}
+    ${trip.map(([d,c])=>{const [x,y]=PT[c];return `<g class="tp" data-c="${c}" aria-hidden="true"><circle cx="${x}" cy="${y}" r="10"/><text x="${x}" y="${y+3.5}">${d}</text></g>`}).join("")}
   </svg>
   <p class="sub">Tracé et positions approximatifs. Les pastilles numérotées sont les jours de votre voyage.</p>`;
 }
@@ -45,6 +45,8 @@ export function renderMap(rows){
 export function setMode(map){$("#segList").setAttribute("aria-pressed",!map);$("#segMap").setAttribute("aria-pressed",map);$("#list").hidden=map;$("#map").hidden=!map;if(map)renderMap(rows)}
 export function initMap(){
   document.addEventListener("click",e=>{const p=e.target.closest("#map [data-c]");if(p)openModule(p.dataset.c)});
+  // Points de la carte au clavier : Entrée et Espace ouvrent la fiche, comme un bouton.
+  document.addEventListener("keydown",e=>{if(e.key!=="Enter"&&e.key!==" ")return;const p=e.target.closest?.("#map .pin[data-c]");if(!p)return;e.preventDefault();openModule(p.dataset.c)});
   $("#segList").onclick=()=>setMode(false);$("#segMap").onclick=()=>setMode(true);
   $("#tripmap").onclick=()=>{switchView("explore");setMode(true)};
 }

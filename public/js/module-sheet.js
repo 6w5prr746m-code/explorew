@@ -11,6 +11,26 @@ export const dlg=$("#dlg");
 // Créneau choisi depuis « + Module » dans le voyage, appliqué à la prochaine fiche ouverte
 let pendingSlot=null;
 export function setPendingSlot(p){pendingSlot=p}
+// Retour du focus : à la fermeture de la feuille, le focus revient sur l'élément qui l'a ouverte.
+// S'il a été remplacé entre-temps (re-rendu après un ajout), on reprend son équivalent (même classe, même code).
+let opener=null;
+const KEYS=["id","data-c","data-add","data-open","data-rm"];
+function selectorOf(el){
+  const k=KEYS.find(a=>el.hasAttribute(a));if(!k)return null;
+  const cls=el.classList[0]?"."+CSS.escape(el.classList[0]):"";
+  return k==="id"?"#"+CSS.escape(el.id):el.localName+cls+"["+k+'="'+CSS.escape(el.getAttribute(k))+'"]';
+}
+export function showSheet(){
+  if(dlg.open)return;
+  const a=document.activeElement;
+  opener=a&&a!==document.body&&!dlg.contains(a)?{el:a,sel:selectorOf(a)}:null;
+  dlg.showModal();
+}
+function restoreFocus(){
+  const o=opener;opener=null;if(!o)return;
+  const t=o.el.isConnected?o.el:(o.sel&&document.querySelector(o.sel));
+  if(t&&t.getClientRects().length)t.focus({preventScroll:false});
+}
 function refLink(code){return BY[code]?`<button class="link" data-open="${code}">${code} · ${esc(BY[code].t)}</button>`:esc(code)}
 // Étiquette sobre à côté d'un champ dont le texte contient « à vérifier » (le texte n'est pas modifié)
 export function verifTag(txt,champ){return aVerifier(txt)?`<span class="averif" role="note" aria-label="${esc(champ)} : information à vérifier avant de partir">À vérifier</span>`:""}
@@ -41,11 +61,12 @@ function renderSheet(code,focusAdd){
   $("#sheet").onclick=e=>{const o=e.target.closest("[data-open]");if(o)openModule(o.dataset.open)};
   $("#padd").onclick=()=>{const i=+$("#pday").value,k=$("#pslot").value;S.days[i].slots[k].push(code);touched();dlg.close();toast(`Ajouté au jour ${i+1}`);renderAll()};
   $("#pclose").onclick=()=>dlg.close();
-  if(!dlg.open)dlg.showModal();
+  showSheet();
   $("#sheet").scrollTop=0;
   if(focusAdd)$("#pick").scrollIntoView({block:"end"});
 }
 export function openModule(code,focusAdd){renderSheet(code,focusAdd||!!pendingSlot);if(pendingSlot&&$("#pday")){$("#pday").value=pendingSlot.i;$("#pslot").value=pendingSlot.k;pendingSlot=null}}
 export function initModuleSheet(){
   dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+  dlg.addEventListener("close",restoreFocus);
 }
