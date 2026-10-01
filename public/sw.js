@@ -18,9 +18,10 @@ let reseauLentJusqua=0;
 self.addEventListener("fetch",e=>{
   if(e.request.method!=="GET")return;
   const enCache=()=>caches.match(e.request,{ignoreSearch:true});
-  const reseau=fetch(e.request).then(r=>{const cp=r.clone();caches.open(VERSION).then(c=>c.put(e.request,cp)).catch(()=>{});return r});
+  let repondu=false; // le réseau a déjà répondu : le délai ne doit plus rien changer
+  const reseau=fetch(e.request).then(r=>{repondu=true;const cp=r.clone();caches.open(VERSION).then(c=>c.put(e.request,cp)).catch(()=>{});return r});
   const attente=Date.now()<reseauLentJusqua?0:DELAI_RESEAU_MS;
-  const delai=new Promise(ok=>setTimeout(ok,attente)).then(enCache).then(r=>{if(!r)return reseau;if(attente)reseauLentJusqua=Date.now()+RESEAU_LENT_MS;return r});
+  const delai=new Promise(ok=>setTimeout(ok,attente)).then(()=>repondu?reseau:enCache().then(r=>{if(!r||repondu)return reseau;if(attente)reseauLentJusqua=Date.now()+RESEAU_LENT_MS;return r}));
   e.waitUntil(reseau.catch(()=>{}));
   e.respondWith(Promise.race([reseau.catch(enCache),delai]));
 });
