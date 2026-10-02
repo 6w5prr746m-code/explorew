@@ -288,6 +288,17 @@ dialog::backdrop{background:var(--scrim)}
 .avis p{margin:0}
 .avis .avis-t{font-weight:700;margin-bottom:2px}
 .avis-x{flex:none;min-height:40px;min-width:40px}
+/* encart « Par où commencer ? » (Explorer, voyage d'exemple) */
+.demarrage{margin-bottom:14px}
+.dem-h{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.dem-h h2{font:400 24px/1.2 var(--display);margin:0}
+.demarrage .btn{min-height:40px;min-width:40px}
+.dem-etapes{margin:10px 0 0;padding-left:22px;display:grid;gap:4px;font-size:14px}
+.dem-l{display:block;margin:14px 0 6px}
+.dem-mods{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.dem-mod{border-left:3px solid var(--c);background:var(--surface-2);border-radius:10px;padding:10px 12px}
+.dem-mod .dem-t{margin:2px 0 0;font-weight:600}
+.dem-mod .dem-meta{margin:2px 0 8px;font-size:12.5px;color:var(--muted)}
 /* encart Hors ligne (Pratique) */
 .hors-ligne .hl-etat{margin:0;font-weight:600;color:var(--ink)}
 .hors-ligne #hl-verif{min-height:40px;margin-top:10px}
