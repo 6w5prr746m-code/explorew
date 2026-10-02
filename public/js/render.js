@@ -7,5 +7,6 @@ import { renderTampons } from "./passeport.js";
 import { renderAgenda } from "./agenda.js";
 import { renderSouvenir } from "./souvenir.js";
 import { renderCartePostale } from "./carte-postale.js";
+import { renderDemarrage } from "./demarrage.js";
 
-export function renderAll(){renderList();renderTrip();renderCarnet();renderToday();renderAgenda();renderTampons();renderSouvenir();renderCartePostale()}
+export function renderAll(){renderList();renderTrip();renderCarnet();renderToday();renderAgenda();renderTampons();renderSouvenir();renderCartePostale();renderDemarrage()}

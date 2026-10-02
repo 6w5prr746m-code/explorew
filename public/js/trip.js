@@ -35,6 +35,15 @@ export function renderTrip(){
   const n=placed;const b=$("#tripbadge");b.hidden=!n;b.textContent=n;
   renderBilan();
 }
+// Ajout direct au jour i : premier créneau vide (matin, après-midi, soir), sinon le matin.
+// Même effet que l'ajout depuis la fiche : sortie du mode exemple, rendu complet, toast.
+export function ajouterAuJour(i,code){
+  if(!BY[code]||!S.days[i])return null;
+  const libre=SLOTS.find(([k])=>!S.days[i].slots[k].length)||SLOTS[0];
+  S.days[i].slots[libre[0]].push(code);touched();renderAll();
+  toast(`Ajouté au jour ${i+1} · ${libre[1]}`);
+  return libre[0];
+}
 export function initTrip(){
   $("#fmt").onchange=e=>{const n=+e.target.value;const dropped=S.days.slice(n).some(d=>SLOTS.some(([k])=>d.slots[k].length));if(dropped&&!confirm("Les jours au-delà de J"+n+" contiennent des modules. Les supprimer ?")){e.target.value=S.fmt;return}S.fmt=n;resizeDays(n);touched();renderTrip()};
   $("#start").onchange=e=>{S.start=e.target.value;touched();renderTrip()};
