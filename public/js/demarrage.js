@@ -12,7 +12,7 @@ import { ajouterAuJour } from "./trip.js";
    1. fiche complète ;
    2. niveau 1 ou non renseigné (null) ;
    3. budget « Gratuit » ou « € » ;
-   4. aucun rappel de sécurité (securite vide) : pas de consigne marche ou baignade pour un tout premier pas ;
+   4. aucun rappel de sécurité (champ securite vide), pour un tout premier pas ;
    5. tri stable par code (ordre des caractères), puis le premier module de chaque profil, jusqu'à NB_PROPOSES
       profils différents. Moins de NB_PROPOSES modules si la règle n'en retient pas assez. */
 export const NB_PROPOSES=3;
