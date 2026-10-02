@@ -23,6 +23,7 @@ import { initSouvenir, buildSouvenir } from "./souvenir.js";
 import { initCartePostale, buildPostcard } from "./carte-postale.js";
 import { initBilan } from "./bilan.js";
 import { initHorsLigne } from "./hors-ligne.js";
+import { initDemarrage } from "./demarrage.js";
 
 initTheme();
 // Avant tout rendu : codes renommés ou retirés de data/modules.json (créneaux fantômes).
@@ -30,7 +31,7 @@ initMigrations();
 $("#nbmod").textContent=MODS.length;
 initModuleSheet();initExplorer();initTrip();initBilan();initCarnet();initPratique();initNav();
 renderPrat();
-initMap();initShare();initPrint();initBackup();initToday();initAgenda();initPasseport();initSouvenir();initCartePostale();initHorsLigne();
+initMap();initShare();initPrint();initBackup();initToday();initAgenda();initPasseport();initSouvenir();initCartePostale();initHorsLigne();initDemarrage();
 
 // API globale conservée pour les scripts (build-book-pdf.mjs) et le débogage
 window.__PEI={DEST,MODS,BY,PROFILES,PICTOS,S,SLOTS,save,renderAll,toast,dayDate,switchView,openModule,renderMap,banner,encodeTrip,decodeTrip,applyTrip,get rows(){return rows}};
