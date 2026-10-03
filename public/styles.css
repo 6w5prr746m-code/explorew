@@ -342,6 +342,23 @@ dialog::backdrop{background:var(--scrim)}
 [data-skin="desert"] .done-date{transform:rotate(-2deg);display:inline-block}
 [data-skin="desert"] .done-safe{border-left-style:dashed}
 [data-skin="desert"] .sheet{border-radius:10px 10px 0 0;border-top:3px double var(--accent)}
+/* Envies du groupe : avis sous les modules de la grille, réponses reçues, écran du proche (#v-envies) */
+.pill-envies{margin:4px 0 0 13px;font-size:12.5px;color:var(--muted)}
+.envies-recues{margin-top:12px}
+.envies-recues .btn,.envies-row .btn,.envies-fin .btn{min-height:40px}
+.sheet .envies-h3{margin:18px 0 0;padding-top:12px;border-top:1px solid var(--line)}
+.envies-liste{list-style:none;margin:14px 0;padding:0;display:grid;gap:8px}
+.envie{background:var(--surface);border-left:3px solid var(--c);border-radius:10px;padding:10px 12px;box-shadow:var(--shadow)}
+.envie-t{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px}
+.envie-t b{flex-basis:100%;font-weight:600;font-size:15px}
+.envie-p{font-size:12px;color:var(--muted)}
+.envie-choix{display:flex;gap:8px;margin-top:8px}
+.envie-choix .btn{flex:1;min-height:40px;color:var(--ink)}
+.envie-choix .btn[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent)}
+.envie-choix .btn[aria-pressed="true"]::before{content:"✓ "}
+.envies-fin label.lbl{display:block}
+.envies-fin input{width:100%;min-height:40px;margin:4px 0 6px;border:1px solid var(--line);background:var(--surface-2);border-radius:8px;padding:8px;color:var(--ink)}
+.envies-fin .row{margin-top:12px}
 @media print{
   @page{size:A5;margin:12mm 11mm}
   body.book .bcover{height:150mm;display:flex;flex-direction:column;justify-content:flex-end;break-after:page;border-bottom:3pt solid #0A7F86}

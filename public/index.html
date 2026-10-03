@@ -60,6 +60,7 @@
     <div id="days"></div>
     <div class="row" style="margin-top:12px">
       <button class="btn primary" id="share">Partager</button>
+      <button class="btn" id="envies-demander">Demander les envies du groupe</button>
       <button class="btn" id="tripmap">Voir sur la carte</button>
       <button class="btn" id="print">Imprimer / PDF</button>
       <button class="btn" id="agenda" aria-describedby="agenda-hint">Ajouter à mon agenda</button>
@@ -67,7 +68,11 @@
       <button class="btn ghost" id="reset">Vider le voyage</button>
     </div>
     <p class="sub" id="agenda-hint" hidden>Indiquez votre date d'arrivée pour ajouter le voyage à votre agenda.</p>
+    <section class="panel envies-recues" id="envies-recues" aria-labelledby="envies-recues-t" hidden></section>
   </section>
+
+  <!-- ENVIES DU GROUPE (écran du proche, ouvert par un lien #e=) -->
+  <section class="view" id="v-envies" aria-labelledby="envies-t" hidden></section>
 
   <!-- CARNET -->
   <section class="view" id="v-carnet" hidden>
