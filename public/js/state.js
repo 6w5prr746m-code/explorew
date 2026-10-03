@@ -26,7 +26,11 @@ function alerteSauvegarde(){
   try{if(sessionStorage.getItem("carnetpei.alerte-sauvegarde"))return;sessionStorage.setItem("carnetpei.alerte-sauvegarde","1")}catch(e){}
   avis({id:"avis-sauvegarde",texte:"Vos modifications ne peuvent pas être enregistrées sur cet appareil (mémoire pleine ou navigation privée). Elles restent affichées tant que la page est ouverte : exportez vos données depuis l'onglet Carnet pour les garder."});
 }
-let saveT;export function save(){clearTimeout(saveT);saveT=setTimeout(()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){alerteSauvegarde()}},250)}
+let saveT=null;
+function ecrire(){saveT=null;try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){alerteSauvegarde()}}
+export function save(){clearTimeout(saveT);saveT=setTimeout(ecrire,250)}
+// Page quittée avant la fin du délai (lien ouvert puis onglet fermé aussitôt) : la sauvegarde en attente est écrite tout de suite.
+addEventListener("pagehide",()=>{if(saveT!==null){clearTimeout(saveT);ecrire()}});
 export function touched(){if(S.example){S.example=false}save()}
 export function dayDate(i){if(!S.start)return"";const d=new Date(S.start+"T12:00:00");d.setDate(d.getDate()+i);return d.toLocaleDateString("fr-FR",{weekday:"short",day:"numeric",month:"short"})}
 export function inTrip(code){return S.days.some(d=>SLOTS.some(([k])=>d.slots[k].includes(code)))}
