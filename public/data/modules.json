@@ -1518,7 +1518,7 @@
    "FAM",
    "€"
   ],
-  "essentiel": "Forêt primaire de tamarins et fougères arborescentes jusqu'au gouffre du Trou de Fer.",
+  "essentiel": "Sentier du Trou de Fer (du gîte de Bélouve à la route forestière de Fleurs Jaunes) fermé par l'arrêté préfectoral n° 2026-1695 du 25 septembre 2026 (publié sur onf.fr, consulté le 1er octobre 2026). Forêt primaire de tamarins et fougères arborescentes jusqu'au gouffre du Trou de Fer.",
   "astuce": "Arriver avant 11 h ; sentier souvent boueux.",
   "planB": "RA-D20",
   "combo": "RA-J6",
@@ -1528,8 +1528,8 @@
   ],
   "geo": null,
   "photo": null,
-  "source": null,
-  "verifieLe": "2026-09-19"
+  "source": "https://www.reunion.fr/offres/gite-de-belouve-trou-de-fer-salazie-fr-575456/",
+  "verifieLe": "2026-10-01"
  },
  {
   "code": "RA-D3",
@@ -1696,7 +1696,7 @@
   "filtres": [
    "€"
   ],
-  "essentiel": "Belvédère sur Mafate sans y descendre.",
+  "essentiel": "Sentier Cap Noir – Roche Verre Bouteille (portion basse du sentier depuis le parking jusqu'à la Roche Verre Bouteille en passant par le kiosque du Cap Noir) fermé par l'arrêté préfectoral n° 2026-1695 du 25 septembre 2026 (publié sur onf.fr, consulté le 1er octobre 2026). Belvédère sur Mafate sans y descendre.",
   "astuce": "Passages à échelles : déconseillé en cas de vertige.",
   "planB": "RA-D8",
   "combo": "RA-J1",
