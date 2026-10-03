@@ -1871,7 +1871,7 @@
   "zone": "Cilaos",
   "lieu": "Cilaos",
   "duree": "5 h aller / retour (9,8 km)",
-  "niveau": 2,
+  "niveau": 3,
   "budget": "Gratuit",
   "filtres": [
    "€"
@@ -2104,7 +2104,7 @@
   "zone": "Nord",
   "lieu": "Hauts de Saint-Denis",
   "duree": "2 jours : 7 h 20 de marche aller / retour (18,5 km) depuis Mamode Camp, nuit au gîte de la Plaine des Chicots",
-  "niveau": 2,
+  "niveau": 3,
   "budget": "€€",
   "filtres": [
    "AUBE"
@@ -2153,13 +2153,13 @@
   "titre": "Le Dimitile, balcon sur Cilaos",
   "zone": "Sud",
   "lieu": "Entre-Deux",
-  "duree": "Journée (à vérifier)",
+  "duree": "7 h de marche aller simple (7,3 km, 1216 m de dénivelé positif) ; durée du retour à vérifier",
   "niveau": 3,
   "budget": "Gratuit",
   "filtres": [
    "€"
   ],
-  "essentiel": "Rempart qui domine Cilaos, lieu de mémoire du marronnage.",
+  "essentiel": "Sentier Bayonne fermé par l'arrêté préfectoral n° 2026-1695 du 25 septembre 2026 (publié sur onf.fr, consulté le 1er octobre 2026) : montée par Grande Jument depuis le kiosque Jean Lauret. Rempart qui domine Cilaos, lieu de mémoire du marronnage.",
   "astuce": "Raconte l'histoire des esclaves fugitifs réfugiés dans les Hauts.",
   "planB": "Cases créoles de l'Entre-Deux",
   "combo": "RA-J10",
@@ -2169,8 +2169,8 @@
   ],
   "geo": null,
   "photo": null,
-  "source": null,
-  "verifieLe": "2026-09-19"
+  "source": "https://www.reunion.fr/offres/dimitile-par-grande-jument-entre-deux-fr-3470244/",
+  "verifieLe": "2026-10-01"
  },
  {
   "code": "RA-J8",
