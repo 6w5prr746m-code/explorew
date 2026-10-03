@@ -105,7 +105,7 @@ function demander(){
    <div class="row envies-row"><button class="btn primary" id="envies-copier">Copier le lien</button>${navigator.share?'<button class="btn" id="envies-nshare">Envoyer…</button>':""}<button class="btn ghost" id="envies-fermer">Fermer</button></div>
    <h3 class="envies-h3">Une réponse reçue ?</h3>
    <p class="sub">Ouvrez le lien de réponse sur cet appareil, ou collez-le ici.</p>
-   <label class="lbl" for="envies-coller">Lien de réponse</label><textarea id="envies-coller" rows="3" placeholder="https://…#r=…"></textarea>
+   <label class="lbl" for="envies-coller">Lien de réponse</label><textarea id="envies-coller" rows="3" placeholder="Collez ici le lien de réponse reçu"></textarea>
    <div class="row envies-row"><button class="btn" id="envies-ajouter">Ajouter les avis</button></div>`;
   lienBoutons({link,copy:"#envies-copier",area:"#envies-demande",nshare:"#envies-nshare",titre:"Donnez vos envies",texte:"Donnez vos envies pour notre voyage"});
   $("#envies-fermer").onclick=()=>dlg.close();
