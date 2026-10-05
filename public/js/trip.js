@@ -8,6 +8,7 @@ import { renderCarnet } from "./carnet.js";
 import { switchView } from "./nav.js";
 import { renderBilan } from "./bilan.js";
 import { enviesHtml } from "./envies.js";
+import { boutonDeplacer } from "./deplacer.js";
 
 function resizeDays(n){while(S.days.length<n)S.days.push(blankDay());if(S.days.length>n)S.days.length=n}
 export function renderTrip(){
@@ -25,8 +26,8 @@ export function renderTrip(){
     return `<details class="day" data-i="${i}" ${open.has(String(i))||(!open.size&&i===0)?"open":""}>
       <summary><span class="dnum">J${i+1}</span><span class="dsum"><span class="d">${dayDate(i)||"Jour "+(i+1)}</span><div class="z">${zones.join(" · ")||"À composer"}</div></span><span class="dots">${dots}</span></summary>
       <div class="dbody">
-        ${SLOTS.map(([k,v])=>`<div class="slot"><div class="h"><span class="lbl">${v}</span><button class="btn small ghost" data-browse="${i}:${k}">+ Module</button></div>
-          ${d.slots[k].map((c,j)=>BY[c]?`<div class="pill" style="--c:${col(BY[c].p)}"><span class="code">${c}</span><button class="t" data-open="${c}">${esc(BY[c].t)}</button><button class="x" data-rm="${i}:${k}:${j}" aria-label="Retirer ${c} ${esc(BY[c].t)} du jour ${i+1}">×</button></div>${enviesHtml(c)}`:"").join("")}</div>`).join("")}
+        ${SLOTS.map(([k,v])=>`<div class="slot" data-slot="${i}:${k}"><div class="h"><span class="lbl">${v}</span><button class="btn small ghost" data-browse="${i}:${k}">+ Module</button></div>
+          ${d.slots[k].map((c,j)=>BY[c]?`<div class="pill" data-pos="${i}:${k}:${j}" style="--c:${col(BY[c].p)}"><span class="code">${c}</span><button class="t" data-open="${c}">${esc(BY[c].t)}</button>${boutonDeplacer(i,k,j,c)}<button class="x" data-rm="${i}:${k}:${j}" aria-label="Retirer ${c} ${esc(BY[c].t)} du jour ${i+1}">×</button></div>${enviesHtml(c)}`:"").join("")}</div>`).join("")}
         <div class="fields">
           <label>Hébergement<input id="heb${i}" data-f="${i}:heb" value="${esc(d.heb)}" placeholder="Gîte, hôtel…"></label>
           <label>Budget du jour (€)<input id="bud${i}" data-f="${i}:bud" inputmode="decimal" value="${esc(d.bud)}" placeholder="0"></label>
