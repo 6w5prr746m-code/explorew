@@ -25,6 +25,7 @@ import { initBilan } from "./bilan.js";
 import { initHorsLigne } from "./hors-ligne.js";
 import { initDemarrage } from "./demarrage.js";
 import { initEnvies, enviesFromHash } from "./envies.js";
+import { initDeplacer } from "./deplacer.js";
 
 initTheme();
 // Avant tout rendu : codes renommés ou retirés de data/modules.json (créneaux fantômes).
@@ -32,7 +33,7 @@ initMigrations();
 $("#nbmod").textContent=MODS.length;
 initModuleSheet();initExplorer();initTrip();initBilan();initCarnet();initPratique();initNav();
 renderPrat();
-initMap();initShare();initPrint();initBackup();initToday();initAgenda();initPasseport();initSouvenir();initCartePostale();initHorsLigne();initDemarrage();initEnvies();
+initMap();initShare();initPrint();initBackup();initToday();initAgenda();initPasseport();initSouvenir();initCartePostale();initHorsLigne();initDemarrage();initEnvies();initDeplacer();
 
 // API globale conservée pour les scripts (build-book-pdf.mjs) et le débogage
 window.__PEI={DEST,MODS,BY,PROFILES,PICTOS,S,SLOTS,save,renderAll,toast,dayDate,switchView,openModule,renderMap,banner,encodeTrip,decodeTrip,applyTrip,get rows(){return rows}};
