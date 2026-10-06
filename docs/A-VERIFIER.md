@@ -14,6 +14,5 @@ Liste générée par `npm run a-verifier` à partir de `public/data/modules.json
 | RA-J7 | Le Dimitile, balcon sur Cilaos | duree | [ ] |
 | SL-03 | Téléphérique urbain de Saint-Denis | essentiel | [ ] |
 | PB-14 | Tunnels de lave | essentiel | [ ] |
-| NE-03 | Sortie astronomie Makes Astro | essentiel | [ ] |
 
 À vérifier aussi, hors fiches : horaires des marchés, jour du grand marché de Saint-Pierre, accès aux bassins de la ravine Saint-Gilles, téléphérique de Saint-Denis, Maison du Coco, dates des fêtes (Dipavali, Safran en fête), tarifs cités.
