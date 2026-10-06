@@ -58,7 +58,7 @@ Ordre pensé pour ne pas perdre de temps : d'abord mettre l'app en ligne et la f
 - [ ] **Vraie carte** : MapLibre GL + tuiles OpenStreetMap (ou IGN), avec tuiles hors ligne pour les cirques.
 - [ ] **Composeur intelligent** : alerte si deux modules du même jour sont trop éloignés (temps de trajet), si un module « AUBE » est placé l'après-midi, ou si un module « saison des pluies » est placé en hiver austral.
 - [ ] Trames prêtes à l'emploi (7, 10, 15, 20, 25, 30 jours) à charger en un tap, reprises de la Section 1 du Book.
-- [ ] Glisser-déposer des modules entre jours et créneaux.
+- [x] Glisser-déposer des modules entre jours et créneaux (avec alternative au clavier, #36).
 - [ ] Filtre « mois de voyage » et affichage du calendrier saisonnier (baleines, letchis, fêtes).
 - [ ] Export de l'itinéraire en `.ics` (agenda) et PDF personnalisé.
 - [ ] Version anglaise (i18n : fichiers `fr.json` et `en.json`, contenu traduit dans `modules.json`).
