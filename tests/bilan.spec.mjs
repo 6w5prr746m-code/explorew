@@ -58,6 +58,9 @@ test.describe("Bilan d'équilibre", () => {
     expect(par("planb")[0].jours).toEqual([4]);
     expect(par("planb")[0].texte).toMatch(/^Jour 5 : aucun plan B pluie/);
 
+    // RA-D17 (filtre AUBE) placé l'après-midi du jour 6.
+    expect(par("aube").map(p => p.jours)).toEqual([[5]]);
+
     // Marge : l'après-midi libre du jour 5 compte, pas celui du jour 7 (module journée).
     expect(b.marge.jours).toEqual([4]);
     expect(b.marge.texte).toBe("De la marge : une demi-journée libre (jour 5 après-midi). De quoi suivre la météo, se reposer ou improviser.");
@@ -72,6 +75,28 @@ test.describe("Bilan d'équilibre", () => {
     expect(b.points.filter(p => p.type === "planb")).toEqual([]);
   });
 
+  test("calcul : sortie à l'aube l'après-midi ou le soir, rien le matin", async ({ page }) => {
+    await openApp(page);
+    const aube = async d => (await calculer(page, d)).points.filter(p => p.type === "aube");
+    // RA-D1 a le filtre AUBE : rien le matin, même avec un module journée ensuite.
+    expect(await aube([[["RA-D1"], [], []], [["AV-J2"], [], []]])).toEqual([]);
+    expect(await aube([VIDE, VIDE, [[], ["RA-D1"], []]])).toEqual([{ type: "aube", jours: [2], texte: "Jour 3 : RA-D1 Lever de soleil au belvédère du Maïdo est prévu l'après-midi, alors que c'est une sortie à l'aube." }]);
+    expect(await aube([[["LA-D1"], [], ["RA-D1"]]])).toEqual([{ type: "aube", jours: [0], texte: "Jour 1 : RA-D1 Lever de soleil au belvédère du Maïdo est prévu le soir, alors que c'est une sortie à l'aube." }]);
+    // Un module sans le filtre AUBE l'après-midi ne déclenche rien.
+    expect(await aube([[[], ["LA-D1"], ["EP-D1"]]])).toEqual([]);
+  });
+
+  test("affichage : sortie à l'aube l'après-midi, bouton vers le jour", async ({ page }) => {
+    const { errors } = await openApp(page);
+    await appliquer(page, [[["LA-D1"], ["RA-D1"], []], VIDE, VIDE, VIDE, VIDE, VIDE, VIDE]);
+    await tab(page, "trip");
+    const pt = page.locator("#bilan .bilan-pt[data-type='aube']");
+    await expect(pt).toHaveCount(1);
+    await expect(pt).toContainText("Jour 1 : RA-D1 Lever de soleil au belvédère du Maïdo est prévu l'après-midi, alors que c'est une sortie à l'aube.");
+    await expect(pt.locator("[data-bilan-jour='0']")).toBeVisible();
+    expect(errors).toEqual([]);
+  });
+
   test("affichage : constats cliquables, sans score ni pourcentage", async ({ page }) => {
     const { errors } = await openApp(page);
     await appliquer(page, DESEQUILIBRE);
@@ -80,7 +105,7 @@ test.describe("Bilan d'équilibre", () => {
     await expect(bilan).toBeVisible();
     await expect(page.locator("#bilan-tog")).toHaveAttribute("aria-expanded", "true");
     const types = await bilan.locator(".bilan-pt").evaluateAll(l => l.map(e => e.dataset.type));
-    expect(new Set(types)).toEqual(new Set(["doublon", "zone-jour", "zone-suite", "tampon", "planb"]));
+    expect(new Set(types)).toEqual(new Set(["doublon", "zone-jour", "zone-suite", "tampon", "planb", "aube"]));
     await expect(bilan.locator(".bilan-marge")).toContainText("De la marge");
     await expect(bilan).toContainText("Règles d'or du Book : un camp de base par zone, les Hauts le matin, le littoral l'après-midi, une journée tampon tous les 4 à 5 jours.");
 

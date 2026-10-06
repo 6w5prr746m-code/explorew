@@ -14,6 +14,7 @@ const TAMPON_MAX=5;
 // Zone qui n'est pas un lieu : elle ne compte ni comme changement de zone ni comme mélange.
 const ZONE_HORS="Toute l'île";
 const DEMI=["m","a"];
+const MOMENT={a:"l'après-midi",s:"le soir"};
 const NOMBRES=["zéro","une","deux","trois","quatre","cinq","six","sept","huit","neuf","dix"];
 const fois=n=>(n<NOMBRES.length?NOMBRES[n]:String(n))+" fois";
 const nb=n=>n<NOMBRES.length?NOMBRES[n]:String(n);
@@ -31,7 +32,7 @@ const plusieursJours=m=>/jours/i.test(m.d||"");
 
 /* Calcul pur : à partir des jours ({slots:{m,a,s}}) et de l'index des modules (code → {c,t,z,d,pb,p}),
    renvoie { vide, points:[{type,jours,texte}], marge:{jours,texte}|null }.
-   points : doublon, zone-jour, zone-suite, tampon, planb. marge : jours sans module et demi-journées libres. */
+   points : doublon, zone-jour, zone-suite, tampon, planb, aube. marge : jours sans module et demi-journées libres. */
 export function calculerBilan(days,by=BY){
   const jours=days.map(d=>{
     const slot=k=>((d.slots&&d.slots[k])||[]).filter(c=>by[c]);
@@ -40,7 +41,8 @@ export function calculerBilan(days,by=BY){
     const parJour=DEMI.some(k=>slot(k).some(c=>journee(by[c])));
     const demiLibres=DEMI.filter(k=>!slot(k).length&&!(k==="a"&&parJour));
     const zones=[...new Set(mods.map(m=>m.z).filter(z=>z&&z!==ZONE_HORS))];
-    return {codes,mods,zones,demiLibres,occupe:codes.length>0,enJournee:DEMI.some(k=>slot(k).length>0)};
+    const tard=["a","s"].flatMap(k=>slot(k).map(c=>({c,k})));
+    return {codes,mods,zones,demiLibres,tard,occupe:codes.length>0,enJournee:DEMI.some(k=>slot(k).length>0)};
   });
   const points=[];
   if(!jours.some(j=>j.occupe))return {vide:true,points,marge:null};
@@ -77,6 +79,11 @@ export function calculerBilan(days,by=BY){
   // Plan B : jours occupés dont aucun module n'a de plan B ni n'est du profil Plan B pluie.
   const sansB=jours.map((j,i)=>j.occupe&&!j.mods.some(m=>m.pb||m.p==="PB")?i:-1).filter(i=>i>=0);
   if(sansB.length)points.push({type:"planb",jours:sansB,texte:`${joursTexte(sansB)} : aucun plan B pluie parmi les modules ${sansB.length>1?"de ces jours":"du jour"}. Prévoyez une solution de repli, par exemple un module du profil Plan B pluie.`});
+
+  // Sortie à l'aube (filtre AUBE) placée l'après-midi ou le soir.
+  jours.forEach((j,i)=>j.tard.forEach(({c,k})=>{
+    if((by[c].f||[]).includes("AUBE"))points.push({type:"aube",jours:[i],texte:`Jour ${i+1} : ${c} ${by[c].t} est prévu ${MOMENT[k]}, alors que c'est une sortie à l'aube.`});
+  }));
 
   // Marge : jours sans module et demi-journées libres, présentés comme de la souplesse.
   const libres=jours.map((j,i)=>j.occupe?-1:i).filter(i=>i>=0);
